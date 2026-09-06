@@ -37,10 +37,11 @@ and a local finding does not authorize changing the document's argument.
 ## Choose the route
 
 - **New document:** assignment → discovery → focus → content model → plot →
-  draft → developmental edit → line edit → copyedit → proof and acceptance.
+  draft → developmental edit → line edit → copyedit → reader review when
+  required → proof and acceptance.
 - **Existing document:** editorial assignment → diagnostic reading → reverse
   outline → editorial diagnosis → revised plot → substantive revision → line
-  edit → copyedit → proof and acceptance.
+  edit → copyedit → reader review when required → proof and acceptance.
 - **Settled content and structure:** route wording-only work to
   `document-writing-prose`, detection-only work to `document-writing-audit`, or
   selected findings to `document-writing-apply`.
@@ -154,13 +155,26 @@ Run these passes in order:
    transitions, sentence shape, voice, and cadence in the target language.
 3. **Copyedit:** terminology consistency, references, grammar, syntax, notation,
    and house style.
-4. **Proof and acceptance:** final completeness, formatting, cross-references,
+4. **Reader review, when required:** reader comprehension, persuasion, decision,
+   and action evidence from `document-reader-review`, followed by author-owned
+   decisions through `document-reader-revise`.
+5. **Proof and acceptance:** final completeness, formatting, cross-references,
    rendering, and success against the assignment and plot.
 
-Give reviewers the audience, focus, plot, and relevant sources. Independence
-means they do not see one another's findings; it does not mean withholding the
-context required to judge the document. Classify every issue by the earliest
-artifact that can resolve it, then return it there:
+Give editorial reviewers the audience, focus, plot, and relevant sources.
+Independence means they do not see one another's findings; it does not mean
+withholding the context required for editorial judgment.
+
+Reader personas follow a different contract. Dispatch them only through
+`document-reader-review`; never give them the author's intent, focus, plot, or
+another persona's output. Reader review returns reactions rather than repairs.
+Route substantive reader findings through `document-reader-revise`, then return
+explicitly author-approved changes to the earliest editorial artifact they
+affect. Delegated writing authority does not let the agent approve a reader
+finding on the author's behalf.
+
+Classify every editorial or accepted reader issue by the earliest artifact that
+can resolve it, then return it there:
 
 - wrong promise or scope → assignment or focus;
 - missing or misconceived substance → discovery or content model;
@@ -182,7 +196,13 @@ Acceptance asks whether the document works, not whether every heuristic fired:
 - Conceptual explanation is proportional to novelty and importance.
 - Representations serve the relationships they were chosen for.
 - Line and copyediting introduced no loss or contradiction.
+- When reader review was selected, persona coverage and takeaway divergence are
+  reported, and accepted findings have passed back through their owning
+  editorial stages.
 - The delivered format is complete and usable.
+
+Reader review does not certify external truth. Route systematic claim
+verification to a separate external fact-checking workflow.
 
 Revise failures at their owning stage. If resolution requires new authority,
 evidence, or a material scope choice, report it instead of hiding it with fluent
@@ -203,6 +223,8 @@ separate context actually performed it.
 - [ ] The plot preserved a discernible reader progression without becoming a
       rigid form.
 - [ ] Developmental decisions preceded line and copy edits.
+- [ ] Reader review, when required, remained independent from editorial review
+      and left substantive decisions with the author.
 - [ ] Lens observations were interpreted in document context and routed to the
       stage that owned the problem.
 - [ ] Durable artifacts make the work resumable without chat history.

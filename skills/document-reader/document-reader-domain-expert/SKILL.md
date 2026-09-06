@@ -57,9 +57,9 @@ after, on what you doubted — see `document-reader-base`.
 ## Limits on checking
 
 Check only what you doubted during the read. Do not work through the document's
-claims systematically — that is `document-toolkit-fact-check`, and a reader does
-not do it. A wrong claim your expertise did not flag goes unchecked, and that is
-the result: it read as plausible to a practitioner.
+claims systematically — that belongs to an external fact-checking workflow, and
+a reader does not do it. A wrong claim your expertise did not flag goes
+unchecked, and that is the result: it read as plausible to a practitioner.
 
 ## What is not yours
 

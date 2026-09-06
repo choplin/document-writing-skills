@@ -4,7 +4,7 @@ This family treats document writing and revision as an editorial workflow. It
 establishes the assignment, learns the material, finds the governing focus,
 models the content, and creates a flexible genre-specific plot before drafting
 or substantive revision. Developmental editing comes before line editing,
-copyediting, and proof.
+copyediting, reader testing when required, and proof.
 
 Intermediate artifacts can be stored as immutable Markdown revisions with
 explicit lineage. There is no mutable state file or separate event log; current
@@ -29,7 +29,8 @@ For a new document:
 
 ```text
 assignment → discovery → focus → content model → plot → draft
-           → developmental edit → line edit → copyedit → proof/acceptance
+           → developmental edit → line edit → copyedit
+           → reader review when required → proof/acceptance
 ```
 
 For an existing document:
@@ -37,7 +38,8 @@ For an existing document:
 ```text
 editorial assignment → diagnostic reading → reverse outline
                      → editorial diagnosis → revised plot
-                     → substantive revision → line/copy/proof
+                     → substantive revision → line/copy
+                     → reader review when required → proof
 ```
 
 Adjacent planning artifacts may be combined for small documents, but their
@@ -56,9 +58,25 @@ books or chapters, technical documents, and academic work.
 - conformance checks detect local correctness and consistency defects after the
   larger decisions are stable.
 
-Only the third category flows directly through `audit` and `apply`. Reviewers
-receive the relevant audience and plot context; “blind” means independent of
-other reviewers' conclusions, not deprived of document intent.
+Only the third category flows directly through `audit` and `apply`. Editorial
+reviewers receive the relevant audience and plot context; “blind” means
+independent of other editorial reviewers' conclusions, not deprived of document
+intent.
+
+## Reader-side acceptance
+
+The bundled `document-reader` system tests a different boundary after a complete
+draft is editorially stable. Its personas report what intended readers
+understood, rejected, or would act on without seeing the author's intent or the
+editorial plot. `document-reader-review` returns findings only;
+`document-reader-revise` puts every substantive response to the author before
+changing the document.
+
+Use reader review when comprehension, persuasion, decision quality, or ability
+to act is material to acceptance. If accepted findings change substance or
+structure, return to the earliest affected editorial stage and repeat downstream
+passes. Do not interpret a clean reader review as factual verification; that is
+a separate external workflow.
 
 ## Durable artifacts
 
@@ -105,3 +123,6 @@ central status mutation.
 | `prose` | Content-preserving line edit |
 | `audit` | Local conformance findings without edits |
 | `apply` | Application of selected local findings |
+
+The reader-review skills are documented in
+[`../document-reader/README.md`](../document-reader/README.md).

@@ -12,7 +12,7 @@ language, live in [Japanese examples](../ja/examples.md) and
 **These lenses do not judge whether a claim is true.** They judge whether the
 document supports it, marks its status honestly, and holds together with
 itself. A document can pass this whole layer and still be wrong about its
-subject; route that to `document-toolkit-fact-check`.
+subject; route that to a separate external fact-checking workflow.
 
 ---
 

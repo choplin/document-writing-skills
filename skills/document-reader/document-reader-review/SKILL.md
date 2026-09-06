@@ -17,12 +17,11 @@ metadata:
 
 Simulate the document's readers and report what happened to them.
 
-Every other document review in this repository is text-internal or
-source-external: it asks whether the document is consistent, readable, or
-factually right. This one asks a question that cannot be answered from the text
-alone — **does this document work on the person it was written for?** Answering
-it requires a reader with a prior state, so the unit of review is a persona, not
-a lens.
+Editorial review asks whether the document is consistent, coherent, and
+readable. External fact-checking asks whether its claims are true. This review
+asks a question neither can answer — **does this document work on the person it
+was written for?** Answering it requires a reader with a prior state, so the
+unit of review is a persona, not a lens.
 
 You are the caller. You select the readers, brief them, and assemble what comes
 back. **You do not read the document as a reader yourself** — you have the
@@ -65,7 +64,7 @@ Do not:
 - propose fixes, wording, or additions — that is `document-reader-revise`;
 - edit the document;
 - verify claims yourself, or verify claims no persona doubted — systematic
-  verification is `document-toolkit-fact-check`;
+  verification belongs to an external fact-checking workflow;
 - report writing defects — wording, structure, notation and terminology are
   `document-writing-review` and `-audit`;
 - run a persona outside the document's audience;
@@ -165,7 +164,7 @@ finding: the findings are the mechanism, this is the outcome.
 Route out rather than judging:
 
 - doubts no persona could settle, and every doubt raised by a persona that does
-  not check → `document-toolkit-fact-check`;
+  not check → external fact-checking;
 - stumbles the personas attributed to phrasing → `document-writing-review`.
 
 **A reader review never certifies accuracy.** Even with the checking personas
@@ -220,7 +219,7 @@ verification:
 
 routed_out:
   - anchor:
-    to: document-toolkit-fact-check | document-writing-review
+    to: external-fact-checking | document-writing-review
     why:
 ```
 

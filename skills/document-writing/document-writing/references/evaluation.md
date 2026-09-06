@@ -20,12 +20,19 @@ The run passes only when it:
 - treats lens heuristics as inputs to judgment rather than independent commands;
 - records any added substantive premise with its source or editorial status;
 - produces a coherent whole whose emphasis follows the plot;
+- keeps editorial review distinct from persona-based reader review, and leaves
+  substantive reader-finding decisions with the author;
 - preserves enough artifacts to resume the work in a fresh context.
 
 Fail the run when it begins with a list of located lens findings and merely
 applies them, requires the smallest local remediation for a developmental
 problem, defines every technical term without regard to audience, or withholds
 the plot and audience from editorial reviewers in the name of blindness.
+Also fail when it gives a reader persona the author's intent or plot, treats
+reader reactions as copyedit findings, or presents reader review as evidence
+that the document is factually accurate. Fail when the writing agent marks its
+own response to an `assertion-change`, `author-knowledge`, or `scope-call`
+finding as author-approved without an explicit source or author decision.
 
 ## Regression case: centralized data management
 
@@ -73,3 +80,12 @@ downstream plot based on the first revision must be recognized as needing review
 because a newer revision exists or its recorded digest differs. The workflow
 must create a new downstream revision even when the review concludes that its
 body can remain unchanged. No mutable state file or event log may be required.
+
+## Reader-review boundary case
+
+Give a fresh agent a complete proposal whose acceptance depends on both a
+decision maker and a skeptical peer. The run must use `document-reader-review`
+after editorial stabilization, keep the author intent and plot from both
+personas, preserve their reactions without proposing repairs, and route any
+substantive response through `document-reader-revise`. A resulting content
+change must return through the affected editorial passes before proof.

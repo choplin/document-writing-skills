@@ -33,11 +33,33 @@ Primary references:
 | Developmental edit | Is the substance and architecture right? | revised plot and draft | Content, order, proportion, and emphasis work as a whole. |
 | Line edit | Does the prose carry the intended movement? | revised draft | Paragraph and sentence realization is natural and coherent. |
 | Copyedit | Is the text locally correct and consistent? | copyedited draft | Terminology, references, grammar, syntax, and style pass. |
+| Reader review, when required | What happens to an intended reader encountering the complete draft? | persona findings and takeaway models | Required reader outcomes have evidence, or unresolved reactions are explicit. |
 | Proof/accept | Does the delivered object fulfill the assignment? | final document | Content and rendering are complete and usable. |
 
 Small documents may combine artifacts, for example `brief-focus` or
 `content-model-plot`. Combining is not skipping: the combined artifact must
 still preserve the relevant decisions.
+
+## Reader acceptance route
+
+Editorial review and reader review are separate systems. Developmental, line,
+and copyediting judge the document with its assignment, focus, plot, and sources
+in view. `document-reader-review` instead measures what an intended reader
+understands, accepts, doubts, and would do after encountering a complete draft.
+Its personas never receive the author's intent, plot, or one another's findings.
+
+Select reader review when acceptance depends materially on comprehension,
+persuasion, decision quality, or ability to act, or when the caller requests
+reader evidence. Run it after the draft is substantively complete and locally
+edited, but before final acceptance. Route its findings through
+`document-reader-revise`, which keeps substantive decisions with the author.
+The writing agent cannot treat its own preferred repair as author approval.
+After an explicit author resolution, return every accepted change to the
+earliest editorial stage it affects and repeat downstream editing and proof as
+needed.
+
+A clean reader review does not establish factual accuracy. Systematic claim
+verification remains a separate external fact-checking workflow.
 
 ## Existing-document branch
 

@@ -53,9 +53,9 @@ after, on what you doubted — see `document-reader-base`.
 
 Check only what you doubted during the read. Do not audit the document against
 the codebase claim by claim — a reader does not do that, and systematic
-verification is `document-toolkit-fact-check`. A wrong claim that did not make
-you pause goes unreported, and that is the correct outcome: it did not read as
-wrong.
+verification belongs to an external fact-checking workflow. A wrong claim that
+did not make you pause goes unreported, and that is the correct outcome: it did
+not read as wrong.
 
 ## What is not yours
 

@@ -3,11 +3,12 @@
 Skills for the question a document cannot answer about itself: **does this work
 on the reader it was written for?**
 
-Distinct from `document-writing`, which judges how a document reads and whether
-it holds together, and from `document-toolkit`, which operates on documents as
-objects — verifying claims, reworking a set. Those judge the document against
-itself or against the world. These judge it from the reader's side, so the unit
-of review is a reader with prior knowledge, not a lens over the text.
+This is the reader-acceptance subsystem of the bundled `document-writing`
+workflow. It is distinct from editorial review, which judges how a document
+reads and whether it holds together, and from external fact-checking, which
+judges claims against the world. Reader review asks what happens to an intended
+reader, so its unit of review is a persona with prior knowledge, not a lens over
+the text.
 
 ## Skills
 
@@ -63,8 +64,8 @@ takeaway model are frozen before any source opens, so verification cannot repair
 the read: a stumble cleared by going and reading the code is still a stumble.
 
 A claim nobody doubted is never checked, and a clean reader review is not
-evidence that a document is accurate. Working through every claim against sources
-is `document-toolkit-fact-check`.
+evidence that a document is accurate. Working through every claim against
+authoritative sources belongs to a separate external fact-checking workflow.
 
 ## Findings and repair are separate
 
@@ -73,7 +74,11 @@ missing premise, an unanswered objection, an undisclosed cost. That is a decisio
 about what the document asserts, and it belongs to the author — so `review`
 proposes no wording at all, and `revise` asks rather than drafts.
 
+An agent asked to write or revise the document is still not the author. It may
+apply a substantive reader finding only after the source material or the author
+explicitly supplies the decision that closes it.
+
 ## Installation
 
-Install these skills through the repository's `skills add` workflow documented
-in the root README.
+Install these skills together with the editorial skills through the repository's
+`skills add` workflow documented in the [root README](../../README.md).

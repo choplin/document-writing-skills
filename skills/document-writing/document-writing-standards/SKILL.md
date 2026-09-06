@@ -185,7 +185,7 @@ recommendation: <contextual judgment, not an automatic command>
 
 ## Scope boundary
 
-These lenses do not establish external truth. Use authoritative sources or
-`document-toolkit-fact-check` for factual verification. Reader outcome is part
-of the document-writing workflow and may also be tested through
+These lenses do not establish external truth. Use authoritative sources through
+a separate external fact-checking workflow for factual verification. Reader
+outcome is part of the document-writing workflow and may also be tested through
 `document-reader-review`; it is no longer excluded from readability judgment.

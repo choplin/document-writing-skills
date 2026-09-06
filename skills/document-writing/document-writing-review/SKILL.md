@@ -37,6 +37,10 @@ branch. If work will span sessions or files, also follow
 7. Apply a connected line edit and then local copyedit through
    `document-writing-base`.
 8. Verify the result against the assignment, focus, plot, and protected content.
+9. When the assignment requires reader evidence, hand the complete draft to
+   `document-reader-review`. Work accepted findings through
+   `document-reader-revise`, then repeat every editorial pass affected by those
+   decisions before acceptance.
 
 Use planning principles and editorial heuristics from
 `document-writing-standards` in stages 2–6. They are aids to diagnosis and
@@ -45,10 +49,15 @@ document's substance and structure are stable.
 
 ## Review context
 
-Any reviewer receives the relevant audience, focus, reverse outline, current
-plot, sources, and intervention boundary. Reviewers may be blind to one
-another's conclusions, but never blind to the context needed to judge why the
-document exists.
+Any editorial reviewer receives the relevant audience, focus, reverse outline,
+current plot, sources, and intervention boundary. Editorial reviewers may be
+blind to one another's conclusions, but never blind to the context needed to
+judge why the document exists.
+
+Reader personas are not editorial reviewers. They follow
+`document-reader-review` and must not receive the author's intent, focus, plot,
+or another persona's findings. Their constrained prior knowledge is the
+measurement, not missing editorial context.
 
 ## Routing findings
 

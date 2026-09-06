@@ -24,6 +24,15 @@ hold, and an objection is closed by conceding, answering, or narrowing a claim.
 decision belongs to the author.** This skill's work is to put each decision
 cleanly, not to guess it.
 
+The agent drafting or editing on the author's behalf does not thereby possess
+author authority. A decision is author-supplied only when it is present in the
+source material or the author explicitly makes it in the current interaction.
+General permission to write, revise, proceed autonomously, or make reasonable
+assumptions is not permission to resolve an `author-knowledge`,
+`assertion-change`, or `scope-call` finding. Those classes are material by
+definition. If no author resolution exists, ask; if interaction is unavailable,
+leave the finding unfilled and stop before applying it.
+
 ## Responsibility boundary
 
 Own:
@@ -37,6 +46,7 @@ Own:
 Do not:
 
 - invent a fact, a rationale, a measurement, or a trade-off to close a gap;
+- label your own preferred response as accepted or author-owned;
 - close an objection by softening the claim without the author choosing that;
 - re-review the document, or generate findings of your own;
 - polish the writing — that is `document-writing-review` on the revised draft.
@@ -78,6 +88,9 @@ sentence for the author to approve is how an invented rationale reaches a
 document: approval is cheaper than authorship, and the author will take it. Ask
 what is true, then write it.
 
+Do not infer acceptance from the original writing assignment. Approval must
+refer to this finding and the content decision that closes it.
+
 A finding the author declines is closed as declined, not silently dropped.
 
 ## 4. Apply
@@ -113,7 +126,7 @@ declined:
 
 routed_out:
   - finding:
-    to: document-writing-review | document-toolkit-fact-check
+    to: document-writing-review | external-fact-checking
 
 stale:
   - finding:
