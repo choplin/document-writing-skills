@@ -10,9 +10,14 @@ What makes this treatment distinct? What must the reader bring with them?
 
 ## Arc
 
-Describe the book's movement in prose, cards, or a diagram. For each part or
-chapter, note the work it performs for the whole and the change it leaves in the
-reader. Track dependencies and deliberate echoes across chapter boundaries.
+Describe how the reader will encounter the book's recursive meaning or narrative
+structure. Choose the entry, order, grouping, pace, emphasis, revelation, and
+ending in prose, cards, or a diagram. Explain consequential departures from the
+content model's logical or narrative dependencies.
+
+Do not mirror one content-model unit as one part, chapter, scene, or paragraph.
+Track the mapping only where units are divided, combined, deferred, interwoven,
+or echoed. A chapter-to-theme table is an index, not an arc.
 
 ## Nonfiction prompts
 
@@ -31,8 +36,10 @@ reader. Track dependencies and deliberate echoes across chapter boundaries.
 
 ## Chapter or section cards
 
-Use any fields that help: provisional title, entry pressure, central movement,
-evidence or scene material, turn, exit state, bridge, unresolved problem.
+Use cards only when they help compare or rearrange candidate passages. Include
+whatever makes the reader-facing choice inspectable, such as provisional title,
+purpose, source units, scene or evidence material, turn, exit state, bridge, or
+unresolved problem. These are prompts, not required fields.
 
 ## Rhythm and proportion
 

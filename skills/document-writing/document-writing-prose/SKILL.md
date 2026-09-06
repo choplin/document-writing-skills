@@ -21,14 +21,15 @@ intervention: content-preserving
 verify: true
 ```
 
-Read prose as connected movement. Improve paragraph continuity, proposition or
-clause realization, information order, transitions, sentence boundaries,
-voice, diction, and cadence together. Do not optimize each lens or sentence in
-isolation.
+Read prose as the realization of a meaning hierarchy. Preserve what each
+passage establishes and how its parts compose that meaning while improving
+paragraph continuity, proposition or clause realization, information order,
+transitions, sentence boundaries, voice, diction, and cadence together. Do not
+optimize each lens or sentence in isolation.
 
-The audience, document kind, focus, and plot are editorial context, even though
-this lane cannot change them. If those are unavailable, infer only what the
-document strongly supports and report the limitation.
+The audience, document kind, focus, content model, and plot are editorial
+context, even though this lane cannot change them. If those are unavailable,
+infer only what the document strongly supports and report the limitation.
 
 Do not add claims or explanations, remove qualifications, change section order,
 rename concepts, or switch representation. When good prose depends on one of

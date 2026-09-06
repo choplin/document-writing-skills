@@ -30,6 +30,17 @@ guide.md.writing/
 Omit inapplicable kinds. Do not create `state.yaml` or `history.jsonl`. The
 revision files are the history.
 
+For a substantial explanatory, argumentative, procedural, or narrative
+document, the content model is not inapplicable. Its body must show recursively
+how lower-level meaning units compose the developed parent units and root
+meaning. A concept inventory, argument-edge list, paragraph summary list, or
+section-to-claim table does not satisfy that requirement.
+
+The body remains free-form. Do not require one record shape at every level or
+force all branches to the same depth. A short document may combine the content
+model and plot in one file only when it keeps the recursive meaning structure
+distinct from the reader-facing order and representation choices.
+
 ## Revision header
 
 Begin each artifact with minimal YAML frontmatter:

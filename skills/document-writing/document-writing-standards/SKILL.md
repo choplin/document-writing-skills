@@ -33,8 +33,9 @@ new section may be the right developmental edit. The “smallest local fix” is
 the governing objective.
 
 All roles share one purpose: let the intended reader spend attention on the
-subject rather than reconstructing the document. That judgment necessarily uses
-the audience's prior knowledge, the document's purpose, and the plot.
+subject rather than reconstructing how details form larger meanings. That
+judgment necessarily uses the audience's prior knowledge, the document's
+purpose, recursive content model, and plot.
 
 ## Lens index
 
@@ -106,9 +107,10 @@ instructions and examples are written in English.
 ### Assignment, focus, content model, and plot
 
 Use the planning roles. Especially consider claim support and epistemic status,
-concept centrality and introduction, document kind, document shape,
-representation, and cognitive pacing. Record their results in the planning
-artifact rather than manufacturing prose findings.
+composition across levels, concept centrality and introduction, document kind,
+document shape, representation, and cognitive pacing. Record their results in
+the planning artifact rather than manufacturing prose findings. A concept
+inventory, proposition graph, or paragraph list alone is not a content model.
 
 `terminology.definition` is audience-relative. Do not define a term merely
 because it is technical. Decide from:
@@ -127,8 +129,10 @@ or left unnamed.
 
 Use planning principles again against the complete draft, plus structural and
 rhythm heuristics. Compare the draft with the audience, focus, content model,
-and plot. Observations can authorize new explanations, deleted digressions,
-reordering, or a revised plot. They are not bounded to the smallest edit.
+and plot. Reconstruct how lower-level passages establish higher-level meanings;
+do not infer document coherence from local cohesion. Observations can authorize
+new explanations, regrouping, deleted digressions, reordering, a revised content
+model, or a revised plot. They are not bounded to the smallest edit.
 
 ### Line or stylistic edit
 
@@ -145,10 +149,10 @@ convert a heuristic into a check merely because it is easy to phrase as a rule.
 ## Context packets
 
 Planning and editorial reviewers receive the relevant assignment, audience
-knowledge, focus, plot, sources, and intervention boundary. A reviewer may be
-blind to other reviewers' conclusions, but not to the document context required
-by the lens. A copyeditor may receive a narrower packet when the substantive
-decisions are explicitly frozen.
+knowledge, focus, content model, plot, sources, and intervention boundary. A
+reviewer may be blind to other reviewers' conclusions, but not to the document
+context required by the lens. A copyeditor may receive a narrower packet when
+the substantive decisions are explicitly frozen.
 
 ## Findings and observations
 

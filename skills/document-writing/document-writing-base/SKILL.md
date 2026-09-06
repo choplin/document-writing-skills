@@ -44,6 +44,7 @@ editorial_context:
   outcome: <intended understanding, decision, or action>
   document_kind: <genre or technical-document kind>
   focus: <governing idea>
+  content_model: <path or concise equivalent>
   plot: <current durable artifact or concise equivalent>
   house_style: <if any>
   protected_content: []
@@ -60,14 +61,16 @@ claim about where a defect is expected.
 
 ## Line edit
 
-Read the document as connected prose, not as a bag of sentences. Use editorial
-heuristics to inspect paragraph movement, continuity, emphasis, transitions,
-sentence realization, voice, and cadence. Produce one coherent revision within
-the content and structural boundary.
+Read the document as connected prose, not as a bag of sentences. Use the content
+model to see what each passage establishes and how it contributes upward; then
+use editorial heuristics to inspect paragraph movement, continuity, emphasis,
+transitions, sentence realization, voice, and cadence. Produce one coherent
+revision within the content and structural boundary.
 
-When a good remedy requires a new claim, new explanation, section movement, or
-changed emphasis, do not improvise it locally. Return an observation to the
-earliest owning stage: focus, content model, plot, or developmental edit.
+When a good remedy requires a new claim, new explanation, changed relation,
+section movement, or changed emphasis, do not improvise it locally. Return an
+observation to the earliest owning stage: focus, content model, plot, or
+developmental edit.
 
 ## Copyedit
 
@@ -102,6 +105,7 @@ For every applying lane, compare before and after. Verify that the edit did not:
 - remove or add a claim, condition, limitation, contrast arm, or instruction;
 - change epistemic status or source attribution;
 - break a cross-reference or representation;
+- obscure how lower-level material establishes a higher-level meaning;
 - flatten the plotted emphasis or reader movement;
 - introduce a new local defect.
 

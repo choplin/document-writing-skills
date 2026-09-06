@@ -23,16 +23,22 @@ taxonomy.
 
 ## Governing path
 
-Describe the reader's path in prose, steps, a flow, or section cards. For each
-part, note the reader need, prerequisite, action or claim, expected result or
-new understanding, failure or limitation if relevant, and handoff to the next
-part.
+Linearize the recursive content model for the reader's task or intended
+understanding. Decide what the reader needs first, which meaning units may be
+combined or deferred, where a result or constraint changes the path, and what
+the reader can rely on afterward. Record the choices in prose, steps, a flow, or
+a few passage cards; do not require the same fields for every passage.
+
+Assign headings and physical sections only after the path works. Do not mirror
+content-model nodes or use a section table as the plot.
 
 ## Concepts and interfaces
 
 What must be explained because this audience does not know it? What familiar
 term needs only the particular property used here? Which commands, APIs,
 parameters, states, outputs, examples, or decisions must be represented exactly?
+Where will the reader see how those details establish the larger explanation or
+decision?
 
 ## Verification
 

@@ -2,9 +2,10 @@
 
 This family treats document writing and revision as an editorial workflow. It
 establishes the assignment, learns the material, finds the governing focus,
-models the content, and creates a flexible genre-specific plot before drafting
-or substantive revision. Developmental editing comes before line editing,
-copyediting, reader testing when required, and proof.
+models recursively how lower-level material composes higher-level meaning, and
+then turns that model into a reader-facing plot before drafting or substantive
+revision. Developmental editing comes before line editing, copyediting, reader
+testing when required, and proof.
 
 Intermediate artifacts can be stored as immutable Markdown revisions with
 explicit lineage. There is no mutable state file or separate event log; current
@@ -37,15 +38,17 @@ For an existing document:
 
 ```text
 editorial assignment → diagnostic reading → reverse outline
-                     → editorial diagnosis → revised plot
+                     → editorial diagnosis → content model → revised plot
                      → substantive revision → line/copy
                      → reader review when required → proof
 ```
 
 Adjacent planning artifacts may be combined for small documents, but their
-decisions are not skipped. A plot is a free-form account of reader progression,
-not a mandatory data schema. Templates are supplied for general documents,
-books or chapters, technical documents, and academic work.
+decisions are not skipped. The content model is a recursive structure of meaning
+units and their composition; the plot chooses how the reader encounters it.
+Neither is a mandatory data schema or section-to-claim table. Templates are
+supplied for general documents, books or chapters, technical documents, and
+academic work.
 
 ## Lens placement
 

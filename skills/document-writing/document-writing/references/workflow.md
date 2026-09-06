@@ -24,14 +24,14 @@ Primary references:
 
 | Stage | Main question | Typical artifact | Exit condition |
 |---|---|---|---|
-| Assignment | For whom, for what use, under what constraints? | brief | Success and intervention scope are explicit. |
+| Assignment | For whom, for what use and reading behavior, under what constraints? | brief | Success, continuous versus lookup use, and intervention scope are explicit. |
 | Discovery | What does the material establish, suggest, or lack? | source notes | Claims, evidence, gaps, and provenance are inspectable. |
 | Focus | What is this document really about? | focus note | Governing question and controlling idea are specific. |
-| Content model | What conceptual and evidential pieces are needed? | content model | Centrality, novelty, relationships, and support are visible. |
-| Plot | How will the reader move through those pieces? | genre-specific plot | The sequence delivers the governing idea. |
-| Draft | What is the complete first realization? | draft | Every plotted movement has usable prose or representation. |
-| Developmental edit | Is the substance and architecture right? | revised plot and draft | Content, order, proportion, and emphasis work as a whole. |
-| Line edit | Does the prose carry the intended movement? | revised draft | Paragraph and sentence realization is natural and coherent. |
+| Content model | How does lower-level meaning recursively establish the document's higher-level meaning? | content model | Every developed non-leaf unit makes its meaning, children, and composition inspectable. |
+| Plot | How will this reader encounter that structure? | genre-specific plot | Order, grouping, emphasis, boundaries, and representations turn the model into a coherent reading path. |
+| Draft | What is the complete first realization? | draft | The composition of each major meaning unit is recoverable from connected prose or a fitting representation. |
+| Developmental edit | Is the substance and architecture right? | revised content model, plot, and draft | Meaning, composition, order, proportion, and emphasis work as a whole. |
+| Line edit | Does the prose carry the intended composition and movement? | revised draft | The prose realizes the hierarchy naturally without exposing planning boundaries. |
 | Copyedit | Is the text locally correct and consistent? | copyedited draft | Terminology, references, grammar, syntax, and style pass. |
 | Reader review, when required | What happens to an intended reader encountering the complete draft? | persona findings and takeaway models | Required reader outcomes have evidence, or unresolved reactions are explicit. |
 | Proof/accept | Does the delivered object fulfill the assignment? | final document | Content and rendering are complete and usable. |
@@ -40,12 +40,31 @@ Small documents may combine artifacts, for example `brief-focus` or
 `content-model-plot`. Combining is not skipping: the combined artifact must
 still preserve the relevant decisions.
 
+## Composition before sequence
+
+Do not use a concept inventory, argument-edge list, paragraph summary list, or
+section-to-claim table as the model of a document. Each may record useful
+material, but none explains how several lower-level units establish one
+higher-level meaning.
+
+Build that composition recursively before deciding presentation order. A unit
+may combine co-ordinate parts, a cause and consequence, a concession and turn,
+multiple perspectives, a sequence of state changes, or another structure. The
+pattern names are guides for communicating the model, not required labels.
+
+The plot then decides how this reader will encounter the model: where to enter,
+what order to use, which units to group or separate, what to emphasize, and how
+to realize them. The plot gate fails when it only restates the model, or when it
+can show coverage but not the reader-facing choices that make the structure
+followable.
+
 ## Reader acceptance route
 
 Editorial review and reader review are separate systems. Developmental, line,
-and copyediting judge the document with its assignment, focus, plot, and sources
-in view. `document-reader-review` instead measures what an intended reader
-understands, accepts, doubts, and would do after encountering a complete draft.
+and copyediting judge the document with its assignment, focus, content model,
+plot, and sources in view. `document-reader-review` instead measures what an
+intended reader understands, accepts, doubts, and would do after encountering a
+complete draft.
 Its personas never receive the author's intent, plot, or one another's findings.
 
 Select reader review when acceptance depends materially on comprehension,
@@ -64,17 +83,20 @@ verification remains a separate external fact-checking workflow.
 ## Existing-document branch
 
 Do not assume that an existing table of contents expresses the intended logic.
-After establishing the editorial assignment, make a reverse outline from the
-actual text. Use it to diagnose:
+After establishing the editorial assignment, make a recursive reverse outline
+from the actual text. Use it to diagnose:
 
-- the job each passage currently performs;
-- the claim and support it contains;
-- its relation to the governing idea;
+- what each passage currently establishes;
+- how passages group into larger meaning units;
+- how the lower-level units compose each parent and ultimately the governing
+  idea;
 - repetition, disproportion, missing premises, and unprepared transitions;
+- orphaned material and groups whose common point cannot be recovered;
 - concepts defined because they are easy to define rather than important.
 
-Then create a revised plot before substantive revision. This keeps diagnosis
-separate from the proposed solution.
+Then build or recover the content model and create a revised plot before
+substantive revision. This keeps diagnosis separate from the proposed solution
+and prevents the old draft's sentence boundaries from standing in for logic.
 
 Purdue OWL's [reverse outlining guidance](https://owl.purdue.edu/owl/graduate_writing/introduction_to_writing/documents/drafting-your-document/handouts/genre-analysis-activity.pdf)
 is a useful basis for recording each paragraph's main idea and relation to the

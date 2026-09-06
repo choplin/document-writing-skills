@@ -15,11 +15,12 @@ State the central contribution and its limits. Distinguish new evidence, new
 method, new synthesis, new interpretation, and practical implication. What
 would be missing from the literature without this work?
 
-## Argument map
+## Content-model projection
 
-Lay out the claims, warrants, evidence, counterarguments, qualifications, and
-dependencies in any useful form. Mark which findings are results and which are
-interpretations. Make the path from research question to contribution visible.
+Start from the recursive content model of claims, warrants, evidence,
+counterarguments, qualifications, and dependencies. Decide how the article will
+linearize that structure so the reader can reconstruct how each major claim and
+the contribution are established. Keep results distinct from interpretations.
 
 ## Method and evidence
 
@@ -29,10 +30,15 @@ work? What evidence would weaken the conclusion?
 
 ## Section movement
 
-For each proposed section, note its intellectual job, input assumptions, central
-claim or reportable material, evidence, relation to adjacent sections, and the
-reader state it establishes. Section labels may follow a venue; their internal
-movement still follows the argument.
+Describe the reader-facing order, grouping, emphasis, and boundaries that turn
+the content model into an article. A section may develop one meaning unit across
+several passages or combine several units; venue labels do not determine that
+mapping. Record where methods, results, warrants, objections, qualifications,
+or implications must enter for the argument to remain reconstructable.
+
+Use passage-level questions such as evidential pressure, interpretive turn, or
+handoff only where they clarify a consequential transition. A table mapping
+sections to claims demonstrates coverage but does not plot the argument.
 
 ## Constraints
 

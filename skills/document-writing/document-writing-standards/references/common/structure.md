@@ -186,10 +186,16 @@ lens: structure.document-shape
 language: common
 layer: structure
 packing_group: shape
-objective: Falsify the claim that the headings identify their content, the
-  sections are in a usable order, and prose and lists are used for the right
-  material.
+objective: Falsify the claim that lower-level passages compose recoverable
+  higher-level meanings, the resulting structure is presented in a usable
+  order, and its headings and representations serve that structure.
 checks:
+  - A group of passages whose common meaning or contribution to its parent
+    cannot be recovered.
+  - Child passages that are all relevant to a topic but do not jointly establish
+    the meaning claimed for their parent.
+  - A flat sequence where the reader must infer which details form which larger
+    points.
   - Headings that state a procedure rather than the subject or the question.
   - Headings that give away the section's conclusion.
   - Headings with no information content.
@@ -201,6 +207,15 @@ content_impact: structural
 
 ### Rules
 
+- **Recover composition before judging layout.** State what each substantial
+  passage establishes, group passages into larger meaning units, and explain
+  how each group establishes its parent. Repeat until reaching the document's
+  governing meaning. Use the recursive content model rather than assuming that
+  headings or paragraph boundaries define the hierarchy.
+- A parent meaning is not a topic label or summary of its children. It is the
+  conclusion, understanding, state, or change their relation establishes.
+- Do not require uniform depth. Expand only the branches whose composition is
+  ambiguous, unsupported, or consequential to the reader's task.
 - **A heading names the question the section answers, or the object it treats.**
   A noun phrase naming the object is acceptable. Interrogative or declarative
   form does not matter; identifying the content does.

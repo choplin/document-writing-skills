@@ -3,7 +3,9 @@
 Language: **common**. These are planning principles and editorial heuristics.
 They change what the document asserts, how it supports it, and how confidently
 it states it, so they do not flow directly through copyedit or automatic
-finding application. Use them with the assignment, sources, focus, and plot.
+finding application. Use them with the assignment, sources, focus, content
+model, and plot. Treat the content model as the authority for how lower-level
+claims, evidence, perspectives, events, or actions compose higher-level meaning.
 
 Worked before/after pairs, and the hedging and concession vocabulary of each
 language, live in [Japanese examples](../ja/examples.md) and
