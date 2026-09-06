@@ -98,3 +98,7 @@ and `document-writing-apply`.
 `document-reader-newcomer`, `document-reader-skeptical-peer`,
 `document-reader-implementer`, `document-reader-decision-maker`,
 `document-reader-domain-expert`, and `document-reader-revise`.
+
+## License
+
+MIT. See [LICENSE](./LICENSE).
