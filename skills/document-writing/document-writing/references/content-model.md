@@ -59,19 +59,36 @@ branch, explain why the available children are sufficient for the parent and
 whether their evidence and epistemic status support the strength of that parent.
 Revise the parent, the children, or the root when that explanation fails.
 
-Then give a fresh writer the assignment, focus, content model, and relevant
-source material. Ask them to explain how the central branch establishes the root
-and to sketch the movement of one important continuous passage. The model is
-internally ready when that writer can do both while making their own natural
-choices about paragraphing and expression.
+Dispatch the assignment, focus, complete working content model, and relevant
+source material to a fresh writer. Ask them to explain how one central branch
+establishes the root and to sketch that branch as one important continuous
+passage. Require both parts while allowing the writer to make natural choices
+about paragraphing and expression.
 
-Treat meanings or relationships that the writer recovered from the old draft,
-source headings, or unstated author intent as gaps. Correct the affected branch
-inline in the working candidate, then repeat the check as needed. Do not create
-durable revisions for these internal review-and-repair cycles. Once the model
-passes, record the writer's explanation and passage sketch with the complete
-candidate and publish it as the next content-model revision. Plotting begins
-only after the human author has read and accepted that revision.
+Review the response for relationships or depth that the writer had to recover
+from source headings, the old draft, or unstated author intent. Treat every such
+recovery as a gap in the model. Correct the affected branch inline in the
+working candidate, then dispatch the complete corrected candidate for the same
+check. Repeat until the writer can explain the branch and sketch the passage
+from the model and supplied inputs without reconstructing omitted meaning.
+
+These review-and-repair cycles create one working candidate. Do not publish
+them as durable revisions. The candidate is internally ready only when it
+passes the complete fresh-writer check.
+
+## Publish and hand off
+
+Record the passing writer's explanation and passage sketch with the complete
+candidate, then publish it as the next durable content-model revision. Present
+that complete revision to the human author and wait for them to read and accept
+it. If they request changes, repair the working candidate, repeat upward
+verification and the fresh-writer check where the changes have an effect, and
+publish another complete revision only after it passes.
+
+Plotting begins only after the human author accepts the content-model revision.
+Hand the accepted model forward with the assignment, focus, and relevant source
+material; it governs what the document must establish while leaving the plot
+and prose free to realize it naturally.
 
 The completed model should make these outcomes observable:
 

@@ -83,25 +83,15 @@ material inventory for later mapping.
 
 ### 3. Design and verify the content
 
-Use [content-model.md](references/content-model.md) to derive the target content
-from the root downward. After that design exists, map source material and any
-reverse outline into it. Verify the proposed meanings upward from their support.
+Load [content-model.md](references/content-model.md) when this phase begins.
+Give it the assignment, focus, relevant sources, and, for an existing document,
+the diagnosis and reverse outline. Follow its complete content-design procedure.
 
-Before opening the plot phase, dispatch the assignment, focus, content model,
-and relevant source material to a fresh context. Receive its explanation of how
-one central branch establishes the root and its sketch of that branch as a
-continuous passage. Use this as an internal review of the working content-model
-candidate. Correct the candidate inline and repeat the check as needed when the
-fresh writer had to recover a relationship or depth from source headings, the
-old draft, or unstated intent. These review-and-repair cycles are part of making
-one candidate; do not allocate durable revisions to them.
-
-Once the candidate passes the check, record the evidence with it and publish the
-complete candidate as the next durable content-model revision. Present that
-revision to the human author and wait for them to read and accept it before
-opening the plot phase. If they request changes, repair and review a working
-candidate before publishing another revision. The accepted result governs what
-the document must establish while leaving the plot and prose free to realize it
+This phase is complete when a complete content-model candidate has passed that
+internal check, been published as a durable revision, and been read and accepted
+by the human author. Hand the accepted content model, assignment, focus, and
+relevant sources to the matching plot guide. The accepted model governs what the
+document must establish while leaving plot and prose free to realize it
 naturally.
 
 ### 4. Plot the reader's experience
