@@ -90,12 +90,19 @@ reverse outline into it. Verify the proposed meanings upward from their support.
 Before opening the plot phase, dispatch the assignment, focus, content model,
 and relevant source material to a fresh context. Receive its explanation of how
 one central branch establishes the root and its sketch of that branch as a
-continuous passage. Record this evidence with the content model and resolve any
-relationship or depth that the fresh writer had to recover from source headings,
-the old draft, or unstated intent.
+continuous passage. Use this as an internal review of the working content-model
+candidate. Correct the candidate inline and repeat the check as needed when the
+fresh writer had to recover a relationship or depth from source headings, the
+old draft, or unstated intent. These review-and-repair cycles are part of making
+one candidate; do not allocate durable revisions to them.
 
-The verified result governs what the document must establish while leaving the
-plot and prose free to realize it naturally.
+Once the candidate passes the check, record the evidence with it and publish the
+complete candidate as the next durable content-model revision. Present that
+revision to the human author and wait for them to read and accept it before
+opening the plot phase. If they request changes, repair and review a working
+candidate before publishing another revision. The accepted result governs what
+the document must establish while leaving the plot and prose free to realize it
+naturally.
 
 ### 4. Plot the reader's experience
 
@@ -109,6 +116,14 @@ Choose one guide:
 Use it to choose the reader's entry, order, grouping, pace, emphasis, local
 passage movement, physical boundaries, ending, and representations. The plot
 owns the path through the modeled content.
+
+Review the working plot against the accepted content model, assignment, and
+relevant sources. Correct findings inline and repeat until the candidate is
+coherent and ready for the author; do not preserve those internal iterations as
+durable revisions. Publish the complete candidate as the next plot revision,
+then wait for the human author to read and accept it before drafting. If they
+request changes, complete the same internal review-and-repair cycle before
+publishing another revision.
 
 ### 5. Draft and edit
 
@@ -140,9 +155,10 @@ unresolved decisions.
 ## Coordinate context and revision
 
 Give each phase the exact current artifacts it needs. Content design receives
-the assignment, focus, sources, and diagnosis. Plotting receives the accepted
-content model. Drafting and editorial review receive the assignment, focus,
-content model, plot, sources, and intervention boundary.
+the assignment, focus, sources, and diagnosis. Plotting receives the
+human-accepted content model. Drafting and editorial review receive the
+assignment, focus, human-accepted content model, human-accepted plot, sources,
+and intervention boundary.
 
 Independent editorial reviewers receive the same governing context while
 working without one another's conclusions. Reader personas receive the finished
@@ -160,3 +176,9 @@ Route a failure to its earliest owner:
 When an upstream decision changes, review its downstream artifacts and create
 new durable revisions for the affected decisions and prose. Report choices that
 require new authority, evidence, or scope.
+
+A durable planning revision is a complete candidate for human inspection, not
+a record of AI editing history. Perform self-review and inline repair before
+publishing it. Human acceptance without changes advances the workflow without
+creating another revision; changes requested after inspection produce a new
+revision only after its working candidate has passed the same internal checks.

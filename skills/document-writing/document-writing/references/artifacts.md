@@ -30,6 +30,25 @@ guide.md.writing/
 Omit inapplicable kinds. The immutable revision files and their links are the
 complete workflow history.
 
+## Working candidates and human gates
+
+A numbered planning artifact is a complete candidate ready for human
+inspection, not an autosave or a record of AI editing history. Develop the
+candidate, self-review it, and apply review findings inline before assigning the
+next revision number. Repeat that internal cycle as needed without preserving
+each intermediate state as a durable artifact.
+
+After publishing a content-model or plot revision, present that exact revision
+to the human author and wait for them to read and accept it before starting the
+dependent phase. Acceptance without changes does not create a new revision. If
+the author requests changes, use the published revision as the basis for a new
+working candidate, complete its internal review and inline repair, and only then
+publish the next numbered revision.
+
+Working candidates are not durable workflow state. Keep them within the active
+phase and do not make later phases or resumability depend on an unnumbered file,
+mutable status record, or review log.
+
 For a substantial explanatory, argumentative, procedural, or narrative
 document, preserve a content model that starts from the reader-centered root,
 derives its supporting meanings top down, and records the upward support check.
@@ -57,10 +76,11 @@ based_on:
 The body is free-form Markdown. End with a short `Revision note` describing
 what changed and why. Do not add empty metadata merely to satisfy a schema.
 
-Past revisions are immutable. To change one, write the next numbered revision
-and point `supersedes` at the prior revision. The first revision omits
-`supersedes`. Paths are relative to the artifact root unless the source is
-external.
+Past revisions are immutable. To change one after it has been published for
+human inspection, finish and internally review the replacement, then write the
+next numbered revision and point `supersedes` at the prior revision. The first
+revision omits `supersedes`. Paths are relative to the artifact root unless the
+source is external.
 
 ## Detecting upstream changes
 
@@ -77,9 +97,11 @@ An upstream change does not automatically invalidate every word downstream.
 It requires review. Even when no body text changes, create a new revision if it
 is important to record that the newer premise was considered.
 
-The latest usable artifact is a revision not superseded by another revision in
-the same lineage. Branches are allowed; do not silently choose between two
-heads when they embody materially different decisions.
+The latest published artifact is a revision not superseded by another revision
+in the same lineage. Publication alone does not make a content model or plot
+usable by its dependent phase; that also requires the human acceptance described
+above. Branches are allowed; do not silently choose between two heads when they
+embody materially different decisions.
 
 A generated status page or index may be used for convenience only if it can be
 rebuilt from these files. It is never authoritative state.

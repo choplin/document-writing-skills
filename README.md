@@ -10,7 +10,8 @@ intended audience.
 ## Workflow boundary
 
 ```text
-assignment → discovery → focus → content model → plot → draft
+assignment → discovery → focus → content model → human acceptance
+           → plot → human acceptance → draft
            → developmental edit → line edit → copyedit
            → reader review when required → author-owned revision
            → proof and acceptance

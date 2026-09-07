@@ -30,7 +30,8 @@ For a new document:
 
 ```text
 assignment → discovery → reader-centered root → top-down content model
-           → bottom-up support check → plot → draft
+           → bottom-up support check → AI repair → human acceptance
+           → plot → AI repair → human acceptance → draft
            → developmental edit → line edit → copyedit
            → reader review when required → proof/acceptance
 ```
@@ -40,8 +41,9 @@ For an existing document:
 ```text
 editorial assignment → diagnostic reading → reverse outline
                      → reader-centered root → new top-down content model
-                     → map recovered material → bottom-up support check
-                     → revised plot
+                     → map recovered material → support check → AI repair
+                     → human acceptance → revised plot → AI repair
+                     → human acceptance
                      → substantive revision → line/copy
                      → reader review when required → proof
 ```
@@ -93,6 +95,13 @@ Each artifact revision records its kind, revision number, predecessor, and the
 paths and SHA-256 digests of upstream artifacts. Revisions are immutable. A
 changed upstream digest triggers downstream review and a new revision, not a
 central status mutation.
+
+AI self-review and inline repair happen while a planning candidate is still
+being made. Only a complete content model or plot that is ready for the human
+author receives a revision number. The human reads that exact revision before
+the dependent phase begins. Acceptance without changes keeps the same revision;
+author-requested changes receive the next number only after another internal
+review-and-repair cycle.
 
 ## References
 

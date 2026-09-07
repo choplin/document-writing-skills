@@ -45,6 +45,10 @@ A run passes when the observable work shows that it:
   one meaning across several passages;
 - records a fresh writer's content-model explanation and passage sketch before
   the plot phase;
+- repairs content-model and plot findings inline before publishing one complete
+  candidate for human inspection;
+- waits for human acceptance of each published content-model and plot revision
+  before starting its dependent phase;
 - produces prose whose larger meanings and movement can be reconstructed by a
   fresh reader;
 - preserves source boundaries, qualifications, provenance, and author-owned
@@ -123,6 +127,18 @@ Create two revisions of an upstream focus or content-model artifact. A plot
 based on the first revision needs a new reviewed revision after the upstream
 change, even when its body remains suitable. Derive this from immutable
 revision artifacts and `based_on` digests.
+
+## Planning-publication gate case
+
+Supply a content-model candidate and a plot candidate with defects that an
+independent AI review can identify. Pass when the agent repairs each candidate
+inline, publishes only the internally complete result as a numbered revision,
+and pauses for the human author to read it before beginning the dependent phase.
+Human acceptance without changes must not create a duplicate revision. If the
+human requests a change, the replacement receives the next number only after
+its own internal review and repair. Fail when AI review iterations become
+numbered artifacts, unresolved AI findings are handed to the human, or plotting
+or drafting starts before the corresponding human acceptance.
 
 ## Reader-review boundary case
 

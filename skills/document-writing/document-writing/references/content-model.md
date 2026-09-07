@@ -62,13 +62,16 @@ Revise the parent, the children, or the root when that explanation fails.
 Then give a fresh writer the assignment, focus, content model, and relevant
 source material. Ask them to explain how the central branch establishes the root
 and to sketch the movement of one important continuous passage. The model is
-ready for plotting when that writer can do both while making their own natural
+internally ready when that writer can do both while making their own natural
 choices about paragraphing and expression.
 
-Record the writer's explanation and passage sketch with the content-model
-artifact. Treat meanings or relationships that the writer recovered from the
-old draft, source headings, or unstated author intent as gaps in the model and
-revise the affected branch before plotting.
+Treat meanings or relationships that the writer recovered from the old draft,
+source headings, or unstated author intent as gaps. Correct the affected branch
+inline in the working candidate, then repeat the check as needed. Do not create
+durable revisions for these internal review-and-repair cycles. Once the model
+passes, record the writer's explanation and passage sketch with the complete
+candidate and publish it as the next content-model revision. Plotting begins
+only after the human author has read and accepted that revision.
 
 The completed model should make these outcomes observable:
 
