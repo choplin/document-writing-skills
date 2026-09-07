@@ -6,15 +6,37 @@ history is not.
 
 ## Storage
 
-When the user or repository names a working location, use it. Otherwise, for a
-file-backed document, create a sibling directory named `<document>.writing/`.
-For supplied text with no durable destination, keep artifacts in the response
-unless persistence would clearly help and an in-scope workspace is available.
+Choose the artifact root in this order:
+
+1. Use a working location named by the user or repository.
+2. For a document in a version-controlled workspace, use a repository-local,
+   writable working area that is already excluded from version control. When
+   `.agents/` exists and is excluded, use
+   `.agents/document-writing/<document-relative-path>.writing/`. Do not create
+   `.agents/` or change ignore rules merely to obtain this location.
+3. Otherwise, use the platform's persistent per-user state area. On systems
+   following the XDG Base Directory specification, use
+   `$XDG_STATE_HOME/document-writing/<workspace-id>/`, or
+   `~/.local/state/document-writing/<workspace-id>/` when `XDG_STATE_HOME` is
+   unset. Preserve the document's workspace-relative path beneath that root
+   and use the `<document>.writing/` suffix. Choose a deterministic,
+   collision-resistant workspace identifier so another repository cannot
+   share the artifact root accidentally.
+4. If no persistent writable location is available, ask the user where to keep
+   durable artifacts before creating them.
+
+Do not place artifacts beside a version-controlled document unless the user or
+repository explicitly selects that location. For supplied text with no durable
+destination, keep artifacts in the response unless persistence would clearly
+help and an in-scope persistent location is available.
 
 Use one directory per artifact kind and immutable, zero-padded revisions:
 
+For example, a repository that provides an ignored `.agents/` directory may
+store artifacts for `docs/guide.md` as:
+
 ```text
-guide.md.writing/
+.agents/document-writing/docs/guide.md.writing/
   brief/001.md
   discovery/001.md
   focus/001.md

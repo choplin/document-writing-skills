@@ -89,12 +89,16 @@ a separate external workflow.
 
 ## Durable artifacts
 
-For multi-session work, store artifacts beside the target in a
-`<document>.writing/` directory unless the project defines another location.
-Each artifact revision records its kind, revision number, predecessor, and the
-paths and SHA-256 digests of upstream artifacts. Revisions are immutable. A
-changed upstream digest triggers downstream review and a new revision, not a
-central status mutation.
+For multi-session work, first use a location selected by the user or project.
+Otherwise, prefer an existing writable repository work area that version
+control already ignores, such as
+`.agents/document-writing/<document-relative-path>.writing/`. Fall back to the
+user's persistent platform state area, using `XDG_STATE_HOME` on XDG systems.
+Do not place artifacts beside a version-controlled document unless that
+location was explicitly selected. Each artifact revision records its kind,
+revision number, predecessor, and the paths and SHA-256 digests of upstream
+artifacts. Revisions are immutable. A changed upstream digest triggers
+downstream review and a new revision, not a central status mutation.
 
 AI self-review and inline repair happen while a planning candidate is still
 being made. Only a complete content model or plot that is ready for the human
