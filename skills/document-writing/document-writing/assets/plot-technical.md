@@ -1,57 +1,50 @@
 # Technical-document plot
 
-Choose the document kind from the user's need. A document may link to other
-kinds, but one passage should not drift between incompatible purposes.
+Choose the primary document kind from the reader's use: a guided learning
+experience, directions for completing a task, lookup during work, an
+explanation, or a design decision. Let that use govern the path and
+representations.
 
-## Reader and use
+## Reader footing and value
 
-Who is working or learning? What task or understanding do they need? What do
-they already know, what environment do they have, and what constraints or risks
-matter?
-
-## Document kind
-
-- Tutorial: a guided learning experience with a reliable successful path.
-- How-to guide: directions for a competent user completing a real task.
-- Reference: accurate, structured description for lookup during work.
-- Explanation: context and connections that deepen understanding.
-- Decision/design document: a decision, rationale, constraints, alternatives,
-  and consequences for collaborators.
-
-State the primary kind and why it fits. Do not create sections merely to fill a
-taxonomy.
+Who is working or learning? What familiar problem, task, or situation brings
+them here? What do they already know, what constraints or risks matter, and what
+becomes possible after reading?
 
 ## Governing path
 
-Linearize the recursive content model for the reader's task or intended
-understanding. Decide what the reader needs first, which meaning units may be
-combined or deferred, where a result or constraint changes the path, and what
-the reader can rely on afterward. Record the choices in prose, steps, a flow, or
-a few passage cards; do not require the same fields for every passage.
+Describe how the reader reaches the document's answer, method, or design from
+that footing. Choose which meanings arrive first, which combine, where a result
+or constraint changes the direction, and what the reader can rely on afterward.
+Use the form that makes those choices inspectable.
 
-Assign headings and physical sections only after the path works. Do not mirror
-content-model nodes or use a section table as the plot.
+## Passage movement
+
+Give every central continuous passage a local path. State what question or
+pressure it inherits, how its explanation or reasoning develops, and what
+understanding or capability it hands to the next passage. Develop passages
+below the section level wherever the diagnosis found an internal-flow problem.
 
 ## Concepts and interfaces
 
-What must be explained because this audience does not know it? What familiar
-term needs only the particular property used here? Which commands, APIs,
-parameters, states, outputs, examples, or decisions must be represented exactly?
-Where will the reader see how those details establish the larger explanation or
-decision?
+Develop concepts according to the reader's prior knowledge and their importance
+to the task or argument. Represent commands, APIs, parameters, states, outputs,
+examples, and decisions at the precision required for use. Show where those
+details establish a larger explanation, decision, or capability.
 
-## Verification
+## Verification and bounds
 
-How can the reader tell that a step succeeded or an interpretation is correct?
-What facts must be verified against code, product behavior, or authoritative
-sources? Which versions and environments bound the claims?
+State how the reader recognizes success or a sound interpretation. Record the
+facts that require verification against code, product behavior, or authoritative
+sources, along with the versions and environments that bound them.
 
-## Architecture
+## Architecture and representation
 
-Where do task flow, machinery structure, comparison, hierarchy, or state change
-call for steps, tables, diagrams, or code? For reference material, let the
-document architecture reflect the thing described where that aids lookup.
+Choose steps for task flow, tables for repeated comparisons, diagrams for
+topology or state change, code for executable detail, and prose for connective
+reasoning. For reference material, align navigation with the described system
+where that improves lookup.
 
 ## Revision note
 
-What changed in this revision, and why?
+State what changed in this revision and why.

@@ -1,41 +1,40 @@
 # General document plot
 
-Use whichever prompts expose the document's movement. Delete the rest.
+Use the prompts that expose consequential choices in the reader's experience.
+The artifact may be prose, a sketch, passage cards, a diagram, or a combination.
 
-## Governing axis
+## Reader footing and destination
 
-What question, problem, or tension holds the document together? What answer or
-change should the reader reach? Why does that matter to this reader now?
+Where does this reader begin? What problem, question, task, or situation will
+they recognize? What answer, value, or change should they reach?
 
-## Reader movement
+## Movement
 
-Describe how this reader will encounter the recursive content model. Choose an
-entry, order, grouping, pace, emphasis, and ending. Record only the decisions
-that make this path preferable to another plausible path. A narrative paragraph,
-sketch, or a few passage cards may be enough.
+Describe the path from that footing to the destination. Choose the entry, order,
+grouping, pace, emphasis, turns, and ending. Explain the decisions that make
+this path fit the reader better than another plausible path.
 
-Do not mirror the content model node by node. One meaning unit may unfold across
-several passages, and one passage may realize several units together. Use entry,
-pressure, turn, landing, or handoff as prompts only where they clarify an
-important transition; they are not required fields.
+Map meanings to passages as the movement requires. A passage may combine several
+meanings, and one meaning may unfold across several passages. Record only the
+mapping decisions that affect comprehension or emphasis.
 
-## Content-model mapping
+## Continuous passages
 
-Which major meaning units are introduced, deferred, interwoven, compressed, or
-expanded? Where might presentation order obscure how children establish their
-parent meaning, and how will the prose or another representation prevent that?
+For each central or previously troubled passage, describe its local movement:
+the footing it inherits, what develops or changes within it, where the reader
+must combine ideas, and what becomes available at its end.
 
-## Shape and proportion
+## Shape and representation
 
-Where should the document slow down, turn, compare, demonstrate, or conclude?
-What deserves space because it is important, and what is merely easy to explain?
-Would any part be clearer as steps, a table, a diagram, or code?
+Mark where the document should slow down, turn, compare, demonstrate, or land.
+Allocate space according to importance and reader novelty. Choose prose, steps,
+tables, diagrams, or code from the relationships they need to express.
 
-## Open alternatives
+## Open choices
 
-Record plausible structures considered, unresolved choices, and why the current
-path is preferred.
+Record plausible alternatives, unresolved decisions, and the reason for the
+current choice.
 
 ## Revision note
 
-What changed in this revision, and why?
+State what changed in this revision and why.

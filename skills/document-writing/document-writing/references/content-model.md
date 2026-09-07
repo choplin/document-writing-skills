@@ -1,91 +1,83 @@
-# Recursive content model
+# Top-down content model
 
-Read this reference when building or recovering a content model. It supplies a
-shared way to describe discourse structure, not a schema that every document
-must fill.
+Read this reference when designing the content of a new document or a substantial
+revision. A content model is a generative account of what the whole document
+must establish and what meanings make that whole possible. Its form follows the
+material; prose, a tree, a diagram, or a mixture may all work.
 
-## Meaning units compose recursively
+## Establish the root
 
-Model the material as meaning units at whatever granularity the document needs.
-A unit may become a whole document, part, section, paragraph, several sentences,
-one sentence, scene, example, or step. Do not decide its granularity from the
-eventual heading or paragraph structure.
+Begin with the intended reader. State a root meaning that connects:
 
-Every non-leaf unit must make three things inspectable:
+- a problem, question, task, or situation the reader can recognize;
+- the document's answer, method, position, or experience; and
+- the value, consequence, or change the reader gains from it.
 
-- **Meaning:** what understanding, conclusion, state, or change the unit
-  establishes as a whole.
-- **Children:** the lower-level units from which that meaning is built.
-- **Composition:** how the children combine to establish the parent meaning.
+Adapt those elements to the document kind. A reference work may connect a work
+situation to reliable lookup and action; a narrative may connect an initial
+situation to the change or experience that gives the work significance. The root
+governs the model even when the final document reveals it gradually.
 
-Add a unit's role in its parent, perspective, evidence, claim status, or source
-only where that information affects composition or later writing. Leaves may be
-facts, claims, evidence, examples, decisions, actions, observations, scenes, or
-other indivisible material for the task at hand.
+## Design downward
 
-The focus proposes the root meaning. The content model tests whether the source
-material and lower-level units can actually establish it. Revise the focus when
-they cannot.
+Work from the root toward the material needed to establish it. For each meaning,
+ask what the reader must understand, accept, experience, or be able to do for
+that meaning to hold. Those required meanings become its children. Continue on
+the branches where another level would change the explanation, support,
+narrative, procedure, or writer's choices.
 
-## Composition patterns are guidance
+A child states content that can contribute to the parent: for example a claim,
+reason, mechanism, distinction, body of evidence, concrete illustration,
+decision, action, or scene. State in ordinary language how the children jointly
+establish the parent. The relation may involve causality, dependency, contrast,
+qualification, synthesis, sequence, or a form specific to the material; the
+actual meanings and their contribution matter more than a pattern name.
 
-Use familiar patterns as a shared vocabulary when they clarify the structure:
+Choose depth locally. Develop a branch far enough that a writer can make a
+coherent passage from it while preserving the important relationships, evidence,
+and claim status. Keep a larger meaning together when its internal movement is
+already clear. Develop the affected branch below the level where a diagnosed
+reader problem occurs. Different branches may therefore stop at different
+depths and use different forms.
 
-- co-ordinate enumeration or decomposition;
-- cause and consequence;
-- condition or dependency;
-- comparison or contrast;
-- concession and turn;
-- question and answer;
-- problem and response;
-- claim, grounds, and warrant;
-- generalization or concrete illustration;
-- definition and implication;
-- chronological, procedural, or state transition;
-- alternative and evaluation;
-- misconception and correction;
-- counterfactual reasoning;
-- exception or qualification;
-- multiple perspectives combined into a synthesis.
+## Use an existing draft as material
 
-For narrative or other descriptive work, useful patterns also include situation,
-event, and change; expectation and violation; desire, obstacle, action, and
-result; viewpoint shift; discovery or revelation; and tension, development, and
-resolution.
+A reverse outline describes what an existing draft currently makes available:
+its claims, explanations, examples, evidence, gaps, and effects on a reader. Use
+that account as an inventory and diagnosis.
 
-These names are neither exhaustive nor exclusive. A unit may combine patterns,
-and ordinary prose is preferable when no label describes the composition well.
-Surface expressions such as `first`, `however`, or `on the other hand` are
-possible realizations, not evidence that the underlying composition has been
-modeled correctly.
+Design the target content model afresh from the root. Once its structure works,
+map the recovered material into it. This comparison shows which material
+supports the new model, which material needs a different role, where support is
+missing, and where the root or one of its descendants must be narrowed. The
+existing draft remains a source of material and constraints throughout revision.
 
-## Choose depth by explanatory need
+## Verify upward
 
-Start from the root and expand only where the composition would otherwise be
-ambiguous, unsupported, or too coarse to draft. Stop when further decomposition
-would not change the reader's understanding, the writer's choices, or the
-evidence and claim status that must be preserved.
+Read the proposed model from its developed edges back toward the root. At each
+branch, explain why the available children are sufficient for the parent and
+whether their evidence and epistemic status support the strength of that parent.
+Revise the parent, the children, or the root when that explanation fails.
 
-Do not force every branch to the same depth. A central argument may need several
-levels while a familiar fact remains a leaf. A large document may need work-level,
-part-level, and chapter-level units; a short passage may need only a root and a
-few children.
+Then give a fresh writer the assignment, focus, content model, and relevant
+source material. Ask them to explain how the central branch establishes the root
+and to sketch the movement of one important continuous passage. The model is
+ready for plotting when that writer can do both while making their own natural
+choices about paragraphing and expression.
 
-## Content-model gate
+Record the writer's explanation and passage sketch with the content-model
+artifact. Treat meanings or relationships that the writer recovered from the
+old draft, source headings, or unstated author intent as gaps in the model and
+revise the affected branch before plotting.
 
-The model is ready for plotting only when:
+The completed model should make these outcomes observable:
 
-- the root meaning realizes the focus and is supported by its descendants;
-- every developed non-leaf unit explains how its children establish its meaning;
-- important perspectives, qualifications, evidence, and claim status occur at
-  the level where they affect the composition;
-- no child is present merely because the source mentioned it or a section needs
-  content;
-- co-ordinate units, dependent units, and different perspectives remain
-  distinguishable; and
-- a new writer can explain the document's major reasoning or narrative structure
-  without recovering it from headings or conversation history.
-
-A concept inventory, claim list, argument-edge list, table of contents, or set of
-paragraph summaries does not pass this gate by itself. Each can supply material,
-but none shows recursively how lower-level meaning becomes higher-level meaning.
+- its root connects the reader's situation, the document's answer or method,
+  and the resulting value or change;
+- its major branches were derived as requirements of that root;
+- reading each developed branch upward establishes its parent at the stated
+  strength;
+- branches containing the document's central difficulty are developed deeply
+  enough to guide a passage through that difficulty; and
+- the model supports connected writing rather than prescribing a sequence of
+  sentences or paragraphs.

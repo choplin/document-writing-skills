@@ -207,15 +207,16 @@ content_impact: structural
 
 ### Rules
 
-- **Recover composition before judging layout.** State what each substantial
-  passage establishes, group passages into larger meaning units, and explain
-  how each group establishes its parent. Repeat until reaching the document's
-  governing meaning. Use the recursive content model rather than assuming that
-  headings or paragraph boundaries define the hierarchy.
-- A parent meaning is not a topic label or summary of its children. It is the
-  conclusion, understanding, state, or change their relation establishes.
-- Do not require uniform depth. Expand only the branches whose composition is
-  ambiguous, unsupported, or consequential to the reader's task.
+- **Recover the current composition before judging layout.** State what each
+  substantial passage establishes, group passages into larger meanings, and
+  explain what a reader can build from them. This is a diagnostic reading of the
+  existing prose. Compare it with the target model that was designed top down
+  from the reader-centered root.
+- A parent states the conclusion, understanding, state, or change established by
+  its children and their relationship.
+- Choose diagnostic depth from the reader problem. Follow the affected branch
+  below the section level when its internal movement is where comprehension
+  fails.
 - **A heading names the question the section answers, or the object it treats.**
   A noun phrase naming the object is acceptable. Interrogative or declarative
   form does not matter; identifying the content does.

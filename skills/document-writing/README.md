@@ -1,11 +1,11 @@
 # document-writing
 
-This family treats document writing and revision as an editorial workflow. It
-establishes the assignment, learns the material, finds the governing focus,
-models recursively how lower-level material composes higher-level meaning, and
-then turns that model into a reader-facing plot before drafting or substantive
-revision. Developmental editing comes before line editing, copyediting, reader
-testing when required, and proof.
+This family builds documents from the change they should create for a reader.
+It establishes a reader-centered root, designs the meanings required to support
+that root, verifies them against the available material, and turns them into a
+reader-facing plot before drafting or substantive revision. Developmental
+editing comes before line editing, copyediting, reader testing when required,
+and proof.
 
 Intermediate artifacts can be stored as immutable Markdown revisions with
 explicit lineage. There is no mutable state file or separate event log; current
@@ -15,8 +15,8 @@ heads and upstream changes are derived from revision files and their digests.
 
 | Task | Skill | Result |
 |---|---|---|
-| Create or substantially rebuild a document | `document-writing` | Durable planning artifacts, a drafted and edited document, and acceptance against audience and plot |
-| Holistically revise an existing draft | `review` | Reverse outline, editorial diagnosis, revised plot, and revised document |
+| Create or substantially rebuild a document | `document-writing` | Orchestrated planning, drafting, editorial passes, and acceptance |
+| Holistically revise an existing draft | `document-writing-review` | The existing-document route through the governing workflow |
 | Write inside an already settled plan | `standards` | Relevant planning, editorial, and language guidance used during composition |
 | Improve prose without changing content or structure | `prose` | A connected line edit |
 | Inspect stable prose without changing it | `audit` | Local conformance findings only |
@@ -29,7 +29,8 @@ heads and upstream changes are derived from revision files and their digests.
 For a new document:
 
 ```text
-assignment → discovery → focus → content model → plot → draft
+assignment → discovery → reader-centered root → top-down content model
+           → bottom-up support check → plot → draft
            → developmental edit → line edit → copyedit
            → reader review when required → proof/acceptance
 ```
@@ -38,17 +39,20 @@ For an existing document:
 
 ```text
 editorial assignment → diagnostic reading → reverse outline
-                     → editorial diagnosis → content model → revised plot
+                     → reader-centered root → new top-down content model
+                     → map recovered material → bottom-up support check
+                     → revised plot
                      → substantive revision → line/copy
                      → reader review when required → proof
 ```
 
-Adjacent planning artifacts may be combined for small documents, but their
-decisions are not skipped. The content model is a recursive structure of meaning
-units and their composition; the plot chooses how the reader encounters it.
-Neither is a mandatory data schema or section-to-claim table. Templates are
-supplied for general documents, books or chapters, technical documents, and
-academic work.
+The reverse outline describes the existing document and supplies material and
+diagnosis. The target content model is designed separately from its root, then
+checked against that recovered material. Its representation and depth follow
+the needs of the document. The plot chooses how the reader encounters the
+modeled meanings, including the internal movement of central continuous
+passages. Templates are supplied for general documents, books or chapters,
+technical documents, and academic work.
 
 ## Lens placement
 
@@ -119,10 +123,10 @@ central status mutation.
 
 | Skill | Responsibility |
 |---|---|
-| `document-writing` | End-to-end new-document and substantial-rebuild workflow |
+| `document-writing` | Orchestrator for new documents and substantial revisions |
 | `standards` | Planning principles, editorial heuristics, local checks, and Japanese/English profiles |
 | `base` | Shared context-aware line/copy/audit/apply machinery |
-| `review` | Existing-document developmental review and revision |
+| `review` | Entry adapter selecting the existing-document route |
 | `prose` | Content-preserving line edit |
 | `audit` | Local conformance findings without edits |
 | `apply` | Application of selected local findings |

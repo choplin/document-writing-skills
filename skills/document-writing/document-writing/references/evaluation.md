@@ -1,91 +1,133 @@
 # Workflow evaluation
 
-Use these cases when changing the workflow or the role of a lens. They test
-editorial behavior, not exact wording. Do not load this file during ordinary
-writing or reveal its expectations to a forward-test agent.
+Use these cases when changing the workflow or the role of a lens. They preserve
+observed failure modes outside the ordinary writing context.
+
+## Revision policy
+
+Treat every workflow revision as a restructuring step until the basic flow has
+worked across the coverage cases below. Re-derive one coherent current workflow
+from the new evidence, then replace or remove instructions whose model of the
+work no longer fits. An additive correction is appropriate only after the basic
+flow is established and the new behavior is genuinely local.
+
+Runtime instructions describe the current desired behavior in positive terms.
+Keep historical alternatives, superseded behavior, failure descriptions, and
+regression-specific prohibitions in this evaluation reference. Compatibility
+with earlier skill behavior or artifact semantics is outside the design goal.
+
+Review each candidate revision for both kinds of accumulation: extra rules that
+leave an obsolete flow intact, and extra fields that reduce an agent's useful
+freedom. Prefer fewer governing principles whose outcomes can be observed in
+the artifacts and final document.
 
 ## Method
 
-Give a fresh agent only the task, source material, audience/use information that
-a real request would contain, and the installed skill. Inspect the intermediate
-reasoning artifacts and final document. A polished final paragraph is not enough
-evidence if the workflow cannot show how it chose the governing axis.
+Give a fresh writing agent the task, source material, audience and use
+information, and the installed skill. Keep this file and reference outputs out
+of that agent's context. Inspect the intermediate artifacts and final document.
+Use separate fresh contexts for handoff checks and blind comparisons.
 
-The run passes only when it:
+A run passes when the observable work shows that it:
 
-- identifies audience knowledge and intended use;
-- recovers or chooses a specific governing focus before line editing;
-- builds a recursive content model in which every developed non-leaf unit shows
-  what it establishes, which children establish it, and how they compose it;
-- lets branches stop at different depths rather than decomposing every unit into
-  the same record shape;
-- plots reader-facing order, grouping, emphasis, boundaries, and representation
-  without copying the content model node by node;
-- distinguishes a content or plot problem from a local prose defect;
-- explains concepts in proportion to novelty and argumentative centrality;
-- treats lens heuristics as inputs to judgment rather than independent commands;
-- records any added substantive premise with its source or editorial status;
-- produces a coherent whole from which the major meaning hierarchy and its
-  compositions can be reconstructed;
-- produces prose that a blind judge does not prefer less than a direct no-skill
-  revision merely because the skill output is more explicit;
-- keeps editorial review distinct from persona-based reader review, and leaves
-  substantive reader-finding decisions with the author;
-- preserves enough artifacts to resume the work in a fresh context.
+- establishes a root connecting a reader-recognizable situation or problem,
+  the document's answer or method, and its value or consequence;
+- derives the target content model downward from that root;
+- uses an existing draft's reverse outline as diagnosis and material rather
+  than as the topology of the target model;
+- verifies the proposed model upward from evidence and claim status;
+- chooses different depths and forms according to local explanatory need;
+- develops a branch below the section level when the diagnosed reader problem
+  occurs inside a section;
+- gives both the whole document and its central continuous passages a coherent
+  reader movement;
+- leaves the writer free to combine several meanings in a passage or develop
+  one meaning across several passages;
+- records a fresh writer's content-model explanation and passage sketch before
+  the plot phase;
+- produces prose whose larger meanings and movement can be reconstructed by a
+  fresh reader;
+- preserves source boundaries, qualifications, provenance, and author-owned
+  decisions; and
+- preserves enough durable artifacts for a fresh context to resume the work.
 
-Fail the run when it begins with a list of located lens findings and merely
-applies them, requires the smallest local remediation for a developmental
-problem, defines every technical term without regard to audience, or withholds
-the plot and audience from editorial reviewers in the name of blindness.
-Also fail when the content model is only a concept inventory, proposition-edge
-graph, paragraph list, or section-to-claim table; when the plot merely repeats
-that model; or when the draft expands planning entries one sentence at a time.
-Also fail when it gives a reader persona the author's intent or plot, treats
-reader reactions as copyedit findings, or presents reader review as evidence
-that the document is factually accurate. Fail when the writing agent marks its
-own response to an `assertion-change`, `author-knowledge`, or `scope-call`
-finding as author-approved without an explicit source or author decision.
+When a direct no-skill revision is available, compare final documents blindly.
+The workflow output should be at least as coherent and readable while delivering
+its intended reader outcome.
 
-## Regression comparison
+## Existing-draft direction case
 
-When a known failure and a direct no-skill revision are available outside the
-repository, use them as a blind comparison. Do not show either reference output
-to the forward-test agent. The candidate fails even when all required claims
-remain present if it reads like a content model or plot table expanded one
-sentence at a time, or if a blind judge finds it less readable than the direct
-revision. Also have a fresh reader reconstruct the major meaning units and how
-their children establish them; compare that reconstruction with the candidate's
-content model. Process compliance cannot compensate for a worse document.
+Supply a draft whose headings and section order are plausible but whose central
+argument requires a different hierarchy. The reverse outline should accurately
+describe the old draft. The target model should begin from a reader-centered
+root, derive the meanings required by that root, and only then map old material
+into the new structure. Fail the run when the target tree can be obtained mainly
+by renaming, regrouping, or reordering the old sections.
 
-## Coverage cases
+## Depth case
 
-Maintain at least one forward test for each plot family:
+Supply a draft whose document-level topic and section order are sound but whose
+reader failure occurs within one important section. The reverse outline,
+content model, and plot should follow that branch below the section level and
+guide a new internal movement. Fail the run when those artifacts stop at section
+summaries.
 
-- **Book or chapter:** the run models how chapter-level meanings compose the
-  work-level promise without treating chapter headings as the structure itself.
-- **Technical document:** the run chooses tutorial, how-to, reference,
-  explanation, or another justified kind from reader use, without creating
-  empty taxonomy sections.
-- **Academic document:** the run models how claims, warrants, evidence, and
-  qualifications compose the contribution, then selects a presentation from the
-  study/article type, venue, and reporting constraints rather than imposing
-  IMRAD universally.
-- **Existing draft:** the run records the actual recursive reverse outline before
-  proposing a revised content model and plot.
+## Freedom and continuity case
+
+Supply material containing a connected explanation that needs both a broad
+movement and several supporting relationships. The content model may use any
+form and uneven depth. Give it to a fresh writer with the assignment and source
+material. Pass when the writer can create a coherent passage with natural
+paragraphing. Fail when the artifact prescribes a uniform record shape, drives
+one sentence or paragraph per entry, or yields prose that reads as fragments
+joined in sequence.
+
+## Composition handoff case
+
+Give a fresh writer only the assignment, focus, content model, and relevant
+source material. Ask them to explain why the children of one central branch
+establish its parent and sketch the movement of that passage. Topic labels,
+presentation labels, order alone, or a named relation without the participating
+meanings fail this case.
+
+## Root-value case
+
+Supply technically complete material whose source organization begins from the
+system rather than the reader. Pass when the model roots the document in a
+problem, task, question, or situation the intended reader recognizes and makes
+the value of the answer or method intelligible. The final presentation may
+reveal that connection gradually when the genre calls for it.
+
+## Plot-family coverage
+
+Maintain at least one forward test for each family:
+
+- **Book or chapter:** the work-level promise governs chapter and passage arcs.
+- **Technical document:** reader use determines the document kind and the
+  movement of a central continuous passage.
+- **Academic document:** the research situation leads to a contribution whose
+  claims, evidence, warrants, and qualifications remain reconstructable.
+- **Existing draft:** diagnosis of the old document and design of the target
+  document remain distinct artifacts and directions of work.
+
+## Editorial-boundary case
+
+Supply a developmental problem that is visible in one sentence but owned by the
+focus, content model, or plot. Pass when it returns to that stage and the
+downstream artifacts are reconsidered. Conformance checks should remain local
+to correctness and consistency after substance and structure stabilize.
 
 ## Lineage case
 
-Create two revisions of an upstream focus or content-model artifact. A
-downstream plot based on the first revision must be recognized as needing review
-because a newer revision exists or its recorded digest differs. The workflow
-must create a new downstream revision even when the review concludes that its
-body can remain unchanged. No mutable state file or event log may be required.
+Create two revisions of an upstream focus or content-model artifact. A plot
+based on the first revision needs a new reviewed revision after the upstream
+change, even when its body remains suitable. Derive this from immutable
+revision artifacts and `based_on` digests.
 
 ## Reader-review boundary case
 
-Give a fresh agent a complete proposal whose acceptance depends on both a
-decision maker and a skeptical peer. The run must use `document-reader-review`
-after editorial stabilization, keep the author intent and plot from both
-personas, preserve their reactions without proposing repairs, and route any
-substantive response through `document-reader-revise`. A resulting content
-change must return through the affected editorial passes before proof.
+Give a fresh agent a complete proposal whose acceptance depends on a decision
+maker and a skeptical peer. Pass when the stable document goes to both personas
+without author intent or editorial planning, their reactions remain intact, and
+substantive responses return through author decision and the affected editorial
+stages. Reader review provides reader evidence rather than factual certification.

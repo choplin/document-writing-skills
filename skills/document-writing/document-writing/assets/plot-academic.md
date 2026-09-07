@@ -1,57 +1,51 @@
 # Academic document plot
 
-Select the structure from the argument, study type, target venue, and applicable
-reporting guidance. Use IMRAD for original research where it fits; do not impose
-it on reviews, theoretical papers, essays, or other genres.
+Select the structure from the research contribution, study or article type,
+target venue, and applicable reporting guidance.
 
-## Research situation
+## Research situation and value
 
-What question is answered? What is already known? What precise gap, dispute, or
-problem remains? Why does the target scholarly audience care?
+What problem, question, gap, or dispute does the target scholarly audience
+recognize? What is already known, what remains unresolved, and what becomes
+possible if this work succeeds?
 
 ## Contribution
 
-State the central contribution and its limits. Distinguish new evidence, new
-method, new synthesis, new interpretation, and practical implication. What
-would be missing from the literature without this work?
+State the central contribution and its limits. Identify whether it supplies new
+evidence, method, synthesis, interpretation, or practical implication, and
+connect that contribution to the research situation.
 
-## Content-model projection
+## Argument path
 
-Start from the recursive content model of claims, warrants, evidence,
-counterarguments, qualifications, and dependencies. Decide how the article will
-linearize that structure so the reader can reconstruct how each major claim and
-the contribution are established. Keep results distinct from interpretations.
+Describe how the reader moves from the research situation to the contribution.
+Choose where claims, warrants, evidence, counterarguments, qualifications,
+methods, results, and interpretations enter so that the contribution can be
+reconstructed at its stated strength.
+
+## Section and passage movement
+
+Map meanings into sections and passages according to argumentative need. One
+meaning may develop across several passages, and one passage may combine several
+meanings. For each central or previously troubled passage, state its inherited
+question, evidential or interpretive development, turn, and handoff.
 
 ## Method and evidence
 
-What data, corpus, sources, procedure, analysis, or theoretical commitments
-support the claims? What must another scholar know to evaluate or reproduce the
-work? What evidence would weaken the conclusion?
-
-## Section movement
-
-Describe the reader-facing order, grouping, emphasis, and boundaries that turn
-the content model into an article. A section may develop one meaning unit across
-several passages or combine several units; venue labels do not determine that
-mapping. Record where methods, results, warrants, objections, qualifications,
-or implications must enter for the argument to remain reconstructable.
-
-Use passage-level questions such as evidential pressure, interpretive turn, or
-handoff only where they clarify a consequential transition. A table mapping
-sections to claims demonstrates coverage but does not plot the argument.
+Identify the data, corpus, sources, procedure, analysis, or theoretical
+commitments that support the claims. State what another scholar needs to
+evaluate or reproduce the work and what evidence would weaken the conclusion.
 
 ## Constraints
 
-Record target venue, article type, word limits, citation style, ethics or data
-requirements, and study-type reporting guidelines. These constrain the paper;
-they do not substitute for its contribution or argument.
+Record the venue, article type, word limits, citation style, ethics or data
+requirements, and study-type reporting guidelines. Use the conventional section
+pattern that fits those constraints and the argument.
 
 ## Limitations and implications
 
-Where will uncertainty, validity limits, alternative explanations, and scope of
-generalization be handled? What implication follows from the results, and what
-does not?
+Place uncertainty, validity limits, alternative explanations, scope of
+generalization, and implications where they shape the reader's judgment.
 
 ## Revision note
 
-What changed in this revision, and why?
+State what changed in this revision and why.

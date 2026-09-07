@@ -109,11 +109,11 @@ instructions and examples are written in English.
 Use the planning roles. Especially consider claim support and epistemic status,
 composition across levels, concept centrality and introduction, document kind,
 document shape, representation, and cognitive pacing. Record their results in
-the planning artifact rather than manufacturing prose findings. A concept
-inventory, proposition graph, or paragraph list alone is not a content model.
+the planning artifact. The content model begins from its reader-centered root
+and derives the meanings required to establish it; inventories and source notes
+supply material during the later support check.
 
-`terminology.definition` is audience-relative. Do not define a term merely
-because it is technical. Decide from:
+`terminology.definition` is audience-relative. Decide its treatment from:
 
 1. whether the audience already knows it;
 2. whether the concept is standard or document-specific;
@@ -129,10 +129,10 @@ or left unnamed.
 
 Use planning principles again against the complete draft, plus structural and
 rhythm heuristics. Compare the draft with the audience, focus, content model,
-and plot. Reconstruct how lower-level passages establish higher-level meanings;
-do not infer document coherence from local cohesion. Observations can authorize
-new explanations, regrouping, deleted digressions, reordering, a revised content
-model, or a revised plot. They are not bounded to the smallest edit.
+and plot. Reconstruct how passages establish higher-level meanings and how each
+continuous passage moves. Observations can authorize new explanations,
+regrouping, deleted digressions, reordering, a revised content model, or a
+revised plot.
 
 ### Line or stylistic edit
 
