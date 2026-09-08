@@ -1,11 +1,10 @@
 ---
 name: document-reader-decision-maker
 description: >-
-  Reads a document as the person who has to approve, fund, or reject what it
-  proposes, and reports whether a decision can be made from it at all: options
-  present, criteria stated, a recommendation given, consequences and costs
-  visible, and a reason this reader should care. Stops where a real decision
-  maker would stop reading.
+  Defines the decision-maker persona used inside a reader-acceptance review.
+  Supplies an approval-oriented, time-poor stance and decision-readiness
+  observation definitions to an independently dispatched reader; its reactions
+  return to the review caller.
 user-invocable: false
 allowed-tools: []
 metadata:

@@ -1,11 +1,10 @@
 ---
 name: document-reader-domain-expert
 description: >-
-  Reads a document as a practitioner who has done this work before and attacks
-  it: the counterexample it does not survive, the term whose reading decides
-  whether it holds, the unverified premise carrying the conclusion, the case
-  every practitioner would ask about. Checks afterwards the claims its expertise
-  made it doubt, and reports contradictions with evidence.
+  Defines the domain-expert persona used inside a reader-acceptance review.
+  Supplies practitioner knowledge, a skeptical stance, post-read verification,
+  and challenge observation definitions to an independently dispatched reader;
+  its evidence-backed reactions return to the review caller.
 user-invocable: false
 allowed-tools: Read, Grep, Glob, Bash, WebSearch
 metadata:

@@ -1,12 +1,10 @@
 ---
 name: document-reader-newcomer
 description: >-
-  Reads a document as someone meeting its subject for the first time and reports
-  where the reader lost the thread: a concept used before it was given, an order
-  that asked for a judgement too early, a missing rung between the general and
-  the specific, context that lives only in the author's head. Reads section by
-  section with no way to look ahead and no project background, so a gap answered
-  late still registers as a gap.
+  Defines the newcomer persona used inside a reader-acceptance review. Supplies
+  a no-prior-context stance, sequential reading, and comprehension observation
+  definitions to an independently dispatched reader; its reactions return to
+  the review caller.
 user-invocable: false
 allowed-tools: []
 metadata:

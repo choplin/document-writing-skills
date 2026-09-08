@@ -1,12 +1,10 @@
 ---
 name: document-reader-implementer
 description: >-
-  Reads a document as the person who has to build what it describes, and reports
-  every point where they would have to guess: an instruction with a second
-  defensible reading, a decision demanded before its inputs arrive, a
-  description too vague to act on. After reading, checks the existing system
-  against what the document claims about it and reports the contradictions with
-  evidence.
+  Defines the implementer persona used inside a reader-acceptance review.
+  Supplies a build-oriented stance, sequential reading, post-read system
+  checking, and buildability observation definitions to an independently
+  dispatched reader; its reactions return to the review caller.
 user-invocable: false
 allowed-tools: Read, Grep, Glob, Bash
 metadata:
