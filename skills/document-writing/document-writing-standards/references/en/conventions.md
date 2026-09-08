@@ -12,74 +12,75 @@ as language-common.
 
 ## `en.mechanics`
 
-```yaml
-lens: en.mechanics
-language: en
-layer: expression
-packing_group: english-expression
-objective: Find punctuation and sentence-boundary constructions that violate the
-  usage conventions of English technical prose.
-checks:
-  - Possessive singulars formed without 's.
-  - Series without a comma after each term but the last.
-  - Parenthetic expressions not enclosed on both sides.
-  - Co-ordinate clauses joined without a comma before the conjunction.
-  - Independent clauses joined by a comma.
-  - Sentences broken in two where one is required.
-  - Opening participial phrases that do not refer to the grammatical subject.
-```
+### Purpose
 
-### Rules
+Detect grammatical failures, punctuation that makes the intended relation
+ambiguous, and departures from an explicit English house style. Usage that is
+merely conventional belongs to editorial judgment unless the assignment fixes
+one form.
 
-- **Possessive singular takes `'s`,** whatever the final consonant: *the
-  service's owner*, *Charles's request*. Exceptions are the possessive pronouns
-  (*its*, *hers*, *theirs*) and established forms of ancient names.
-- **Serial comma.** In a series of three or more terms with one conjunction, put
-  a comma after each term except the last: *read, transform, and write*. Keep it
-  consistent across the document.
-- **Enclose parenthetic expressions between commas on both sides.** A missing
-  closing comma is the common failure. A restrictive clause takes no commas at
-  all; the distinction between restrictive and non-restrictive is a meaning
-  change, not a style choice.
-- **Comma before a conjunction introducing a co-ordinate clause**: *The
-  migration ran, but the index was never rebuilt.*
+### Consider
+
+- Possessive or series punctuation inconsistent with the supplied convention.
+- Parenthetic expressions whose boundary or restrictive meaning is ambiguous.
+- Co-ordinate clauses whose boundary is not recoverable from their punctuation.
+- Independent clauses joined by a comma.
+- Sentences broken in two where one is required.
+- Opening participial phrases that do not refer to the grammatical subject.
+
+### Checks and conventions
+
+- Apply a possessive convention consistently when the assignment, publisher,
+  or existing document establishes one. *The service's owner* is uncontroversial;
+  forms such as *Charles' request* and *Charles's request* are house-style
+  choices unless the document mixes them.
+- Apply a serial comma only when an explicit convention requires it, the
+  document has already established it, or omitting it creates a real grouping
+  ambiguity. Both *read, transform and write* and *read, transform, and write*
+  are otherwise valid.
+- Enclose a parenthetic expression on both sides when punctuation marks it as
+  parenthetic. A restrictive clause takes no commas; changing restrictive
+  status changes meaning and is not a style cleanup.
+- Use the configured punctuation before a conjunction introducing a
+  co-ordinate clause. Without such a convention, intervene only when the clause
+  boundary is hard to recover.
 - **No comma splice.** Two independent clauses take a semicolon, a period, or a
   conjunction — never a bare comma.
-- **Do not break a sentence in two.** A dependent fragment punctuated as a
-  sentence is a defect unless the emphasis is deliberate and rare.
+- A dependent fragment is a defect when it cannot stand as an intentional
+  rhetorical fragment and its grammatical attachment is clear.
 - **An opening participial phrase must refer to the grammatical subject.**
   *Having rebuilt the index, the query returned in 20ms* attributes the rebuild
   to the query. (A dangling opener whose referent cannot be recovered at all is
   also a `reference.antecedent` finding.)
 
-### Severity
+### Reader impact
 
-`minor` for possessives, serial commas, and clause punctuation. `major` for a
-comma splice that makes the clause boundary ambiguous, and for a dangling
-participle that misattributes the action.
+A house-style inconsistency has local impact. A comma splice that obscures the
+clause boundary or a dangling participle that misattributes an action can
+change the reader's understanding.
 
 ---
 
 ## `en.diction`
 
-```yaml
-lens: en.diction
-language: en
-layer: expression
-packing_group: english-expression
-objective: Find word choices and register inconsistencies that break the
-  conventions of English technical prose.
-checks:
-  - Words used in a sense their established usage does not carry.
-  - A summary that shifts tense without a change in time or viewpoint.
-  - Mixed American and British spelling.
-  - Contractions and register shifting within one document.
-  - Person and number shifting between sections.
-non_goals:
-  - Choosing between competing terms for one concept is
-    terminology.consistency. This lens covers the word's register and form.
-  - Cutting an empty intensifier is prose.plain-expression.
-```
+### Purpose
+
+Find word choices and register inconsistencies that break the
+conventions of English technical prose.
+
+### Consider
+
+- Words used in a sense their established usage does not carry.
+- A summary that shifts tense without a change in time or viewpoint.
+- Mixed American and British spelling.
+- Contractions and register shifting within one document.
+- Person and number shifting between sections.
+
+### Boundaries
+
+- Choosing between competing terms for one concept is
+  terminology.consistency. This lens covers the word's register and form.
+- Cutting an empty intensifier is prose.plain-expression.
 
 ### Rules
 
@@ -110,16 +111,18 @@ non_goals:
   - *e.g.* / *i.e.* used interchangeably.
 - **Keep one tense in a summary.** Shift tense only when the summarized sequence
   itself changes time or the document deliberately changes viewpoint.
-- **One spelling convention.** American or British, consistently: *behavior* and
-  *behaviour* do not mix, nor *-ize* and *-ise*.
-- **One register.** Contractions are acceptable in documentation that has chosen
-  an informal register, but they must not appear in a document that is otherwise
-  formal.
-- **One person and number.** Do not alternate between *we*, *you*, and the
-  impersonal across sections. (Which one is appropriate inside an argument is
-  `prose.voice`.)
+- **Follow an explicit spelling convention.** When the assignment or existing
+  document establishes American or British spelling, do not mix *behavior* and
+  *behaviour* or *-ize* and *-ise*. Without that signal, a single valid form is
+  not a defect.
+- **Keep register coherent where a shift distracts the reader.** Contractions
+  are acceptable in an informal register; a deliberate quoted voice or audience
+  shift may justify local variation.
+- **Keep person and number stable across one speaking position.** A shift among
+  *we*, *you*, and impersonal form is a defect only when it obscures who acts or
+  changes the reader relationship. `prose.voice` judges which position fits.
 
-### Severity
+### Reader impact
 
-`major` for mixed register or mixed spelling convention across a document.
-`minor` for individual word choices.
+Mixed register or spelling conventions can distract across a whole document.
+An individual word choice usually has local impact unless it changes meaning.

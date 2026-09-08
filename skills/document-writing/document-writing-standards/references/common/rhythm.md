@@ -46,24 +46,25 @@ had no reason to construct.
 
 ## `rhythm.cognitive-pacing`
 
-```yaml
-lens: rhythm.cognitive-pacing
-language: common
-layer: rhythm
-packing_group: rhythm
-objective: Falsify the claim that the document sustains a reason to keep
-  reading, rather than running at one cognitive mode from start to finish.
-checks:
-  - A fixed viewpoint distance held for a whole section.
-  - An opening that states an agenda without creating any open tension.
-  - A continuously read passage that closes every tension before giving the
-    reader another grounded reason to continue.
-  - A question or promised answer that is opened and never discharged.
-  - A section opening that declares what the section will cover.
-  - Theory introduced before the reader has felt the problem it names.
-  - A close that ends on abstraction instead of landing on something concrete.
-content_impact: none
-```
+### Purpose
+
+Judge whether the document sustains a reason to keep reading rather than
+running at one cognitive mode from start to finish.
+
+### Consider
+
+- A fixed viewpoint distance held for a whole section.
+- An opening that states an agenda without creating any open tension.
+- A continuously read passage that closes every tension before giving the
+  reader another grounded reason to continue.
+- A question or promised answer that is opened and never discharged.
+- A section opening that declares what the section will cover.
+- Theory introduced before the reader has felt the problem it names.
+- A close that ends on abstraction instead of landing on something concrete.
+
+### Intervention boundary
+
+This guidance does not by itself authorize a substantive change.
 
 ### Rules
 
@@ -108,7 +109,7 @@ the result. Manufacturing a disagreement or discovery from drafting history is
 the other failure mode; `reference.discourse-grounding` will delete or flatten
 it.
 
-### Severity
+### Reader impact
 
-`minor` throughout. Nothing this lens finds prevents the document from being
-understood.
+Nothing this lens finds prevents the document from being understood. Its value
+is in sustaining attention through continuously read prose.

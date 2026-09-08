@@ -3,7 +3,8 @@
 Language: **common**. These are planning principles and editorial heuristics.
 They may suggest joining sentences, moving text, changing representation, or
 revising the plot. Interpret them against audience, purpose, focus, and genre;
-their metadata describes the usual reach of a change, not automatic authority.
+the intervention boundary states the usual reach of a change, not automatic
+authority.
 
 Concrete instances — connectives, heading forms, landing phrasings — live in
 [Japanese examples](../ja/examples.md) and [English examples](../en/examples.md),
@@ -17,21 +18,22 @@ argument was.
 
 ## `structure.paragraph-unity`
 
-```yaml
-lens: structure.paragraph-unity
-language: common
-layer: structure
-packing_group: structure
-objective: Falsify the claim that each paragraph carries one job and establishes
-  that job before its supporting material becomes ambiguous.
-checks:
-  - Paragraphs mixing several stages of movement (investigation, report,
-    verification, evaluation).
-  - Paragraphs whose governing topic or claim arrives only after supporting
-    material that cannot yet be placed.
-  - Co-ordinate ideas expressed in non-parallel form.
-content_impact: reordering
-```
+### Purpose
+
+Judge whether each paragraph carries one job and establishes that job before
+its supporting material becomes ambiguous.
+
+### Consider
+
+- Paragraphs mixing several stages of movement (investigation, report,
+  verification, evaluation).
+- Paragraphs whose governing topic or claim arrives only after supporting
+  material that cannot yet be placed.
+- Co-ordinate ideas expressed in non-parallel form.
+
+### Intervention boundary
+
+Use this guidance only when the current editing stage permits reordering.
 
 ### Rules
 
@@ -44,31 +46,33 @@ content_impact: reordering
 - End the paragraph in conformity with how it began.
 - Express co-ordinate ideas in parallel grammatical form.
 
-### Severity
+### Reader impact
 
-`major` where the topic sentence is missing or buried; `minor` for parallelism.
+A missing or buried governing claim can make the paragraph's job unrecoverable;
+non-parallel co-ordinate ideas usually add local processing cost.
 
 ---
 
 ## `structure.signposting`
 
-```yaml
-lens: structure.signposting
-language: common
-layer: structure
-packing_group: structure
-objective: Find places where the reader cannot tell how a passage relates to
-  what came before it, or where material is placed so that the sequence breaks.
-checks:
-  - Paragraph openings whose relation to the previous paragraph is not encoded
-    by syntax, wording, order, or a connective.
-  - Arguments that conclude, then handle objections, then restate the conclusion.
-  - Forward references placed mid-argument.
-  - Defenses of an example placed inside the passage they interrupt.
-  - Information needed for a later payoff disclosed early.
-  - A likely misreading left unaddressed before the real reason is given.
-content_impact: reordering
-```
+### Purpose
+
+Find places where the reader cannot tell how a passage relates to
+what came before it, or where material is placed so that the sequence breaks.
+
+### Consider
+
+- Paragraph openings whose relation to the previous paragraph is not encoded
+  by syntax, wording, order, or a connective.
+- Arguments that conclude, then handle objections, then restate the conclusion.
+- Forward references placed mid-argument.
+- Defenses of an example placed inside the passage they interrupt.
+- Information needed for a later payoff disclosed early.
+- A likely misreading left unaddressed before the real reason is given.
+
+### Intervention boundary
+
+Use this guidance only when the current editing stage permits reordering.
 
 ### Rules
 
@@ -92,37 +96,41 @@ content_impact: reordering
   one fails and the other holds. A counterfactual may ground the distinction.
   Do not add an imagined misconception merely to make a contrast possible.
 
-### Severity
+### Reader impact
 
-`major` for an unrecoverable relation at a paragraph boundary or an argument
-that loops back on its own conclusion; `minor` for placement.
+An unrecoverable relation at a paragraph boundary or an argument that loops
+back on its own conclusion can break the sequence. Placement problems usually
+add more local cost.
 
 ---
 
 ## `structure.sentence-cohesion`
 
-```yaml
-lens: structure.sentence-cohesion
-language: common
-layer: structure
-packing_group: structure
-objective: Find adjacent propositions in explanatory or argumentative prose
-  whose logical relation the reader must guess.
-checks:
-  - Adjacent propositions with no identifiable relation such as cause, result,
-    condition, contrast, sequence, elaboration, or example.
-  - A connective that names a different relation from the one the propositions
-    actually support.
-  - A run of individually clear assertions whose order and cumulative point
-    cannot be recovered.
-non_goals:
-  - Do not require an explicit connective where syntax or meaning already makes
-    the relation unambiguous.
-  - Do not join propositions merely to make sentences longer.
-  - A single proposition split by target-language sentence boundaries belongs
-    to the language profile; this lens relates distinct propositions.
-content_impact: none
-```
+### Purpose
+
+Find adjacent propositions in explanatory or argumentative prose
+whose logical relation the reader must guess.
+
+### Consider
+
+- Adjacent propositions with no identifiable relation such as cause, result,
+  condition, contrast, sequence, elaboration, or example.
+- A connective that names a different relation from the one the propositions
+  actually support.
+- A run of individually clear assertions whose order and cumulative point
+  cannot be recovered.
+
+### Boundaries
+
+- Do not require an explicit connective where syntax or meaning already makes
+  the relation unambiguous.
+- Do not join propositions merely to make sentences longer.
+- A single proposition split by target-language sentence boundaries belongs
+  to the language profile; this lens relates distinct propositions.
+
+### Intervention boundary
+
+This guidance does not by itself authorize a substantive change.
 
 ### Rules
 
@@ -134,30 +142,31 @@ content_impact: none
 - Preserve a deliberate hard break where each assertion stands independently
   and the break supplies emphasis rather than hiding a relation.
 
-### Severity
+### Reader impact
 
-`major` when the missing relation changes how the reader understands the
-argument; `minor` when the relation is recoverable but adds local processing
-cost.
+The impact is substantial when the missing relation changes how the reader
+understands the argument. A relation recoverable only with extra effort adds
+local processing cost.
 
 ---
 
 ## `structure.enumeration-landing`
 
-```yaml
-lens: structure.enumeration-landing
-language: common
-layer: structure
-packing_group: structure
-objective: Find lists of properties, categories, or principles that are never
-  connected to anything concrete.
-checks:
-  - Enumerations followed by no mapping onto the case, data, or scenario the
-    section is about.
-  - Items landed in a uniform, mechanical phrasing that adds nothing.
-  - Lists used where the items are not co-ordinate.
-content_impact: reordering
-```
+### Purpose
+
+Find lists of properties, categories, or principles that are never
+connected to anything concrete.
+
+### Consider
+
+- Enumerations followed by no mapping onto the case, data, or scenario the
+  section is about.
+- Items landed in a uniform, mechanical phrasing that adds nothing.
+- Lists used where the items are not co-ordinate.
+
+### Intervention boundary
+
+Use this guidance only when the current editing stage permits reordering.
 
 ### Rules
 
@@ -173,37 +182,39 @@ An unlanded enumeration is a common and expensive machine-written defect. The
 reader understands every item and still cannot use any of them, because nothing
 in the list has been attached to the situation under discussion.
 
-### Severity
+### Reader impact
 
-`major`. An enumeration that never lands is close to information-free.
+An enumeration that never lands can be close to information-free because the
+reader cannot connect it to the case at hand.
 
 ---
 
 ## `structure.document-shape`
 
-```yaml
-lens: structure.document-shape
-language: common
-layer: structure
-packing_group: shape
-objective: Falsify the claim that lower-level passages compose recoverable
-  higher-level meanings, the resulting structure is presented in a usable
-  order, and its headings and representations serve that structure.
-checks:
-  - A group of passages whose common meaning or contribution to its parent
-    cannot be recovered.
-  - Child passages that are all relevant to a topic but do not jointly establish
-    the meaning claimed for their parent.
-  - A flat sequence where the reader must infer which details form which larger
-    points.
-  - Headings that state a procedure rather than the subject or the question.
-  - Headings that give away the section's conclusion.
-  - Headings with no information content.
-  - Sections whose order forces forward references.
-  - Prose carrying material that is a list; lists carrying material that is an
-    argument.
-content_impact: structural
-```
+### Purpose
+
+Judge whether lower-level passages compose recoverable higher-level meanings,
+whether the resulting structure is presented in a usable order, and whether its
+headings and representations serve that structure.
+
+### Consider
+
+- A group of passages whose common meaning or contribution to its parent
+  cannot be recovered.
+- Child passages that are all relevant to a topic but do not jointly establish
+  the meaning claimed for their parent.
+- A flat sequence where the reader must infer which details form which larger
+  points.
+- Headings that state a procedure rather than the subject or the question.
+- Headings that give away the section's conclusion.
+- Headings with no information content.
+- Sections whose order forces forward references.
+- Prose carrying material that is a list; lists carrying material that is an
+  argument.
+
+### Intervention boundary
+
+Treat a resulting change as planning or developmental work, not a local conformance fix.
 
 ### Rules
 
@@ -239,34 +250,38 @@ Return document-shape concerns as plot or developmental-edit observations.
 Record the intended structural change and its reason because it overrides an
 authorial choice; do not send it through the local finding-application lane.
 
-### Severity
+### Reader impact
 
-`major` for a heading that does not identify its content or an order that
-forces forward references; `minor` for prose/list choice.
+A heading that does not identify its content or an order that forces forward
+references can make the structure unrecoverable. A poor prose/list choice may
+instead slow scanning without blocking understanding.
 
 ---
 
 ## `structure.representation-choice`
 
-```yaml
-lens: structure.representation-choice
-language: common
-layer: structure
-packing_group: shape
-objective: Find material whose chosen representation makes its important
-  relationships materially harder to inspect than another available form.
-checks:
-  - State transitions and transition conditions buried in prose or a flat list.
-  - Data flow or dependency direction that must be reconstructed from sentences.
-  - Hierarchy or containment expressed as an undifferentiated sequence.
-  - A timeline or phase sequence whose order is difficult to scan.
-  - Repeated fields or comparisons across common axes not aligned in a table.
-  - A diagram or table used where prose, a list, or code would expose the
-    relevant relationship more directly.
-required_inputs:
-  - target rendering, accessibility, and maintenance constraints, when known
-content_impact: structural
-```
+### Purpose
+
+Find material whose chosen representation makes its important
+relationships materially harder to inspect than another available form.
+
+### Consider
+
+- State transitions and transition conditions buried in prose or a flat list.
+- Data flow or dependency direction that must be reconstructed from sentences.
+- Hierarchy or containment expressed as an undifferentiated sequence.
+- A timeline or phase sequence whose order is difficult to scan.
+- Repeated fields or comparisons across common axes not aligned in a table.
+- A diagram or table used where prose, a list, or code would expose the
+  relevant relationship more directly.
+
+### Context needed
+
+- target rendering, accessibility, and maintenance constraints, when known
+
+### Intervention boundary
+
+Treat a resulting change as planning or developmental work, not a local conformance fix.
 
 ### Rules
 
@@ -290,32 +305,35 @@ Return representation changes as plot or developmental-edit observations.
 Changing form overrides an authorial choice and may add or remove a document
 element, so record the relationship to expose, the chosen form, and the reason.
 
-### Severity
+### Reader impact
 
-`major` when the current form obscures a relationship needed for the reader's
-task; `minor` when another form would reduce scanning or comparison cost without
-changing comprehension.
+The impact is substantial when the current form obscures a relationship needed
+for the reader's task. A different form may instead reduce scanning or
+comparison cost without changing comprehension.
 
 ---
 
 ## `structure.genre-purity`
 
-```yaml
-lens: structure.genre-purity
-language: common
-layer: structure
-packing_group: shape
-objective: Examine whether each passage serves a reader need in a shape suited
-  to that need, and whether mixtures remain navigable and intentional.
-checks:
-  - Tutorial material interrupted by reference tables or design rationale.
-  - How-to guides that stop to explain why the mechanism works.
-  - Reference material carrying narrative instruction.
-  - Explanation carrying step-by-step procedure.
-required_inputs:
-  - the document's stated or evident purpose
-content_impact: structural
-```
+### Purpose
+
+Examine whether each passage serves a reader need in a shape suited
+to that need, and whether mixtures remain navigable and intentional.
+
+### Consider
+
+- Tutorial material interrupted by reference tables or design rationale.
+- How-to guides that stop to explain why the mechanism works.
+- Reference material carrying narrative instruction.
+- Explanation carrying step-by-step procedure.
+
+### Context needed
+
+- the document's stated or evident purpose
+
+### Intervention boundary
+
+Treat a resulting change as planning or developmental work, not a local conformance fix.
 
 ### The four purposes
 
@@ -336,7 +354,7 @@ content_impact: structural
 - Mixed documents are normal. Make their boundaries and navigation clear rather
   than pursuing purity as an end in itself.
 
-### Severity
+### Reader impact
 
 Treat the issue as major only where the mixture defeats the reader's current
 purpose. A short useful aside is not a defect by category alone.

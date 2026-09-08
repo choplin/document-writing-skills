@@ -20,21 +20,19 @@ subject; route that to a separate external fact-checking workflow.
 
 ## `logic.claim-support`
 
-```yaml
-lens: logic.claim-support
-language: common
-layer: logic
-packing_group: logic
-objective: Examine whether material claims have the kind and amount of support
-  their role, genre, audience, and stated confidence require.
-checks:
-  - Load-bearing assertions whose grounds appear nowhere in the document or its
-    declared sources.
-  - Causal claims whose mechanism the intended reader needs but cannot supply.
-  - Claims broader than the examples offered for them.
-  - Distinct things collapsed into one.
-  - Multi-causal phenomena reduced to a single cause.
-```
+### Purpose
+
+Examine whether material claims have the kind and amount of support
+their role, genre, audience, and stated confidence require.
+
+### Consider
+
+- Load-bearing assertions whose grounds appear nowhere in the document or its
+  declared sources.
+- Causal claims whose mechanism the intended reader needs but cannot supply.
+- Claims broader than the examples offered for them.
+- Distinct things collapsed into one.
+- Multi-causal phenomena reduced to a single cause.
 
 ### Rules
 
@@ -55,7 +53,7 @@ checks:
   instead narrow or remove the claim. Choose the smallest change only after
   deciding which argument the document ought to make.
 
-### Severity
+### Reader impact
 
 Treat an unsupported load-bearing claim as a major editorial issue. A mechanism
 the audience can supply, or one intentionally deferred and signposted, is not an
@@ -65,22 +63,19 @@ issue merely because it is absent from the sentence.
 
 ## `logic.epistemic-status`
 
-```yaml
-lens: logic.epistemic-status
-language: common
-layer: logic
-packing_group: logic
-objective: Falsify the claim that fact, opinion, hypothesis, and inference are
-  distinguishable in the text, and that each is stated at the confidence its
-  grounds support.
-checks:
-  - Speculation, inference, or an unverified possibility written as established
-    fact.
-  - Guarantees of detection, prevention, or resolution stated unconditionally.
-  - Conclusions hedged with no reason to hedge.
-  - Statements presented as verified that the writer did not verify.
-  - Opinion presented in the register of fact.
-```
+### Purpose
+
+Judge whether fact, opinion, hypothesis, and inference are distinguishable in
+the text, and whether each is stated at the confidence its grounds support.
+
+### Consider
+
+- Speculation, inference, or an unverified possibility written as established
+  fact.
+- Guarantees of detection, prevention, or resolution stated unconditionally.
+- Conclusions hedged with no reason to hedge.
+- Statements presented as verified that the writer did not verify.
+- Opinion presented in the register of fact.
 
 ### Rules
 
@@ -109,32 +104,30 @@ This lens is the counterweight to `prose.plain-expression` and
 wins: a preserved hedge costs a few words, and a false assertion costs the
 reader's trust in the document.
 
-### Severity
+### Reader impact
 
-`blocker` where speculation is stated as fact in a way that would change a
-reader's decision. `major` for unconditional guarantees and for unmarked
-opinion. `minor` for groundless hedging.
+The impact is highest where speculation stated as fact would change a reader's
+decision. Unconditional guarantees and unmarked opinion can undermine the
+argument; groundless hedging usually adds local uncertainty.
 
 ---
 
 ## `logic.internal-consistency`
 
-```yaml
-lens: logic.internal-consistency
-language: common
-layer: logic
-packing_group: logic
-objective: Find places where the document contradicts itself, or leaves what it
-  opened unclosed.
-checks:
-  - Passages asserting incompatible things about the same object.
-  - Concepts treated differently in different sections.
-  - Questions that promise an answer and never deliver it.
-  - Forward references whose target never delivers.
-  - Concessions and limitations that end the passage without resuming the
-    argument.
-  - Conclusions restated in a form the argument did not reach.
-```
+### Purpose
+
+Find places where the document contradicts itself, or leaves what it
+opened unclosed.
+
+### Consider
+
+- Passages asserting incompatible things about the same object.
+- Concepts treated differently in different sections.
+- Questions that promise an answer and never deliver it.
+- Forward references whose target never delivers.
+- Concessions and limitations that end the passage without resuming the
+  argument.
+- Conclusions restated in a form the argument did not reach.
 
 ### Rules
 
@@ -153,8 +146,8 @@ checks:
   that are stronger, broader, or simply different from what the preceding text
   established.
 
-### Severity
+### Reader impact
 
-`blocker` for a direct contradiction between two passages. `major` for an
-unanswered question, an undelivered forward reference, or a conclusion the
-argument did not reach.
+A direct contradiction can prevent the reader from acting on the document.
+An unanswered question, undelivered forward reference, or unsupported
+conclusion can break the argument's promised path.

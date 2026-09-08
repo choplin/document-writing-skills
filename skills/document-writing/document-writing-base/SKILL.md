@@ -16,10 +16,11 @@ metadata:
 This skill serves downstream editorial passes. It does not replace assignment,
 discovery, focus, content modeling, plotting, or developmental editing.
 
-Read the selected lens definitions in `document-writing-standards` before use.
-Respect their roles: planning principles produce upstream decisions, editorial
-heuristics produce contextual observations, and conformance checks may produce
-directly applicable findings.
+Use the selection and progressive-loading procedure in
+`document-writing-standards`. Read only the definitions needed for the prose
+language, lane, and relevant guidance. Interpretive guidance produces upstream
+decisions or contextual observations; only deterministic conformance checks
+may produce directly applicable findings.
 
 ## Lane contract
 
@@ -74,8 +75,11 @@ developmental edit.
 
 ## Copyedit
 
-Select applicable `check` lenses for the prose language and house style. Detect
-only locally falsifiable defects. Apply them in dependency order when necessary:
+Select applicable deterministic `check` lenses for the prose language. Treat a
+house-style preference as a check only when the supplied context names that
+convention; otherwise act only on a reader-visible ambiguity or inconsistency.
+Detect only locally falsifiable defects. Apply them in dependency order when
+necessary:
 
 1. terminology and reference;
 2. proposition or clause integrity;

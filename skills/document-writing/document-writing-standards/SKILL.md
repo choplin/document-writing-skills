@@ -16,21 +16,28 @@ This catalog supports a larger editorial workflow. It does not decide the
 document's purpose or replace a plot. The same observation can be useful at
 different stages, but the authority of a lens depends on its role.
 
-## Roles
+## Match the control to the judgment
 
-- **Planning principle:** informs the assignment, focus, content model, or plot.
-  It produces a decision, question, or plot note—not a located prose finding.
-- **Editorial heuristic:** helps an editor notice a possible problem and choose
-  among revisions in context. It produces an observation and alternatives. The
-  text may legitimately depart from the heuristic.
-- **Conformance check:** detects a locally falsifiable defect after the larger
-  decisions are stable. It may produce a finding suitable for direct
-  application.
+The catalog contains three kinds of control. These are reading instructions,
+not fields that every lens must carry:
 
-Do not collapse these roles into a single scoring or auto-fix pass. In
-particular, a request for more support, a different concept introduction, or a
-new section may be the right developmental edit. The “smallest local fix” is not
-the governing objective.
+- **Interpretive guidance** supplies principles and considerations. Planning
+  guidance informs the assignment, focus, content model, or plot; editorial
+  guidance helps an editor diagnose a passage and compare revisions in context.
+  Either may lead to a decision, question, observation, or several legitimate
+  alternatives. A matching surface form is not itself a defect.
+- **Coordinated handoff data** preserves a decision that another stage needs:
+  for example, the intended reader, a structural observation, or an approved
+  local finding. Give a handoff only the fields its consumer uses.
+- **Deterministic checking** tests a stable passage for a local, falsifiable
+  defect with a content-preserving repair. It may produce a finding suitable
+  for direct application.
+
+Do not collapse these controls into a score or auto-fix pass, and do not turn
+this distinction into required lens metadata or an exhaustive taxonomy. A
+request for more support, a different concept introduction, or a new section
+may be the right developmental edit. The “smallest local fix” is not the
+governing objective.
 
 All roles share one purpose: let the intended reader spend attention on the
 subject rather than reconstructing how details form larger meanings. That
@@ -71,7 +78,7 @@ must all run.
 | `ja.proposition-integrity` | ja | structure | editorial, check | [conventions.md](references/ja/conventions.md) |
 | `ja.sentence-boundaries` | ja | expression | editorial | [composition.md](references/ja/composition.md) |
 | `ja.notation` | ja | expression | check | [conventions.md](references/ja/conventions.md) |
-| `ja.syntax` | ja | expression | check | [conventions.md](references/ja/conventions.md) |
+| `ja.syntax` | ja | expression | editorial, check | [conventions.md](references/ja/conventions.md) |
 | `ja.diction` | ja | expression | editorial, check | [conventions.md](references/ja/conventions.md) |
 | `ja.cadence` | ja | rhythm | editorial | [rhythm.md](references/ja/rhythm.md) |
 | `en.argument-explicitness` | en | terminology | editorial, check | [composition.md](references/en/composition.md) |
@@ -83,7 +90,21 @@ must all run.
 | `en.diction` | en | expression | editorial, check | [conventions.md](references/en/conventions.md) |
 | `en.cadence` | en | rhythm | editorial | [rhythm.md](references/en/rhythm.md) |
 
-## Language profiles
+## Deterministic check boundary
+
+A `check` use is deterministic only when the defect can be established from the
+stable passage plus supplied context, and a repair can preserve every claim and
+reader relation. Typical evidence is an unresolved exact referent, a missing
+grammatical argument, malformed markup, an internally inconsistent term, or a
+violation of an explicitly supplied house-style convention.
+
+For lenses that allow both `editorial` and `check` use, this boundary applies to
+each instance. Diction, sentence boundaries, and terminology often require
+interpretation; use them as checks only for their locally falsifiable cases. If
+the remedy requires selecting a meaning, adding support, changing emphasis, or
+reordering the argument, return an editorial observation instead.
+
+## Select and load guidance
 
 Select common guidance plus the profile matching the prose:
 
@@ -101,6 +122,19 @@ and quotations do not change the prose language.
 Japanese profile instructions and examples are written in Japanese so that the
 norm and its realization can be compared without translation. English profile
 instructions and examples are written in English.
+
+Load references progressively:
+
+1. determine the prose language and current editorial stage;
+2. select the relevant layers or lens IDs from the index;
+3. read only the common reference files that contain those lenses and the
+   matching language-profile files needed to realize them; and
+4. load the matching examples only when a principle remains ambiguous or a
+   concrete comparison would materially improve judgment.
+
+Do not load the other language profile, unrelated layers, or an entire examples
+file merely because it is available. Re-open adjacent guidance when a conflict
+or dependency surfaces during the pass.
 
 ## Choosing guidance by editorial stage
 
@@ -156,19 +190,16 @@ the substantive decisions are explicitly frozen.
 
 ## Findings and observations
 
-Use this schema only for `check` findings that may flow through
-`document-writing-apply`:
+Use this handoff only for deterministic `check` findings that may flow through
+`document-writing-apply`. Every field is consumed there: `id` supports person
+selection, `lens` reloads the governing check, the exact anchor detects stale
+findings, and the remaining fields establish and bound the permitted repair.
 
 ```yaml
 id: <stable within one run>
 lens: <lens ID>
-also_raised_by: []
-language: common | ja | en
-layer: logic | terminology | structure | expression | rhythm
-severity: blocker | major | minor
 location:
   anchor: <exact unique quotation>
-  section: <nearest heading or document start>
 claim: <locally falsifiable defect>
 evidence: <why it violates the check>
 remediation: <a content-preserving correction>

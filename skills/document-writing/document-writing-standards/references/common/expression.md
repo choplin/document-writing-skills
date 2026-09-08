@@ -4,9 +4,9 @@ Language: **common**. These are line-edit heuristics, not a lexical blacklist or
 an automatic deletion pass. Use them after the argument and plot are stable,
 and judge each change by the passage's intended movement.
 
-The objectives below are language-common. Natural realization does not follow
-from examples alone, so language profiles own clause order, omission, voice,
-sentence boundaries, and cadence. Language-specific instances live in
+The purposes and considerations below are language-common. Natural realization
+does not follow from examples alone, so language profiles own clause order,
+omission, voice, sentence boundaries, and cadence. Language-specific instances live in
 [Japanese examples](../ja/examples.md) and [English examples](../en/examples.md).
 
 This layer carries the largest share of what makes machine-written prose
@@ -17,25 +17,25 @@ and still costs the reader far more attention than the content is worth.
 
 ## `prose.plain-expression`
 
-```yaml
-lens: prose.plain-expression
-language: common
-layer: expression
-packing_group: expression
-objective: Find text that performs erudition or rhetoric instead of carrying
-  information, where a plain wording exists and would say the same thing.
-checks:
-  - Empty intensifiers and empty qualifiers that add no proposition.
-  - Verbs that name the act of writing instead of what was written.
-  - Announcements of importance in place of the important thing.
-  - Rhetorical devices used where a plain statement would do.
-  - Figures of speech whose referent is not determined.
-  - Words chosen for register rather than precision.
-non_goals:
-  - Do not flatten genuine uncertainty into assertion. That is
-    logic.epistemic-status, and it protects hedges this lens would otherwise cut.
-  - Do not remove a device that is doing real work at a turning point.
-```
+### Purpose
+
+Find text that performs erudition or rhetoric instead of carrying
+information, where a plain wording exists and would say the same thing.
+
+### Consider
+
+- Empty intensifiers and empty qualifiers that add no proposition.
+- Verbs that name the act of writing instead of what was written.
+- Announcements of importance in place of the important thing.
+- Rhetorical devices used where a plain statement would do.
+- Figures of speech whose referent is not determined.
+- Words chosen for register rather than precision.
+
+### Boundaries
+
+- Do not flatten genuine uncertainty into assertion. That is
+  logic.epistemic-status, and it protects hedges this lens would otherwise cut.
+- Do not remove a device that is doing real work at a turning point.
 
 ### Rules
 
@@ -54,41 +54,43 @@ non_goals:
   one-line paragraphs used as punch lines, and antithesis are permitted where
   the tension does argumentative work. Flag them where a plain statement
   suffices, and flag repetition of the same device.
-- **Bold emphasis** in body text is limited to the logical hinges — a negation
-  that prevents misreading, a section's conclusion. One or two per section.
-  Everything else is made prominent by sentence order and structure.
+- **Use emphasis only where it helps the reader recover the structure.** A
+  negation that prevents misreading or a section conclusion may justify bold
+  text. Do not enforce a numeric quota or a particular markup unless the house
+  style does; repeated emphasis is a concern when it flattens hierarchy or
+  distracts from the passage's actual hinge.
 - **Do not escalate.** Do not dramatize turning points, and do not stack
   consequences to alarm the reader about risk. A sentence of fact is usually
   enough.
 - **Register borrowing.** Do not reuse a word that sounds like a technical term
   in a non-technical position. Use the ordinary phrasing.
 
-### Severity
+### Reader impact
 
-Empty qualifier or verb, padded announcement: `minor`. A figure the reader
-cannot resolve, or a passage whose actual claim is unrecoverable behind the
-rhetoric: `major`.
+An empty qualifier, empty verb, or padded announcement adds local cost. An
+unresolvable figure or rhetoric that hides the actual claim can prevent the
+reader from recovering the passage's meaning.
 
 ---
 
 ## `prose.self-reference`
 
-```yaml
-lens: prose.self-reference
-language: common
-layer: expression
-packing_group: expression
-objective: Find sentences whose subject is the document itself rather than the
-  subject matter.
-checks:
-  - Apply the topic test to every paragraph-initial sentence and every
-    standalone short sentence.
-  - Find section-opening declarations of what the section will cover.
-  - Find section-closing previews of what comes next.
-  - Find restatements of the document's own character or scope.
-non_goals:
-  - Do not delete the four permitted forms listed below.
-```
+### Purpose
+
+Find sentences whose subject is the document itself rather than the
+subject matter.
+
+### Consider
+
+- Apply the topic test to every paragraph-initial sentence and every
+  standalone short sentence.
+- Find section-opening declarations of what the section will cover.
+- Find section-closing previews of what comes next.
+- Find restatements of the document's own character or scope.
+
+### Boundaries
+
+- Do not delete the four permitted forms listed below.
 
 ### The topic test
 
@@ -128,35 +130,35 @@ sentence so it states the situation it was gesturing at. A rewrite that is still
 about the document — merely shorter, or reworded — has failed. Delete it and
 bridge the surrounding sentences instead.
 
-### Severity
+### Reader impact
 
-`major`. These sentences are pure overhead, and they are dense in
-machine-written text.
+These sentences are pure overhead and are dense in machine-written text; a run
+of them can obscure the document's actual movement.
 
 ---
 
 ## `prose.concision`
 
-```yaml
-lens: prose.concision
-language: common
-layer: expression
-packing_group: expression
-objective: Find text that can be removed without losing information.
-checks:
-  - The same claim made more than once in different words.
-  - A summary placed immediately after the passage it summarizes.
-  - Sentences that exist only to connect or to evaluate.
-  - Intermediate steps a reader can supply unaided.
-  - Multi-sentence arguments compressible into one sentence.
-  - Rhetorical dialogue with an imagined reader.
-non_goals:
-  - Do not cut context the reader has not yet been given. Shortening an
-    introduction by dropping scope, comparison axes, or open questions is
-    omission, not concision.
-  - Do not cut connectives that carry logical relation. That is
-    structure.signposting's material.
-```
+### Purpose
+
+Find text that can be removed without losing information.
+
+### Consider
+
+- The same claim made more than once in different words.
+- A summary placed immediately after the passage it summarizes.
+- Sentences that exist only to connect or to evaluate.
+- Intermediate steps a reader can supply unaided.
+- Multi-sentence arguments compressible into one sentence.
+- Rhetorical dialogue with an imagined reader.
+
+### Boundaries
+
+- Do not cut context the reader has not yet been given. Shortening an
+  introduction by dropping scope, comparison axes, or open questions is
+  omission, not concision.
+- Do not cut connectives that carry logical relation. That is
+  structure.signposting's material.
 
 ### Rules
 
@@ -178,31 +180,29 @@ non_goals:
   conclusion into vagueness. Name the structure and state it.
 - Connectives that carry rhythm are not padding.
 
-### Severity
+### Reader impact
 
-`minor` per instance; `major` where a section's length is dominated by
-restatement.
+One instance adds local cost; restatement that dominates a section can hide its
+contribution to the document.
 
 ---
 
 ## `prose.sentence-load`
 
-```yaml
-lens: prose.sentence-load
-language: common
-layer: expression
-packing_group: expression
-objective: Find text that forces the reader to hold more than necessary, or to
-  read backwards.
-checks:
-  - Sentences long enough, or nested deeply enough, that the subject and its
-    predicate lose contact.
-  - Proper nouns and identifiers introduced but never referenced again.
-  - Detail unrelated to the question the section answers.
-  - Asides that belong in a footnote.
-  - Related words separated by intervening material.
-  - Emphatic content buried mid-sentence instead of placed at the end.
-```
+### Purpose
+
+Find text that forces the reader to hold more than necessary, or to
+read backwards.
+
+### Consider
+
+- Sentences long enough, or nested deeply enough, that the subject and its
+  predicate lose contact.
+- Proper nouns and identifiers introduced but never referenced again.
+- Detail unrelated to the question the section answers.
+- Asides that belong in a footnote.
+- Related words separated by intervening material.
+- Emphatic content buried mid-sentence instead of placed at the end.
 
 ### Rules
 
@@ -223,27 +223,25 @@ checks:
 - **Keep related material close enough to recover.** The language profile owns
   constituent order and the natural position of emphasis.
 
-### Severity
+### Reader impact
 
-`minor` for a single unnecessary identifier; `major` where a sentence must be
-re-read to be parsed.
+A single unnecessary identifier adds local recall cost. A sentence that must be
+re-read before it can be parsed interrupts understanding.
 
 ---
 
 ## `prose.voice`
 
-```yaml
-lens: prose.voice
-language: common
-layer: expression
-packing_group: expression
-objective: Find narration that leaves a relevant actor or object unrecoverable,
-  addresses the reader without a document purpose, or blurs the object under
-  discussion.
-checks:
-  - Vague category words standing in for the actual object.
-  - Fictional persona framing attached to an example for no purpose.
-```
+### Purpose
+
+Find narration that leaves a relevant actor or object unrecoverable,
+addresses the reader without a document purpose, or blurs the object under
+discussion.
+
+### Consider
+
+- Vague category words standing in for the actual object.
+- Fictional persona framing attached to an example for no purpose.
 
 ### Rules
 
@@ -259,7 +257,7 @@ checks:
 - Preserve negation when it defines the operative boundary. Language profiles
   own preferences for positive form, directives, and judgment.
 
-### Severity
+### Reader impact
 
-`minor` for voice and address; `major` where the actor or the object of a claim
-cannot be determined from the sentence.
+Voice and address usually affect local flow. The impact is substantial where
+the actor or object of a claim cannot be determined from the sentence.

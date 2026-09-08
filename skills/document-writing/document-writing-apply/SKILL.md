@@ -21,12 +21,12 @@ intervention: selected-findings
 verify: true
 ```
 
-Accept only findings that conform to the check schema in
-`document-writing-standards`. Re-resolve each exact anchor immediately before
-application and mark absent or changed anchors stale. Reject any item whose
-remedy adds substance, changes a claim or its epistemic status, reorganizes the
-reader progression, or otherwise exceeds `content_impact: none`; route it to
-holistic review instead.
+Accept only findings that conform to the minimal check handoff in
+`document-writing-standards`. Load only the lenses named by those findings.
+Re-resolve each exact anchor immediately before application and mark absent or
+changed anchors stale. Reject any item whose remedy adds substance, changes a
+claim or its epistemic status, reorganizes the reader progression, or otherwise
+exceeds `content_impact: none`; route it to holistic review instead.
 
 Apply accepted findings in dependency order defined by
 `document-writing-base`. Verify only damage introduced by this application.

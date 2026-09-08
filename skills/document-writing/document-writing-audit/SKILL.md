@@ -22,12 +22,14 @@ intervention: content-preserving
 verify: false
 ```
 
-Return only located, falsifiable defects using the finding schema in
-`document-writing-standards`. Do not convert planning principles or editorial
-heuristics into findings. If the document appears to have a broken focus,
-missing substance, wrong order, or disproportionate explanation, state that a
-holistic `document-writing-review` is needed; do not encode the diagnosis as a
-set of local commands.
+Load only the language-specific and common references for applicable
+deterministic checks. Return located, falsifiable defects using the minimal
+finding handoff in `document-writing-standards`. Do not convert planning
+principles, editorial heuristics, or an unstated house-style preference into
+findings. If the document appears to have a broken focus, missing substance,
+wrong order, or disproportionate explanation, state that a holistic
+`document-writing-review` is needed; do not encode the diagnosis as a set of
+local commands.
 
 Change no files or supplied text. Exact unique anchors are required because the
 approved findings may later be passed to `document-writing-apply`.

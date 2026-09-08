@@ -1,8 +1,8 @@
 # Examples — English
 
 Concrete instances of the common and English-profile lenses. Keyed by lens ID.
-Load alongside the lens definition; the lists are
-illustrative, not exhaustive.
+Load only the subsection for a selected lens when a concrete comparison would
+materially help the judgment; the lists are illustrative, not exhaustive.
 
 Examples for planning principles and editorial heuristics illustrate contextual
 judgments, not constructions that must always produce a finding.
@@ -292,12 +292,15 @@ requirement is an inspectable representation, not a particular renderer.
 
 - Correct order (explain, then name): When several stages share a representation
   for passing data, changing that representation affects all of them. This
-  dependency is **coupling**.
+  dependency is coupling. Emphasize the introduced term only when the house
+  style calls for that treatment.
 - Defect (name first): The goal of the design is to reduce **coupling**.
   (Coupling is not defined before this point.)
 - Do not open with a bare dictionary assertion: instead of "Idempotency is the
   property that…", place the object first, state what it does, then define it.
-- Expand abbreviations at first use: "write-ahead log (WAL)", not a bare "WAL".
+- Expand an abbreviation before the reader needs it when the audience cannot be
+  expected to know it: "write-ahead log (WAL)". A familiar abbreviation does
+  not require an audience-free first-use expansion.
 
 ---
 
