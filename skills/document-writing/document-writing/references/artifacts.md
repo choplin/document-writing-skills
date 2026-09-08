@@ -4,6 +4,38 @@ Persist intermediate artifacts when the work spans sessions, agents, or a
 substantial document. The artifacts are the handoff contract; conversation
 history is not.
 
+Resolve `scripts/artifact-lineage.py` relative to this skill's `SKILL.md`, then
+use that absolute path for deterministic publication and lineage inspection.
+The helper derives revision identities and predecessors from the immutable
+files, computes whole-file SHA-256 digests, and rejects invalid or ambiguous
+lineage. It does not decide whether an artifact is complete, qualitatively
+acceptable, or approved by the human author.
+
+The helper requires Python 3.9 or later to be available as `python3`. It uses
+only the Python standard library and installs no package dependencies. If that
+runtime is unavailable, report the missing prerequisite and do not attempt the
+deterministic artifact operations manually.
+
+Its stable command contract is:
+
+```text
+python3 <document-writing-skill>/scripts/artifact-lineage.py digest PATH
+python3 <document-writing-skill>/scripts/artifact-lineage.py next ROOT ARTIFACT
+python3 <document-writing-skill>/scripts/artifact-lineage.py publish ROOT ARTIFACT --body-file PATH [--based-on PATH ...]
+python3 <document-writing-skill>/scripts/artifact-lineage.py inspect ROOT
+```
+
+Every successful command writes JSON to standard output. `inspect` includes
+the current head of each artifact lineage and stale upstream references from
+those current heads; superseded historical revisions remain immutable but do
+not keep repaired lineages invalid.
+Invalid input, a digest mismatch, a superseded upstream reference, a malformed
+revision, or ambiguous heads produces a nonzero exit. Other failures write a
+JSON error to standard error. `publish` accepts a reviewed body without YAML
+frontmatter, creates the next numbered file without overwriting any existing
+revision, records the current head as `supersedes`, and computes each
+`--based-on` digest. Treat its returned path as the exact published revision.
+
 ## Storage
 
 Choose the artifact root in this order:
@@ -80,7 +112,12 @@ the semantic design and reader-facing choices remain separately inspectable.
 
 ## Revision header
 
-Begin each artifact with minimal YAML frontmatter:
+Begin each artifact with minimal YAML frontmatter in the subset the helper
+accepts: top-level fields may appear in any order; artifact names, predecessor
+paths, and upstream paths are non-empty plain or JSON-quoted strings;
+`revision` is a positive integer; and `based_on` is a non-empty list containing
+one `path` and SHA-256 `digest` per item. YAML comments, tags, anchors, and
+aliases are unsupported. Omit `based_on` when there are no upstream inputs.
 
 ```yaml
 ---
@@ -101,29 +138,26 @@ what changed and why. Do not add empty metadata merely to satisfy a schema.
 Past revisions are immutable. To change one after it has been published for
 human inspection, finish and internally review the replacement, then write the
 next numbered revision and point `supersedes` at the prior revision. The first
-revision omits `supersedes`. Paths are relative to the artifact root unless the
-source is external.
+revision omits `supersedes`. Publish the reviewed body with the helper rather
+than selecting the number, predecessor, or digests manually. Paths are relative
+to the artifact root unless the source is external.
 
 ## Detecting upstream changes
 
-Before using an artifact:
-
-1. Resolve each `based_on.path`.
-2. Compute the SHA-256 digest of the whole referenced file.
-3. Compare it with the recorded digest.
-4. Check whether a newer revision now supersedes the referenced revision.
-5. If either check differs, inspect the actual change and create a new
-   downstream revision that records the reviewed upstream revision.
+Before using an artifact, run the helper's `inspect ROOT` operation. If it
+reports a digest mismatch or superseded upstream reference, inspect the actual
+change and create a new downstream revision that records the reviewed upstream
+revision. Do not reproduce head selection or hashing manually.
 
 An upstream change does not automatically invalidate every word downstream.
 It requires review. Even when no body text changes, create a new revision if it
 is important to record that the newer premise was considered.
 
-The latest published artifact is a revision not superseded by another revision
-in the same lineage. Publication alone does not make a content model or plot
-usable by its dependent phase; that also requires the human acceptance described
-above. Branches are allowed; do not silently choose between two heads when they
-embody materially different decisions.
+The helper reports the latest published artifact as the revision not
+superseded by another revision in the same lineage. Publication alone does not
+make a content model or plot usable by its dependent phase; that also requires
+the human acceptance described above. Branches are allowed, but the helper
+reports multiple heads as ambiguous instead of choosing between them.
 
 A generated status page or index may be used for convenience only if it can be
 rebuilt from these files. It is never authoritative state.

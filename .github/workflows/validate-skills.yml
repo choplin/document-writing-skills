@@ -5,12 +5,14 @@ on:
     paths:
       - "skills/**"
       - "scripts/validate-skills.sh"
+      - "tests/test_artifact_lineage.py"
       - "lefthook.yml"
       - ".github/workflows/validate-skills.yml"
   pull_request:
     paths:
       - "skills/**"
       - "scripts/validate-skills.sh"
+      - "tests/test_artifact_lineage.py"
       - "lefthook.yml"
       - ".github/workflows/validate-skills.yml"
 
@@ -46,3 +48,6 @@ jobs:
 
       - name: Validate skills
         run: scripts/validate-skills.sh --emit-annotations
+
+      - name: Test artifact lineage helper
+        run: python3 -m unittest discover -s tests -v
