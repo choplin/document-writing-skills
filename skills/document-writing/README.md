@@ -15,14 +15,18 @@ heads and upstream changes are derived from revision files and their digests.
 
 | Task | Skill | Result |
 |---|---|---|
-| Create or substantially rebuild a document | `document-writing` | Orchestrated planning, drafting, editorial passes, and acceptance |
+| Create or substantially rebuild a document | `document-writing` | End-to-end planning, drafting, editorial passes, and acceptance |
 | Holistically revise an existing draft | `document-writing-review` | The existing-document route through the governing workflow |
-| Write inside an already settled plan | `standards` | Relevant planning, editorial, and language guidance used during composition |
-| Improve prose without changing content or structure | `prose` | A connected line edit |
-| Inspect stable prose without changing it | `audit` | Local conformance findings only |
-| Apply approved local findings | `apply` | Content-preserving edits with stale-anchor and preservation checks |
+| Consult writing guidance or evaluate prose | `document-writing-standards` | Relevant planning, editorial, and language guidance |
+| Improve prose without changing content or structure | `document-writing-prose` | A connected line edit |
+| Inspect stable prose without changing it | `document-writing-audit` | Local conformance findings only |
+| Apply approved local findings | `document-writing-apply` | Content-preserving edits with stale-anchor and preservation checks |
 
-`base` is internal machinery for the line, copyedit, audit, and apply lanes.
+`document-writing-base` is internal machinery selected by these entry points.
+`document-writing-standards` is not user-invocable, but an agent may select it
+directly when a writing task needs its guidance. The standards catalog loads
+only the material relevant to the current prose language, editorial stage, and
+lenses.
 
 ## Workflow
 
@@ -67,25 +71,24 @@ technical documents, and academic work.
 - conformance checks detect local correctness and consistency defects after the
   larger decisions are stable.
 
-Only the third category flows directly through `audit` and `apply`. Editorial
-reviewers receive the relevant audience and plot context; “blind” means
-independent of other editorial reviewers' conclusions, not deprived of document
-intent.
+Only the third category flows directly through `document-writing-audit` and
+`document-writing-apply`. Editorial reviewers receive the relevant audience and
+plot context; “blind” means independent of other editorial reviewers'
+conclusions, not deprived of document intent.
 
 ## Reader-side acceptance
 
-The bundled `document-reader` system tests a different boundary after a complete
-draft is editorially stable. Its personas report what intended readers
-understood, rejected, or would act on without seeing the author's intent or the
-editorial plot. `document-reader-review` returns findings only;
-`document-reader-revise` puts every substantive response to the author before
-changing the document.
+`document-reader-review` tests the reader boundary after a complete draft is
+editorially stable. Its personas receive the finished document and their reader
+context, not the author's intent or editorial plot, and return findings without
+changing the document. `document-reader-revise` puts every substantive response
+to the author before changing the document.
 
 Use reader review when comprehension, persuasion, decision quality, or ability
 to act is material to acceptance. If accepted findings change substance or
 structure, return to the earliest affected editorial stage and repeat downstream
-passes. Do not interpret a clean reader review as factual verification; that is
-a separate external workflow.
+passes. Reader review supplies evidence about reader outcomes. Factual
+verification belongs to a separate external fact-checking workflow.
 
 ## Durable artifacts
 
@@ -136,13 +139,13 @@ review-and-repair cycle.
 
 | Skill | Responsibility |
 |---|---|
-| `document-writing` | Orchestrator for new documents and substantial revisions |
-| `standards` | Planning principles, editorial heuristics, local checks, and Japanese/English profiles |
-| `base` | Shared context-aware line/copy/audit/apply machinery |
-| `review` | Entry adapter selecting the existing-document route |
-| `prose` | Content-preserving line edit |
-| `audit` | Local conformance findings without edits |
-| `apply` | Application of selected local findings |
+| `document-writing` | End-to-end workflow for new documents and substantial revisions |
+| `document-writing-review` | Entry point for the existing-document route |
+| `document-writing-prose` | Content-preserving line edit |
+| `document-writing-audit` | Local conformance findings without edits |
+| `document-writing-apply` | Application of selected local findings |
+| `document-writing-base` | Internal context-aware line/copy/audit/apply machinery |
+| `document-writing-standards` | Agent-selectable planning principles, editorial heuristics, local checks, and Japanese/English profiles |
 
 The reader-review skills are documented in
 [`../document-reader/README.md`](../document-reader/README.md).

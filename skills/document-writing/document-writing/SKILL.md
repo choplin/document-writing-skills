@@ -1,11 +1,11 @@
 ---
 name: document-writing
 description: >-
-  Orchestrates the planning, drafting, and revision of substantial documents.
-  Applies to books and chapters, technical documentation, academic writing, and
-  explanatory or argumentative documents whose audience, governing idea,
-  content design, and reader progression must be established before prose is
-  finalized.
+  Plans, drafts, and revises substantial documents from framing through
+  delivery. Applies to books and chapters, technical documentation, academic
+  writing, and explanatory or argumentative documents whose audience,
+  governing idea, content design, and reader progression must be established
+  before prose is finalized.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task, AskUserQuestion
 metadata:
   description-role: trigger
@@ -13,9 +13,10 @@ metadata:
 
 # Document Writing
 
-Orchestrate the document from the change it should create for its reader. Keep
-one semantic direction across planning, drafting, editing, reader evidence, and
-acceptance while letting each phase use the form and depth its material needs.
+Carry the document from the change it should create for its reader through
+delivery. Keep one semantic direction across planning, drafting, editing,
+reader evidence, and acceptance while letting each phase use the form and depth
+its material needs.
 
 The governing direction is:
 
@@ -31,25 +32,13 @@ reader's situation, problem, or task
        reader-facing plot and prose
 ```
 
-Load phase guidance when that phase begins:
-
-- [content-model.md](references/content-model.md) for focus and content design;
-- the matching guide in `assets/` for the reader-facing plot;
-- [document-kinds.md](references/document-kinds.md) when document-kind choices
-  affect the route;
-- [artifacts.md](references/artifacts.md) for work spanning files, sessions, or
-  agents; and
-- `document-writing-standards` for the relevant planning, editorial, and
-  conformance guidance.
-
 When maintaining this workflow, read
 [evaluation.md](references/evaluation.md). Keep evaluation material outside a
 forward-test agent's context.
 
 ## Select the route
 
-- **New or substantially rebuilt document:** run the complete orchestration
-  below.
+- **New or substantially rebuilt document:** run the complete workflow below.
 - **Existing document:** add diagnostic reading and a reverse outline, then
   design the target document afresh from its reader-centered root.
 - **Settled content and structure:** delegate a connected wording revision to
@@ -59,13 +48,23 @@ forward-test agent's context.
 Small documents may combine adjacent artifacts while preserving the decisions
 and checks owned by each phase.
 
-## Orchestrate the work
+For work spanning files, sessions, or agents, read
+[artifacts.md](references/artifacts.md) before publishing the first durable
+artifact. Use its revision, lineage, storage, and resume contract throughout the
+workflow.
+
+## Write the document
 
 ### 1. Frame the outcome
 
 Establish the audience, prior knowledge, use and reading situation, intended
 outcome, document kind, scope, constraints, sources, and unresolved questions.
 For revision, include the intervention boundary and protected content.
+
+When document-kind conventions affect framing or route selection, read only the
+matching section of [document-kinds.md](references/document-kinds.md). Apply
+`document-writing-standards` and load only the planning guidance relevant to
+the current decisions.
 
 Establish a focus and proposed root that connect a problem, question, task, or
 situation recognizable to the reader with the document's answer, method,
@@ -75,6 +74,9 @@ position, or experience and the value or consequence it creates.
 
 Collect what the source material establishes, suggests, or leaves open,
 including provenance and claim status.
+
+Apply `document-writing-standards` and load planning guidance for claim support,
+epistemic status, and diagnosis only when those judgments arise.
 
 For an existing document, recover what its passages currently cause a reader to
 understand. Locate support, gaps, repetition, emphasis, and movement at the level
@@ -107,6 +109,9 @@ Use it to choose the reader's entry, order, grouping, pace, emphasis, local
 passage movement, physical boundaries, ending, and representations. The plot
 owns the path through the modeled content.
 
+Apply `document-writing-standards` and load only planning guidance relevant to
+the plot decisions being made.
+
 Review the working plot against the accepted content model, assignment, and
 relevant sources. Correct findings inline and repeat until the candidate is
 coherent and ready for the author; do not preserve those internal iterations as
@@ -118,8 +123,10 @@ publishing another revision.
 ### 5. Draft and edit
 
 Draft connected movements and passages against the content model and plot while
-preserving source boundaries and claim status. Then run the passes from larger
-decisions to smaller ones:
+preserving source boundaries and claim status. Apply
+`document-writing-standards` at each pass and load only guidance matching its
+editorial stage, prose language, and current judgment. Then run the passes from
+larger decisions to smaller ones:
 
 1. developmental edit for substance, support, architecture, proportion,
    representation, and reader movement;

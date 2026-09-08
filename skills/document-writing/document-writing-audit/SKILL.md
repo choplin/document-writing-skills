@@ -2,9 +2,8 @@
 name: document-writing-audit
 description: >-
   Inspects stable Japanese or English prose for locally falsifiable conformance
-  defects without editing it. Applies when a person wants located copyedit
-  findings to approve and apply later; it is not a substitute for developmental
-  or holistic editorial review.
+  defects and produces located copyedit findings for person approval without
+  changing the document.
 allowed-tools: Read, Glob, Grep, Bash, Task
 metadata:
   description-role: trigger

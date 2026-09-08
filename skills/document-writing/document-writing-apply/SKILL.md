@@ -3,7 +3,7 @@ name: document-writing-apply
 description: >-
   Applies a person-selected set of local document conformance findings, rejects
   stale or substantive instructions, and verifies that the edits preserve the
-  document. Applies after document-writing-audit or equivalent human review.
+  document.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task
 metadata:
   description-role: trigger

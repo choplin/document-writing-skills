@@ -2,9 +2,7 @@
 name: document-writing-standards
 description: >-
   Supplies planning principles, editorial heuristics, and local conformance
-  checks for Japanese and English documents. Apply the relevant guidance while
-  planning, drafting, or editing; do not treat every lens as a mechanical defect
-  detector.
+  checks when an agent plans, drafts, or edits Japanese or English documents.
 user-invocable: false
 metadata:
   description-role: trigger
@@ -220,7 +218,8 @@ recommendation: <contextual judgment, not an automatic command>
 
 ## Scope boundary
 
-These lenses do not establish external truth. Use authoritative sources through
-a separate external fact-checking workflow for factual verification. Reader
-outcome is part of the document-writing workflow and may also be tested through
-`document-reader-review`; it is no longer excluded from readability judgment.
+These lenses judge planning, prose, and reader-facing effects; they do not
+establish external truth. Factual verification uses authoritative sources
+through a separate external fact-checking workflow. Reader outcomes remain part
+of document-writing acceptance and may be tested through
+`document-reader-review`.
