@@ -2,7 +2,8 @@
 
 Language: **common**. These are planning principles and editorial heuristics.
 They may suggest joining sentences, moving text, changing representation, or
-revising the plot. Interpret them against audience, purpose, focus, and genre;
+revising the plot. Interpret them against audience, purpose, semantic spine,
+meaning tree, and genre;
 the intervention boundary states the usual reach of a change, not automatic
 authority.
 
@@ -221,10 +222,18 @@ Treat a resulting change as planning or developmental work, not a local conforma
 - **Recover the current composition before judging layout.** State what each
   substantial passage establishes, group passages into larger meanings, and
   explain what a reader can build from them. This is a diagnostic reading of the
-  existing prose. Compare it with the target model that was designed top down
-  from the reader-centered root.
+  existing prose. Compare it with the target meaning tree that was designed top
+  down from the reader-valued root.
+- **Require recursive composition from root to leaves.** The document's root is
+  established by its major meanings; each major meaning is established or
+  developed by its children; and each material passage has a recoverable path of
+  contribution through those parents. Topical relevance alone does not create
+  that relationship.
 - A parent states the conclusion, understanding, state, or change established by
   its children and their relationship.
+- Judge hierarchy and proportion as part of the logic. A supporting detail must
+  not become the apparent governing subject merely because it receives more
+  headings or explanation than the meaning it supports.
 - Choose diagnostic depth from the reader problem. Follow the affected branch
   below the section level when its internal movement is where comprehension
   fails.
@@ -247,8 +256,9 @@ Treat a resulting change as planning or developmental work, not a local conforma
 ### Reporting
 
 Return document-shape concerns as plot or developmental-edit observations.
-Record the intended structural change and its reason because it overrides an
-authorial choice; do not send it through the local finding-application lane.
+Record the intended structural change and its reason because it belongs to the
+composition owner and may affect the semantic spine; do not send it through the
+local finding-application lane.
 
 ### Reader impact
 
@@ -302,8 +312,8 @@ Treat a resulting change as planning or developmental work, not a local conforma
 ### Reporting
 
 Return representation changes as plot or developmental-edit observations.
-Changing form overrides an authorial choice and may add or remove a document
-element, so record the relationship to expose, the chosen form, and the reason.
+Changing form may add or remove a document element or affect the semantic spine,
+so record the relationship to expose, the chosen form, and the reason.
 
 ### Reader impact
 

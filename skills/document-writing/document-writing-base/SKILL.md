@@ -13,8 +13,9 @@ metadata:
 
 # Document Writing Base
 
-This skill serves downstream editorial passes. It does not replace assignment,
-discovery, focus, content modeling, plotting, or developmental editing.
+This skill serves downstream editorial passes. It does not replace framing,
+discovery, meaning-tree design, composition, developmental editing, or semantic
+round-trip verification.
 
 Use the selection and progressive-loading procedure in
 `document-writing-standards`. Read only the definitions needed for the prose
@@ -44,9 +45,9 @@ editorial_context:
   use: <reading or work situation>
   outcome: <intended understanding, decision, or action>
   document_kind: <genre or technical-document kind>
-  focus: <governing idea>
-  content_model: <path or concise equivalent>
-  plot: <current durable artifact or concise equivalent>
+  semantic_spine: <author-shared governing meanings>
+  meaning_tree: <path or concise equivalent>
+  plot: <reader-facing composition decisions or concise equivalent>
   house_style: <if any>
   protected_content: []
   permitted_intervention: <boundary>
@@ -62,16 +63,16 @@ claim about where a defect is expected.
 
 ## Line edit
 
-Read the document as connected prose, not as a bag of sentences. Use the content
-model to see what each passage establishes and how it contributes upward; then
+Read the document as connected prose, not as a bag of sentences. Use the meaning
+tree to see what each passage establishes and how it contributes upward; then
 use editorial heuristics to inspect paragraph movement, continuity, emphasis,
 transitions, sentence realization, voice, and cadence. Produce one coherent
 revision within the content and structural boundary.
 
 When a good remedy requires a new claim, new explanation, changed relation,
 section movement, or changed emphasis, do not improvise it locally. Return an
-observation to the earliest owning stage: focus, content model, plot, or
-developmental edit.
+observation to holistic composition or the affected meaning-tree branch. An
+author-owned change to the semantic spine returns to the author.
 
 ## Copyedit
 
@@ -97,7 +98,7 @@ changed anchor is stale. Deduplicate findings by cause and anchor.
   establish hierarchy before connective or boundary choices.
 - In English, establish explicit argument roles before information order and
   clause linkage; grammar outranks a stylistic boundary preference.
-- A copyedit never overrides the current focus or plot.
+- A copyedit never overrides the semantic spine, meaning tree, or plot.
 
 If two heuristics disagree, decide from audience, purpose, and passage movement;
 do not resolve by vote or a universal priority table.

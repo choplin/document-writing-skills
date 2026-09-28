@@ -1,11 +1,10 @@
 ---
 name: document-writing
 description: >-
-  Plans, drafts, and revises substantial documents from framing through
-  delivery. Applies to books and chapters, technical documentation, academic
-  writing, and explanatory or argumentative documents whose audience,
-  governing idea, content design, and reader progression must be established
-  before prose is finalized.
+  Plans, drafts, and revises substantial documents by first sharing their
+  governing meaning with the author, then expanding, composing, and verifying
+  that meaning through finished prose. Applies to technical, academic,
+  explanatory, argumentative, and book-length work.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Task, AskUserQuestion
 metadata:
   description-role: trigger
@@ -13,169 +12,281 @@ metadata:
 
 # Document Writing
 
-Carry the document from the change it should create for its reader through
-delivery. Keep one semantic direction across planning, drafting, editing,
-reader evidence, and acceptance while letting each phase use the form and depth
-its material needs.
-
-The governing direction is:
+Turn the author's intended meaning into a document that lets its reader reach
+the intended understanding, decision, or action. Treat writing as a semantic
+design activity: establish the governing meaning with the author, develop it
+recursively, realize it as connected prose, then recover the meaning from the
+prose and compare the two.
 
 ```text
-reader's situation, problem, or task
-                ↓
-       root meaning and value
-                ↓
-       top-down content design
-                ↓
- bottom-up verification from material
-                ↓
-       reader-facing plot and prose
+author intent and sources
+        ↕ collaborate
+reader-valued root and semantic spine
+        ↓ agent expands
+complete meaning tree
+        ↓ composition owner plots the reader path
+reader-facing plot
+        ↓ same owner composes
+complete draft
+        ↕ fresh reconstruction and revision
+recovered meaning tree
+        ↓ factual and editorial finish
+final candidate
+        ↓ final reconstruction
+verified document
 ```
 
-When maintaining this workflow, read
-[evaluation.md](references/evaluation.md). Keep evaluation material outside a
-forward-test agent's context.
+The author owns what the document means. The writing agent owns how settled
+meaning becomes a readable document. Do not replace either responsibility with
+approval of a large intermediate outline.
+
+The workflow's primary invariant is **mutual agreement on the governing
+meaning before composition**. The agent must express its current understanding
+of the meaning tree back to the author, from the root through the branches deep
+enough to constrain the document. The author must explicitly confirm or correct
+that understanding. Until both directions have occurred, do not create or
+substantively revise the target document.
+
+This is one semantic handoff, not a prescribed meeting or artifact ceremony.
+Its format, length, and number of conversational turns follow the work. It does
+not require approval of every node, the complete lower tree, headings, or a
+prose plan. A request to write does not replace the handoff when the agent has
+not yet shown what it understood.
+
+Treat this agreement as more important than drafting progress, review counts,
+lens conformance, or polished prose. Those downstream activities can be
+repeated and repaired; prose built from an unshared governing meaning cannot be
+accepted as progress.
+
+When maintaining or evaluating this workflow, read
+[evaluation.md](references/evaluation.md). Keep evaluation cases and reference
+outputs outside a forward writing agent's context.
 
 ## Select the route
 
-- **New or substantially rebuilt document:** run the complete workflow below.
-- **Existing document:** add diagnostic reading and a reverse outline, then
-  design the target document afresh from its reader-centered root.
-- **Settled content and structure:** delegate a connected wording revision to
-  `document-writing-prose`, detection to `document-writing-audit`, and approved
-  local findings to `document-writing-apply`.
-
-Small documents may combine adjacent artifacts while preserving the decisions
-and checks owned by each phase.
+- **New or substantially rebuilt document:** use the complete workflow below.
+- **Existing document:** first diagnose the current reader experience and make
+  a reverse outline. Use the draft as material, not as the target hierarchy.
+- **Settled meaning and structure:** delegate connected wording revision to
+  `document-writing-prose`, local detection to `document-writing-audit`, and
+  approved local findings to `document-writing-apply`.
 
 For work spanning files, sessions, or agents, read
-[artifacts.md](references/artifacts.md) before publishing the first durable
-artifact. Use its revision, lineage, storage, and resume contract throughout the
-workflow.
+[artifacts.md](references/artifacts.md) before publishing a durable artifact.
+Use immutable revisions and `based_on` digests without making artifact
+publication an approval ceremony.
 
-## Write the document
+## Build the document
 
-### 1. Frame the outcome
+### 1. Frame and learn
 
-Establish the audience, prior knowledge, use and reading situation, intended
-outcome, document kind, scope, constraints, sources, and unresolved questions.
-For revision, include the intervention boundary and protected content.
+Establish the intended reader, prior knowledge, reading or work situation,
+useful outcome, document kind, scope, constraints, sources, protected content,
+and unresolved questions. For revision, also record the intervention boundary.
 
-When document-kind conventions affect framing or route selection, read only the
-matching section of [document-kinds.md](references/document-kinds.md). Apply
-`document-writing-standards` and load only the planning guidance relevant to
-the current decisions.
+When document-kind conventions affect the work, read only the matching section
+of [document-kinds.md](references/document-kinds.md). Apply
+`document-writing-standards` progressively, loading only the planning guidance
+needed for the current judgment.
 
-Establish a focus and proposed root that connect a problem, question, task, or
-situation recognizable to the reader with the document's answer, method,
-position, or experience and the value or consequence it creates.
+Collect what the available material establishes, suggests, or leaves open.
+Record provenance and epistemic status. For an existing draft, recover what its
+passages currently cause a reader to understand, including gaps, repetition,
+misplaced emphasis, and unsupported transitions.
 
-### 2. Learn and diagnose
+### 2. Share the semantic spine
 
-Collect what the source material establishes, suggests, or leaves open,
-including provenance and claim status.
+Load [meaning-tree.md](references/meaning-tree.md) when this phase begins.
+Apply it to collaborate with the author from the root downward.
 
-Apply `document-writing-standards` and load planning guidance for claim support,
-epistemic status, and diagnosis only when those judgments arise.
+Distinguish the reader outcome from the document's substantive root. The reader
+outcome explains why reading matters; the root states the governing meaning the
+reader must understand or judge. For a product or design document, the root
+normally expresses the user or organizational value of the subject, not merely
+that a designer will understand its components or decisions.
 
-For an existing document, recover what its passages currently cause a reader to
-understand. Locate support, gaps, repetition, emphasis, and movement at the level
-where they affect the reader. Preserve this reverse outline as a diagnosis and
-material inventory for later mapping.
+Develop the root and important branches through ordinary conversation. When the
+tree is deep enough to constrain the document, present a coherent synthesis of
+the agent's understanding: its root, the meanings that establish it, and their
+material relations, conditions, and qualifications. Ask the author to confirm
+or correct that understanding. Continue at the meaning level until the author
+explicitly confirms the current synthesis. Do not compose while confirmation is
+absent or while the author is still correcting its governing meaning.
 
-### 3. Design and verify the content
+The confirmed portion is the **semantic spine**. It fixes the author-owned part
+of the document's governing logic. It is not a mechanical outline and need not
+map one node to one heading or paragraph. Existing prose, source material, or an
+agent-authored artifact cannot establish this agreement. When durable handoff
+is useful, publish a semantic-spine revision only after confirmation; the
+artifact summarizes the agreed meaning without requiring a transcript or
+node-by-node evidence.
 
-Load [content-model.md](references/content-model.md) when this phase begins.
-Give it the assignment, focus, relevant sources, and, for an existing document,
-the diagnosis and reverse outline. Follow its complete content-design procedure.
+After agreement, expand lower branches, compose, edit, apply lenses, and review
+autonomously. Return to this handoff only when the root or another agreed
+meaning must change.
 
-This phase is complete when a complete content-model candidate has passed that
-internal check, been published as a durable revision, and been read and accepted
-by the human author. Hand the accepted content model, assignment, focus, and
-relevant sources to the matching plot guide. The accepted model governs what the
-document must establish while leaving plot and prose free to realize it
-naturally.
+### 3. Expand and verify the meaning tree
 
-### 4. Plot the reader's experience
+Develop the semantic spine downward until the difficult branches can guide
+coherent passages without unstated reasoning. Include the claims, reasons,
+mechanisms, distinctions, evidence, examples, conditions, and consequences the
+reader needs. State how children combine to establish each parent.
 
-Choose one guide:
+Treat the complete meaning tree as the document's logical design. Derive it
+recursively from the root: every child must contribute to its parent, sibling
+meanings must jointly establish or develop that parent, and every material leaf
+must have a traceable path of contribution back to the root. The tree determines
+which meanings are governing, supporting, subordinate, or out of scope.
+Available material may substantiate or refine this logic, but a topic inventory,
+source organization, or existing document cannot substitute for it.
 
-- [general document](assets/plot-general.md)
-- [book or chapter](assets/plot-book.md)
-- [technical document](assets/plot-technical.md)
-- [academic document](assets/plot-academic.md)
+Maintain terminology with the tree: give each concept one primary name, its
+intended meaning and scope, important distinctions, and any source or code name
+that must remain traceable. For a material example, record the inputs,
+operation, expected result, and the proposition it demonstrates.
 
-Use it to choose the reader's entry, order, grouping, pace, emphasis, local
-passage movement, physical boundaries, ending, and representations. The plot
-owns the path through the modeled content.
+Verify upward from developed leaves to the root. Check that evidence supports
+the stated strength, examples actually instantiate their propositions, and no
+branch depends on unstated author intent. Repair lower branches directly when
+accepted sources determine the answer. Return to the author only when the
+repair would alter the shared semantic spine or requires new authority.
 
-Apply `document-writing-standards` and load only planning guidance relevant to
-the plot decisions being made.
+### 4. Plot, compose, and develop the draft
 
-Review the working plot against the accepted content model, assignment, and
-relevant sources. Correct findings inline and repeat until the candidate is
-coherent and ready for the author; do not preserve those internal iterations as
-durable revisions. Publish the complete candidate as the next plot revision,
-then wait for the human author to read and accept it before drafting. If they
-request changes, complete the same internal review-and-repair cycle before
-publishing another revision.
+Give one writing agent ownership of composition through developmental editing.
+Provide the brief, semantic spine, expanded meaning tree, sources, terminology,
+protected content, and applicable house style. Composition decisions remain
+with that owner throughout the complete draft and developmental edit.
 
-### 5. Draft and edit
+Read the plot guide matching the document kind when choosing the reader-facing
+realization:
 
-Draft connected movements and passages against the content model and plot while
-preserving source boundaries and claim status. Apply
-`document-writing-standards` at each pass and load only guidance matching its
-editorial stage, prose language, and current judgment. Then run the passes from
-larger decisions to smaller ones:
+- [general document](references/plot-general.md)
+- [book or chapter](references/plot-book.md)
+- [technical document](references/plot-technical.md)
+- [academic document](references/plot-academic.md)
 
-1. developmental edit for substance, support, architecture, proportion,
-   representation, and reader movement;
-2. connected line edit through `document-writing-base`;
-3. local copyedit through `document-writing-base`;
-4. reader review through `document-reader-review` when acceptance requires
-   evidence from intended readers;
-5. author resolution through `document-reader-revise` and repetition of every
-   editorial pass affected by an accepted finding; and
-6. proof of the complete rendered object.
+Derive the plot and document architecture from the meaning tree before
+composing prose. The meaning tree governs what the document establishes and how
+its meanings support one another. The plot governs how the intended reader
+encounters that logic: entry, order, grouping, pace, emphasis, passage movement,
+representation, and ending. Plot decisions may rearrange or combine tree nodes
+for comprehension, but may not replace their hierarchy or contribution
+relations.
 
-### 6. Accept and deliver
+For every central section and paragraph, identify its governing proposition,
+its parent meaning, and how it advances that parent. Let logical role, reader
+need, and explanatory difficulty determine order, emphasis, and development
+depth.
 
-Accept the document when the intended reader can reach the promised outcome;
-the root is supported at its stated strength; central passages carry coherent
-internal movement; uncertainty, provenance, and protected content survive; and
-the final references, format, and rendering are usable.
+The composition owner chooses the entry, order, headings, paragraph grouping,
+representations, examples, transitions, emphasis, and ending required by the
+reader and genre. It may combine several tree nodes in one passage or develop
+one node across several passages, but these choices must realize the tree's
+support relations and priorities. Freedom of presentation does not permit a
+different logical hierarchy to govern the prose.
 
-Lead the delivery with the document or its link. Then identify the latest
-durable artifacts, completed passes, material departures from the plot, and
-unresolved decisions.
+Attach source material, prior prose, examples, and technical detail to the
+meanings they support only after the logical design exists. Material belongs in
+the document when it contributes to a node at appropriate scope and prominence;
+otherwise omit it, move it to a separately scoped artifact, or revise the tree
+through the appropriate authority boundary.
 
-## Coordinate context and revision
+Draft connected passages, then developmentally edit the complete document for
+substance, support, architecture, proportion, representation, and reader
+movement. Writing may expose a missing relation, unnatural example, ambiguous
+term, or misplaced distinction. Repair the prose and lower meaning tree
+together when sources settle the issue. Ask the author only when the discovery
+changes an author-owned meaning.
 
-Give each phase the exact current artifacts it needs. Content design receives
-the assignment, focus, sources, and diagnosis. Plotting receives the
-human-accepted content model. Drafting and editorial review receive the
-assignment, focus, human-accepted content model, human-accepted plot, sources,
-and intervention boundary.
+### 5. Reconstruct and compare
 
-Independent editorial reviewers receive the same governing context while
-working without one another's conclusions. Reader personas receive the finished
-document and their assigned reader context through `document-reader-review`;
-their reactions return to the author for substantive decisions.
+Give a fresh reviewer the finished draft, intended audience, and reading
+situation, but not the semantic spine, meaning tree, author intent, source
+outline, or suspected defects. Ask the reviewer to reconstruct from the
+document alone:
 
-Route a failure to its earliest owner:
+- the document's root and major supporting meanings;
+- each central section's governing proposition;
+- the contribution of its paragraphs and important examples;
+- the relations among claims, evidence, conditions, and consequences; and
+- the qualifications and unresolved questions a reader should retain.
 
-- reader promise or scope → assignment or focus;
-- substance, support, or semantic relationship → discovery or content design;
-- order, grouping, emphasis, representation, or passage movement → plot;
-- paragraph or sentence realization → line edit;
-- local correctness or consistency → copyedit.
+Compare the recovered tree with the intended tree. Compare not only whether
+meanings occur, but also their hierarchy, support relations, sequence,
+prominence, and development depth. Look for omitted or invented claims, changed
+strength, lost conditions, misplaced support, ambiguous relations, examples
+that imply the wrong generalization, and a root the reader cannot recover from
+the document's entry and progression. The comparison fails when the intended
+meanings are present but do not govern the logic a reader reconstructs.
 
-When an upstream decision changes, review its downstream artifacts and create
-new durable revisions for the affected decisions and prose. Report choices that
-require new authority, evidence, or scope.
+Revise and repeat until material differences are resolved. Change prose when
+the intended meaning was not realized. Change the lower meaning tree when
+writing exposed a source-supported defect. Return to the author when the shared
+semantic spine itself must change.
 
-A durable planning revision is a complete candidate for human inspection, not
-a record of AI editing history. Perform self-review and inline repair before
-publishing it. Human acceptance without changes advances the workflow without
-creating another revision; changes requested after inspection produce a new
-revision only after its working candidate has passed the same internal checks.
+This round trip tests semantic recoverability, not external truth.
+
+### 6. Verify truth and finish the prose
+
+Verify domain meanings, factual claims, quotations, calculations, and examples
+against authoritative sources or the appropriate external fact-checking
+workflow. Keep editorial review, reader review, and external fact-checking as
+separate responsibilities even when all are required before delivery.
+
+Apply `document-writing-standards` in this order:
+
+1. holistic editorial guidance for paragraph movement, information order,
+   continuity, voice, diction, and cadence across the complete document;
+2. language and terminology guidance while preserving the intended tree; and
+3. deterministic local checks only after meaning and structure are stable.
+
+Use lenses as guidance or checks at their declared control level. Do not split
+the document into one independent rewrite per lens, and do not treat a clean
+local audit as evidence that the document works as a whole.
+
+Run `document-reader-review` when acceptance requires evidence from intended
+readers. Resolve substantive findings through `document-reader-revise`, then
+repeat every affected semantic, editorial, factual, and local check. Finally,
+proof the complete rendered object.
+
+After these passes, reconstruct and compare the meaning of the exact final
+candidate. Any later change capable of affecting meaning or recoverability,
+including a factual correction, example correction, holistic edit, reader
+revision, or proof-driven edit, requires another fresh reconstruction and
+comparison. Deterministic local edits must pass their preservation check; repeat
+reconstruction when that check cannot establish that the change was semantically
+neutral.
+
+### 7. Accept and deliver
+
+Read the final document from its first line without planning artifacts. Accept
+it only when an intended reader can identify what the document is, why it
+matters, and what it enables; recover its governing meaning and central
+propositions; follow the support and examples; distinguish settled claims from
+limits and open questions; and use the rendered object as intended. The accepted
+reconstruction comparison must be based on the exact delivered draft revision.
+
+Lead delivery with the document or its link. Then report the shared semantic
+spine, material author decisions, verification performed, unresolved questions,
+and any departures that affect meaning. Do not lead with workflow artifacts.
+
+## Coordinate authority and revision
+
+The author need not review every intermediate artifact. Ask only for semantic
+choices whose alternatives would materially change the document. A request to
+discuss feedback, inspect an artifact, or consider an option does not authorize
+publishing external records or making unrelated changes.
+
+When an author-owned decision changes, revise the affected meaning-tree branch,
+draft, reconstruction comparison, and downstream checks. Preserve durable
+lineage where the work requires it, but derive status from immutable revisions
+rather than a mutable workflow record.
+
+Independent reviewers receive only the context their evidence requires:
+
+- meaning-tree verification receives the tree and accepted sources;
+- reconstruction receives the finished draft and reader context, not intent;
+- editorial review receives the draft and intended meaning;
+- reader personas receive the finished document and their reader context; and
+- fact-checking receives the claims and authoritative sources it must verify.

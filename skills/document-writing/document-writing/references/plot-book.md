@@ -1,7 +1,7 @@
 # Book or chapter plot
 
 Adapt these prompts to nonfiction, narrative, or a mixed work. Preserve the
-choices that govern the reader's experience and omit prompts that add no
+meaning tree while choosing the reader experience; omit prompts that add no
 decision.
 
 ## Reader footing and promise
@@ -13,9 +13,9 @@ that valuable to this reader?
 ## Arc
 
 Describe the entry, development, turns, pace, emphasis, revelation, echoes, and
-ending. Map content-model meanings or narrative changes into that arc according
-to the experience: one may span several passages, and several may combine in
-one movement.
+ending. Map meanings or narrative changes into that arc according to the
+experience: one may span several passages, and several may combine in one
+movement.
 
 ## Nonfiction development
 
@@ -42,8 +42,4 @@ previously troubled continuous passage enough detail to guide its internal arc.
 ## Rhythm and proportion
 
 Mark where the work compresses, expands, pauses, accelerates, recalls, or lands.
-Let importance and reader experience govern space.
-
-## Revision note
-
-State what changed in this revision and why.
+Let logical importance and reader experience govern space.

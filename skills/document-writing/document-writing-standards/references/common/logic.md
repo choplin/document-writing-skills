@@ -3,9 +3,11 @@
 Language: **common**. These are planning principles and editorial heuristics.
 They change what the document asserts, how it supports it, and how confidently
 it states it, so they do not flow directly through copyedit or automatic
-finding application. Use them with the assignment, sources, focus, content
-model, and plot. Treat the content model as the authority for how lower-level
-claims, evidence, perspectives, events, or actions compose higher-level meaning.
+finding application. Use them with the assignment, sources, semantic spine,
+meaning tree, and plot. Treat the semantic spine as the
+authority for settled meaning. Treat lower branches as the current working
+account of how claims, evidence, perspectives, events, or actions compose that
+meaning, subject to source-supported repair at the author boundary.
 
 Worked before/after pairs, and the hedging and concession vocabulary of each
 language, live in [Japanese examples](../ja/examples.md) and
@@ -49,7 +51,7 @@ their role, genre, audience, and stated confidence require.
   several kinds of problem, separate them and map each to the concept that
   explains it.
 - **Develop support when the argument needs it.** The remedy may add evidence,
-  mechanism, an example, a limitation, or an entire movement to the plot. It may
+  mechanism, an example, a limitation, or an entire movement in the draft. It may
   instead narrow or remove the claim. Choose the smallest change only after
   deciding which argument the document ought to make.
 

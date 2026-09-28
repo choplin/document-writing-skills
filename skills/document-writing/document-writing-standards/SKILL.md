@@ -11,8 +11,9 @@ metadata:
 # Document Writing Standards
 
 This catalog supports a larger editorial workflow. It does not decide the
-document's purpose or replace a plot. The same observation can be useful at
-different stages, but the authority of a lens depends on its role.
+document's purpose or replace meaning-tree design, plotting, or composition. The same
+observation can be useful at different stages, but the authority of a lens
+depends on its role.
 
 ## Match the control to the judgment
 
@@ -20,8 +21,9 @@ The catalog contains three kinds of control. These are reading instructions,
 not fields that every lens must carry:
 
 - **Interpretive guidance** supplies principles and considerations. Planning
-  guidance informs the assignment, focus, content model, or plot; editorial
-  guidance helps an editor diagnose a passage and compare revisions in context.
+  guidance informs the assignment, semantic spine, meaning tree, plot, or composition;
+  editorial guidance helps an editor diagnose a passage and compare revisions in
+  context.
   Either may lead to a decision, question, observation, or several legitimate
   alternatives. A matching surface form is not itself a defect.
 - **Coordinated handoff data** preserves a decision that another stage needs:
@@ -40,7 +42,7 @@ governing objective.
 All roles share one purpose: let the intended reader spend attention on the
 subject rather than reconstructing how details form larger meanings. That
 judgment necessarily uses the audience's prior knowledge, the document's
-purpose, recursive content model, and plot.
+purpose, recursive meaning tree, and plot.
 
 ## Lens index
 
@@ -136,14 +138,15 @@ or dependency surfaces during the pass.
 
 ## Choosing guidance by editorial stage
 
-### Assignment, focus, content model, and plot
+### Framing, semantic spine, meaning tree, plot, and composition
 
 Use the planning roles. Especially consider claim support and epistemic status,
 composition across levels, concept centrality and introduction, document kind,
-document shape, representation, and cognitive pacing. Record their results in
-the planning artifact. The content model begins from its reader-centered root
-and derives the meanings required to establish it; inventories and source notes
-supply material during the later support check.
+document shape, representation, and cognitive pacing. Record material semantic
+decisions in the meaning tree. Begin with a reader-valued root, share its major
+supporting meanings with the author, and expand lower branches to the depth
+needed for coherent passages. Inventories and source notes supply material; they
+do not determine the target hierarchy.
 
 `terminology.definition` is audience-relative. Decide its treatment from:
 
@@ -160,11 +163,12 @@ or left unnamed.
 ### Developmental edit
 
 Use planning principles again against the complete draft, plus structural and
-rhythm heuristics. Compare the draft with the audience, focus, content model,
-and plot. Reconstruct how passages establish higher-level meanings and how each
-continuous passage moves. Observations can authorize new explanations,
-regrouping, deleted digressions, reordering, a revised content model, or a
-revised plot.
+rhythm heuristics. Compare the draft with the audience, semantic spine, meaning
+tree, and plot. Reconstruct how passages establish
+higher-level meanings and how each continuous passage moves. Observations can
+authorize new explanations,
+regrouping, deleted digressions, reordering, or a revised lower meaning-tree
+branch. A change to the semantic spine remains author-owned.
 
 ### Line or stylistic edit
 
@@ -181,7 +185,7 @@ convert a heuristic into a check merely because it is easy to phrase as a rule.
 ## Context packets
 
 Planning and editorial reviewers receive the relevant assignment, audience
-knowledge, focus, content model, plot, sources, and intervention boundary. A
+knowledge, semantic spine, meaning tree, plot, sources, and intervention boundary. A
 reviewer may be blind to other reviewers' conclusions, but not to the document
 context required by the lens. A copyeditor may receive a narrower packet when
 the substantive decisions are explicitly frozen.
@@ -208,10 +212,10 @@ If a proposed remedy adds a claim, changes the argument, or reorganizes the
 reader progression, return an editorial observation instead:
 
 ```yaml
-stage: assignment | discovery | focus | content-model | plot | developmental | line
+stage: assignment | discovery | semantic-spine | meaning-tree | plot | composition | developmental | line
 location: <section, passage, or document-wide>
 observation: <what may impede the intended reader>
-relation_to_intent: <audience, focus, or plot reason>
+relation_to_intent: <audience, semantic-spine, meaning-tree, or plot reason>
 options: []
 recommendation: <contextual judgment, not an automatic command>
 ```

@@ -14,13 +14,15 @@ Use `document-writing` as the governing workflow and select its existing-documen
 route. Supply the draft, audience and use information, intervention boundary,
 protected content, sources, and repository constraints.
 
-The route adds diagnostic reading and a reverse outline before target content
-design. Preserve that artifact as an account of the existing document, then use
-`document-writing` to create a new reader-centered content model, map material,
-plot and substantively revise the document, complete the editorial passes, and
-obtain acceptance.
+The route first reads the draft as a reader and reconstructs what it currently
+means. Preserve that reverse outline as diagnosis and material inventory. Then
+collaborate with the author on a reader-valued root and semantic spine, expand a
+target meaning tree recursively from that root, and derive the revised
+document's plot and architecture from the target tree before mapping useful old
+material into it. Follow the governing workflow from that point through
+composition, reconstruction, verification, and acceptance.
 
 Lead the result with the revised document or link. Report the reader-centered
-root, principal content and plot decisions, completed passes, context
-limitations, and unresolved questions. Preserve durable artifacts through the
-governing workflow.
+root, shared semantic spine, material author decisions, completed verification,
+context limitations, and unresolved questions. Preserve durable artifacts
+through the governing workflow.

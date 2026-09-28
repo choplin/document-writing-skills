@@ -1,114 +1,117 @@
 # document-writing
 
-This family builds documents from the change they should create for a reader.
-It establishes a reader-centered root, designs the meanings required to support
-that root, verifies them against the available material, and turns them into a
-reader-facing plot before drafting or substantive revision. Developmental
-editing comes before line editing, copyediting, reader testing when required,
-and proof.
+This family turns an author's intended meaning into a document whose readers can
+recover and use that meaning. It collaborates with the author near the root,
+expands the lower meaning tree autonomously, gives one composition owner the
+reader-facing plot and complete draft, and verifies the result by reconstructing
+meaning from the finished prose.
 
-Intermediate artifacts can be stored as immutable Markdown revisions with
-explicit lineage. There is no mutable state file or separate event log; current
-heads and upstream changes are derived from revision files and their digests.
+Intermediate artifacts use immutable Markdown revisions with explicit lineage
+when work spans sessions or agents. There is no mutable workflow state or event
+log; current heads and upstream changes are derived from revision files and
+their digests.
 
 ## Choose by task
 
 | Task | Skill | Result |
 |---|---|---|
-| Create or substantially rebuild a document | `document-writing` | End-to-end planning, drafting, editorial passes, and acceptance |
-| Holistically revise an existing draft | `document-writing-review` | The existing-document route through the governing workflow |
+| Create or substantially rebuild a document | `document-writing` | Shared semantic spine, complete draft, semantic round trip, editorial finish, and acceptance |
+| Holistically revise an existing draft | `document-writing-review` | Existing-draft diagnosis followed by the governing workflow |
 | Consult writing guidance or evaluate prose | `document-writing-standards` | Relevant planning, editorial, and language guidance |
-| Improve prose without changing content or structure | `document-writing-prose` | A connected line edit |
+| Improve prose without changing settled meaning or structure | `document-writing-prose` | A connected line edit |
 | Inspect stable prose without changing it | `document-writing-audit` | Local conformance findings only |
 | Apply approved local findings | `document-writing-apply` | Content-preserving edits with stale-anchor and preservation checks |
 
-`document-writing-base` is internal machinery selected by these entry points.
-`document-writing-standards` is not user-invocable, but an agent may select it
-directly when a writing task needs its guidance. The standards catalog loads
-only the material relevant to the current prose language, editorial stage, and
-lenses.
+`document-writing-base` is internal machinery selected by the prose, audit, and
+apply entry points. `document-writing-standards` loads only the material relevant
+to the current language, editorial stage, and lenses.
 
 ## Workflow
 
 For a new document:
 
 ```text
-assignment → discovery → reader-centered root → top-down content model
-           → bottom-up support check → AI repair → human acceptance
-           → plot → AI repair → human acceptance → draft
-           → developmental edit → line edit → copyedit
-           → reader review when required → proof/acceptance
+assignment and sources
+  → collaborate on reader-valued root and semantic spine
+  → agent expands and verifies the meaning tree
+  → one owner plots the reader path, composes, and developmentally edits
+  → fresh reviewer reconstructs meaning from the draft alone
+  → compare and revise
+  → factual/domain verification and holistic prose edit
+  → deterministic local audit
+  → reader review when required
+  → final reconstruction and comparison
+  → proof and acceptance
 ```
 
 For an existing document:
 
 ```text
-editorial assignment → diagnostic reading → reverse outline
-                     → reader-centered root → new top-down content model
-                     → map recovered material → support check → AI repair
-                     → human acceptance → revised plot → AI repair
-                     → human acceptance
-                     → substantive revision → line/copy
-                     → reader review when required → proof
+editorial assignment
+  → reader-side diagnosis and reverse outline of the old draft
+  → collaborate on a new reader-valued root and semantic spine
+  → design the target meaning tree independently of old headings
+  → map useful material into the target tree
+  → plot, compose, reconstruct, compare, verify, edit, and accept
 ```
 
-The reverse outline describes the existing document and supplies material and
-diagnosis. The target content model is designed separately from its root, then
-checked against that recovered material. Its representation and depth follow
-the needs of the document. The plot chooses how the reader encounters the
-modeled meanings, including the internal movement of central continuous
-passages. Templates are supplied for general documents, books or chapters,
-technical documents, and academic work.
+The author and agent collaborate only through the depth needed to constrain the
+document's governing meaning. The author is asked about root-level,
+high-impact, uncertain, or author-owned semantic choices, not to approve every
+lower branch, outline revision, or prose plan.
+
+Mutual agreement on the governing meaning is the workflow's primary acceptance
+boundary. Before composition, the agent articulates its understanding of the
+meaning tree from the root through the depth needed to constrain the document;
+the author explicitly confirms or corrects it. The conversation may take any
+natural form and does not require node-by-node approval, but drafting, review,
+artifacts, or lens conformance cannot substitute for this two-way confirmation.
+Afterward, lower-tree expansion and prose work proceed autonomously unless a
+confirmed meaning must change.
+
+The meaning tree governs what the document establishes and how its meanings
+compose. The plot maps that logic into the reader's entry, order, grouping,
+pace, emphasis, representations, passage movement, and ending. One composition
+owner makes the plot and prose decisions while preserving the shared semantic
+spine. Writing may expose and repair source-determined defects in lower
+branches; a change to an author-owned meaning returns to the author.
+
+## Semantic round trip
+
+A fresh reviewer receives the complete draft and reader context without the
+intended tree or author intent. The reviewer reconstructs the root, major
+supporting meanings, central section propositions, important paragraph roles,
+examples, qualifications, and unresolved questions.
+
+The workflow compares that recovered tree with the intended tree. It revises
+omitted or invented claims, changed strength, lost conditions, misplaced
+support, ambiguous relations, misleading examples, and an unrecoverable entry.
+This tests what the document communicates. External truth remains the
+responsibility of source verification or a separate fact-checking workflow.
 
 ## Lens placement
 
-`document-writing-standards` classifies guidance by use:
+`document-writing-standards` preserves local writing guidance without turning
+the document into a sequence of independent lens outputs:
 
-- planning principles inform focus, concept treatment, document kind,
-  representation, argument, and plot;
-- editorial heuristics support contextual judgment during developmental and
-  line editing;
-- conformance checks detect local correctness and consistency defects after the
-  larger decisions are stable.
+- planning guidance shapes the semantic spine, lower meaning tree, and plot;
+- editorial guidance is used by the composition owner across connected
+  passages and the complete document; and
+- deterministic checks run only after meaning and structure are stable.
 
-Only the third category flows directly through `document-writing-audit` and
-`document-writing-apply`. Editorial reviewers receive the relevant audience and
-plot context; “blind” means independent of other editorial reviewers'
-conclusions, not deprived of document intent.
+A clean local audit is necessary when applicable, but never sufficient evidence
+that the document works as a whole.
 
 ## Reader-side acceptance
 
-`document-reader-review` tests the reader boundary after a complete draft is
+`document-reader-review` tests the intended-reader boundary after the draft is
 editorially stable. Its personas receive the finished document and their reader
-context, not the author's intent or editorial plot, and return findings without
-changing the document. `document-reader-revise` puts every substantive response
-to the author before changing the document.
+context, not the author's intent or meaning tree. `document-reader-revise`
+returns substantive decisions to the author before changing the document.
 
-Use reader review when comprehension, persuasion, decision quality, or ability
-to act is material to acceptance. If accepted findings change substance or
-structure, return to the earliest affected editorial stage and repeat downstream
-passes. Reader review supplies evidence about reader outcomes. Factual
-verification belongs to a separate external fact-checking workflow.
-
-## Durable artifacts
-
-For multi-session work, first use a location selected by the user or project.
-Otherwise, prefer an existing writable repository work area that version
-control already ignores, such as
-`.agents/document-writing/<document-relative-path>.writing/`. Fall back to the
-user's persistent platform state area, using `XDG_STATE_HOME` on XDG systems.
-Do not place artifacts beside a version-controlled document unless that
-location was explicitly selected. Each artifact revision records its kind,
-revision number, predecessor, and the paths and SHA-256 digests of upstream
-artifacts. Revisions are immutable. A changed upstream digest triggers
-downstream review and a new revision, not a central status mutation.
-
-AI self-review and inline repair happen while a planning candidate is still
-being made. Only a complete content model or plot that is ready for the human
-author receives a revision number. The human reads that exact revision before
-the dependent phase begins. Acceptance without changes keeps the same revision;
-author-requested changes receive the next number only after another internal
-review-and-repair cycle.
+Reader review, editorial review, and external fact-checking remain separate
+responsibilities. If an accepted finding changes meaning or structure, repeat
+the affected tree comparison and downstream checks.
 
 ## References
 
@@ -135,17 +138,31 @@ review-and-repair cycle.
 - [`cognitive-rhythm-writing`](https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432): cognitive pacing and Japanese cadence
 - [`writing-clearly-and-concisely`](https://github.com/obra/the-elements-of-style/tree/05fc4f0d2b97b7c042dd9949ad658568e4a1324e/skills/writing-clearly-and-concisely): English mechanics, composition, and concision
 
+## Durable artifacts
+
+For multi-session work, first use a location selected by the user or project.
+Otherwise prefer an existing ignored repository work area such as
+`.agents/document-writing/<document-relative-path>.writing/`, then the user's
+persistent platform state area. Do not place artifacts beside a
+version-controlled document unless that location was explicitly selected.
+
+Useful artifact kinds include `brief`, `discovery`, `reverse-outline`,
+`semantic-spine`, `meaning-tree`, `plot`, `draft`, `reconstruction`, `comparison`, and
+`acceptance`. Revisions are immutable and record upstream paths and SHA-256
+digests. Artifact publication records a durable candidate; it does not imply
+human approval or qualitative success.
+
 ## Skills
 
 | Skill | Responsibility |
 |---|---|
 | `document-writing` | End-to-end workflow for new documents and substantial revisions |
 | `document-writing-review` | Entry point for the existing-document route |
-| `document-writing-prose` | Content-preserving line edit |
+| `document-writing-prose` | Content-preserving connected line edit |
 | `document-writing-audit` | Local conformance findings without edits |
 | `document-writing-apply` | Application of selected local findings |
 | `document-writing-base` | Internal context-aware line/copy/audit/apply machinery |
-| `document-writing-standards` | Agent-selectable planning principles, editorial heuristics, local checks, and Japanese/English profiles |
+| `document-writing-standards` | Planning principles, editorial heuristics, local checks, and language profiles |
 
 The reader-review skills are documented in
 [`../document-reader/README.md`](../document-reader/README.md).

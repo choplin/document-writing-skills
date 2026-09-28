@@ -1,7 +1,8 @@
 # General document plot
 
 Use the prompts that expose consequential choices in the reader's experience.
-The artifact may be prose, a sketch, passage cards, a diagram, or a combination.
+The plot may be prose, a sketch, passage cards, a diagram, or a combination. It
+is a reader-facing realization of the meaning tree, not a second semantic model.
 
 ## Reader footing and destination
 
@@ -14,9 +15,9 @@ Describe the path from that footing to the destination. Choose the entry, order,
 grouping, pace, emphasis, turns, and ending. Explain the decisions that make
 this path fit the reader better than another plausible path.
 
-Map meanings to passages as the movement requires. A passage may combine several
-meanings, and one meaning may unfold across several passages. Record only the
-mapping decisions that affect comprehension or emphasis.
+Map meanings to passages as the movement requires. A passage may combine
+several meanings, and one meaning may unfold across several passages. Preserve
+the tree's hierarchy and contribution relations while changing presentation.
 
 ## Continuous passages
 
@@ -27,14 +28,11 @@ must combine ideas, and what becomes available at its end.
 ## Shape and representation
 
 Mark where the document should slow down, turn, compare, demonstrate, or land.
-Allocate space according to importance and reader novelty. Choose prose, steps,
-tables, diagrams, or code from the relationships they need to express.
+Allocate space according to logical importance and reader novelty. Choose
+prose, steps, tables, diagrams, or code from the relationships they need to
+express.
 
 ## Open choices
 
 Record plausible alternatives, unresolved decisions, and the reason for the
 current choice.
-
-## Revision note
-
-State what changed in this revision and why.

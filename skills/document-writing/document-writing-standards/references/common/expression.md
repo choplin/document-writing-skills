@@ -1,7 +1,7 @@
 # Expression Lenses
 
 Language: **common**. These are line-edit heuristics, not a lexical blacklist or
-an automatic deletion pass. Use them after the argument and plot are stable,
+an automatic deletion pass. Use them after the meaning and plot are stable,
 and judge each change by the passage's intended movement.
 
 The purposes and considerations below are language-common. Natural realization

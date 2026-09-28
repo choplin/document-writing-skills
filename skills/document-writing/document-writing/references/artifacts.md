@@ -71,44 +71,69 @@ store artifacts for `docs/guide.md` as:
 .agents/document-writing/docs/guide.md.writing/
   brief/001.md
   discovery/001.md
-  focus/001.md
-  content-model/001.md
-  plot/001.md
-  plot/002.md
   reverse-outline/001.md
+  semantic-spine/001.md
+  meaning-tree/001.md
+  plot/001.md
   draft/001.md
   draft/002.md
+  reconstruction/001.md
+  comparison/001.md
   acceptance/001.md
 ```
 
 Omit inapplicable kinds. The immutable revision files and their links are the
 complete workflow history.
 
-## Working candidates and human gates
+## Working candidates and author decisions
 
-A numbered planning artifact is a complete candidate ready for human
-inspection, not an autosave or a record of AI editing history. Develop the
-candidate, self-review it, and apply review findings inline before assigning the
-next revision number. Repeat that internal cycle as needed without preserving
-each intermediate state as a durable artifact.
+A numbered planning artifact is a durable handoff candidate, not an autosave or
+a record of AI editing history. Develop the candidate, self-review it, and apply
+review findings inline before assigning the next revision number. Repeat that
+internal cycle as needed without preserving each intermediate state as a
+durable artifact. Its publication does not replace the semantic or editorial
+conditions of the workflow stage that consumes it.
 
-After publishing a content-model or plot revision, present that exact revision
-to the human author and wait for them to read and accept it before starting the
-dependent phase. Acceptance without changes does not create a new revision. If
-the author requests changes, use the published revision as the basis for a new
-working candidate, complete its internal review and inline repair, and only then
-publish the next numbered revision.
+Publish a semantic-spine revision only after the agent has presented its
+synthesis and the author has explicitly confirmed or corrected it. Summarize
+the agreed reader-valued root and important branches and note that mutual
+confirmation occurred. Record material unresolved choices and useful
+provenance, but do not turn the body into a transcript or node-by-node approval
+record.
+
+An unconfirmed agent synthesis is a working candidate, not a semantic-spine
+revision and not an input to composition. The author need not inspect or approve
+the complete lower meaning tree; source-determined decisions below the shared
+spine may remain there.
+
+Publish an expanded meaning-tree revision after verifying it downward and
+upward. Lower branches may change during composition when writing exposes a
+source-supported defect. A change to the shared semantic spine requires a new
+agent synthesis, mutual confirmation, and spine revision; a source-determined
+repair below the spine does not.
+
+Publish a plot revision when reader-path decisions are substantial enough to
+matter across sessions or handoffs. Base it on the meaning tree. A plot records
+entry, order, grouping, emphasis, passage movement, representation, and ending;
+it neither changes the tree's logic nor creates another author-approval gate.
 
 Working candidates are not durable workflow state. Keep them within the active
 phase and do not make later phases or resumability depend on an unnumbered file,
 mutable status record, or review log.
 
 For a substantial explanatory, argumentative, procedural, or narrative
-document, preserve a content model that starts from the reader-centered root,
-derives its supporting meanings top down, and records the upward support check.
-Its body is free-form, and each branch uses the representation and depth its
-material requires. A short document may combine the content model and plot when
-the semantic design and reader-facing choices remain separately inspectable.
+document, preserve a meaning tree that starts from the reader-valued root,
+identifies the author-shared semantic spine, derives lower meanings top down,
+and records the upward support check. Its body is free-form, and each branch
+uses the representation and depth its material requires.
+
+Preserve the draft-only reconstruction and its comparison with the intended
+tree when the round trip is material to resumability or review. The
+reconstruction records what a fresh reader recovered; the comparison records
+how omissions, additions, changed relations, and changed claim strength were
+resolved. The final reconstruction and comparison use `based_on` to identify the
+exact final draft revision they checked. A later meaning-affecting edit requires
+new downstream revisions.
 
 ## Revision header
 
@@ -121,13 +146,11 @@ aliases are unsupported. Omit `based_on` when there are no upstream inputs.
 
 ```yaml
 ---
-artifact: plot
+artifact: meaning-tree
 revision: 2
-supersedes: plot/001.md
+supersedes: meaning-tree/001.md
 based_on:
-  - path: focus/002.md
-    digest: sha256:<digest of that exact file>
-  - path: content-model/001.md
+  - path: semantic-spine/002.md
     digest: sha256:<digest of that exact file>
 ---
 ```
@@ -135,8 +158,8 @@ based_on:
 The body is free-form Markdown. End with a short `Revision note` describing
 what changed and why. Do not add empty metadata merely to satisfy a schema.
 
-Past revisions are immutable. To change one after it has been published for
-human inspection, finish and internally review the replacement, then write the
+Past revisions are immutable. To change one after it has been published, finish
+and internally review the replacement, then write the
 next numbered revision and point `supersedes` at the prior revision. The first
 revision omits `supersedes`. Publish the reviewed body with the helper rather
 than selecting the number, predecessor, or digests manually. Paths are relative
@@ -154,10 +177,12 @@ It requires review. Even when no body text changes, create a new revision if it
 is important to record that the newer premise was considered.
 
 The helper reports the latest published artifact as the revision not
-superseded by another revision in the same lineage. Publication alone does not
-make a content model or plot usable by its dependent phase; that also requires
-the human acceptance described above. Branches are allowed, but the helper
-reports multiple heads as ambiguous instead of choosing between them.
+superseded by another revision in the same lineage. Publication records a
+durable candidate; it does not prove that a semantic spine was shared, a meaning
+tree was sound, or a draft passed its round-trip comparison. Record those facts
+in the artifact body and its source decisions rather than inferring them from a
+revision number. Branches are allowed, but the helper reports multiple heads as
+ambiguous instead of choosing between them.
 
 A generated status page or index may be used for convenience only if it can be
 rebuilt from these files. It is never authoritative state.
@@ -168,12 +193,14 @@ Pass the exact latest relevant artifacts, not a summary from memory. A drafting
 or editorial reviewer normally needs:
 
 - assignment or brief;
-- focus;
-- content model;
-- plot;
+- semantic spine;
+- expanded meaning tree;
+- plot or equivalent current composition decisions;
 - source locations or discovery notes;
 - current draft;
-- known deviations and unresolved decisions.
+- terminology decisions;
+- known deviations and unresolved decisions;
+- latest reconstruction comparison when revising an existing draft.
 
 A copyeditor may receive a narrower packet, but must still know the audience,
 document kind, house style, protected terminology, and intervention boundary.

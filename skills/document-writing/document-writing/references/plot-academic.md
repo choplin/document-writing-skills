@@ -1,7 +1,9 @@
 # Academic document plot
 
 Select the structure from the research contribution, study or article type,
-target venue, and applicable reporting guidance.
+target venue, and applicable reporting guidance. The plot realizes the meaning
+tree for a scholarly reader; it does not change the contribution or evidential
+relations established there.
 
 ## Research situation and value
 
@@ -45,7 +47,3 @@ pattern that fits those constraints and the argument.
 
 Place uncertainty, validity limits, alternative explanations, scope of
 generalization, and implications where they shape the reader's judgment.
-
-## Revision note
-
-State what changed in this revision and why.

@@ -10,11 +10,14 @@ intended audience.
 ## Workflow boundary
 
 ```text
-assignment → discovery → focus → content model → human acceptance
-           → plot → human acceptance → draft
-           → developmental edit → line edit → copyedit
-           → reader review when required → author-owned revision
-           → proof and acceptance
+assignment and sources
+  → reach mutual agreement on the reader-valued root and semantic spine
+  → agent expands and verifies the meaning tree
+  → one owner plots the reader path, composes, and developmentally edits
+  → factual/domain verification and holistic prose edit
+  → deterministic local audit and reader review when required
+  → fresh reconstruction of meaning from the final candidate
+  → comparison, proof, and acceptance
 ```
 
 The review systems answer different questions:
@@ -28,7 +31,8 @@ The review systems answer different questions:
 
 A reader review is not a second copyedit and never certifies factual accuracy.
 If it triggers substantive revision, return the document to the earliest owning
-editorial stage before proof and acceptance.
+semantic or editorial stage and repeat the final reconstruction before proof and
+acceptance.
 
 ## Install
 
@@ -54,7 +58,7 @@ skills add ./skills --skill '*' -a claude-code codex -g -y
 
 ```text
 skills/
-  document-writing/   editorial workflow, standards, plots, and durable artifacts
+  document-writing/   meaning design, plot, composition, standards, and durable artifacts
   document-reader/    persona-based reader review and author-led revision
 scripts/
   validate-skills.sh  strict validation for every skill

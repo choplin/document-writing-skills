@@ -1,149 +1,218 @@
 # Workflow evaluation
 
 Use these cases when changing the workflow or the role of a lens. They preserve
-observed failure modes outside the ordinary writing context.
+observed failure modes outside the ordinary writing context. Keep this file and
+reference outputs out of a forward writing agent's context.
 
-## Revision policy
+## Evaluation method
 
-Treat every workflow revision as a restructuring step until the basic flow has
-worked across the coverage cases below. Re-derive one coherent current workflow
-from the new evidence, then replace or remove instructions whose model of the
-work no longer fits. An additive correction is appropriate only after the basic
-flow is established and the new behavior is genuinely local.
+Give a fresh writing agent a realistic task, source material, audience and use
+information, and the installed skill. Inspect its interaction with the author,
+meaning artifacts, draft, reconstruction, comparison, and final document.
 
-Runtime instructions describe the current desired behavior in positive terms.
-Keep historical alternatives, superseded behavior, failure descriptions, and
-regression-specific prohibitions in this evaluation reference. Compatibility
-with earlier skill behavior or artifact semantics is outside the design goal.
+Use separate fresh contexts for reconstruction, reader review, and blind
+comparison. A reviewer that saw the intended meaning tree cannot establish what
+the prose alone communicates.
 
-Review each candidate revision for both kinds of accumulation: extra rules that
-leave an obsolete flow intact, and extra fields that reduce an agent's useful
-freedom. Prefer fewer governing principles whose outcomes can be observed in
-the artifacts and final document.
+When a direct no-skill draft is available, compare final documents blindly. The
+workflow output should be at least as coherent, readable, accurate, and useful
+while preserving the author's intended meaning.
 
-## Method
+## Governing outcomes
 
-Give a fresh writing agent the task, source material, audience and use
-information, and the installed skill. Keep this file and reference outputs out
-of that agent's context. Inspect the intermediate artifacts and final document.
-Use separate fresh contexts for handoff checks and blind comparisons.
+A successful run shows that:
 
-A run passes when the observable work shows that it:
+- the root expresses a valuable change in language the intended reader can
+  understand before learning the document's internal terminology;
+- before composition, the agent articulates its understanding of the root,
+  major supporting meanings, and material relations, and the author explicitly
+  confirms or corrects that synthesis;
+- the agent expands difficult branches to passage-level depth, verifies support
+  upward, and preserves terminology, conditions, qualifications, and sources;
+- one composition owner derives a genre-appropriate plot from the meaning tree,
+  then produces and developmentally edits the complete document rather than
+  serializing independent lens or outline fragments;
+- a fresh reviewer reconstructs the governing meaning from the draft alone;
+- differences between intended and recovered meaning are resolved at the
+  correct authority boundary;
+- domain terms, factual claims, and examples receive the verification their
+  truth and use require;
+- interpretive lenses improve connected prose and deterministic checks catch
+  applicable local defects without substituting for holistic judgment; and
+- the final document works from its first line as a complete reader-facing
+  object.
 
-- establishes a root connecting a reader-recognizable situation or problem,
-  the document's answer or method, and its value or consequence;
-- derives the target content model downward from that root;
-- uses an existing draft's reverse outline as diagnosis and material rather
-  than as the topology of the target model;
-- verifies the proposed model upward from evidence and claim status;
-- chooses different depths and forms according to local explanatory need;
-- develops a branch below the section level when the diagnosed reader problem
-  occurs inside a section;
-- gives both the whole document and its central continuous passages a coherent
-  reader movement;
-- leaves the writer free to combine several meanings in a passage or develop
-  one meaning across several passages;
-- records a fresh writer's content-model explanation and passage sketch before
-  the plot phase;
-- repairs content-model and plot findings inline before publishing one complete
-  candidate for human inspection;
-- waits for human acceptance of each published content-model and plot revision
-  before starting its dependent phase;
-- produces prose whose larger meanings and movement can be reconstructed by a
-  fresh reader;
-- preserves source boundaries, qualifications, provenance, and author-owned
-  decisions; and
-- preserves enough durable artifacts for a fresh context to resume the work.
+## Reader-valued root case
 
-When a direct no-skill revision is available, compare final documents blindly.
-The workflow output should be at least as coherent and readable while delivering
-its intended reader outcome.
+Supply a product or design document whose sources are organized around internal
+components and constraints. Pass when collaboration establishes the user or
+organizational value first, then derives mechanisms as support. Fail when the
+root is merely a product name, component definition, implementation objective,
+or internal safety condition that the intended reader cannot yet value.
 
-## Existing-draft direction case
+## Semantic-spine collaboration case
 
-Supply a draft whose headings and section order are plausible but whose central
-argument requires a different hierarchy. The reverse outline should accurately
-describe the old draft. The target model should begin from a reader-centered
-root, derive the meanings required by that root, and only then map old material
-into the new structure. Fail the run when the target tree can be obtained mainly
-by renaming, regrouping, or reordering the old sections.
+Supply a task in which the author develops the root and important branches over
+several conversational turns while correcting one agent synthesis. Pass when
+the agent keeps working at the meaning level, articulates a coherent current
+tree back to the author, obtains explicit confirmation or correction, and only
+then composes. Fail when the agent relies on its private understanding, treats a
+general request to write as confirmation before presenting its synthesis, or
+starts composing while the author is still correcting the governing meaning.
+Do not require a special phrase, node-by-node record, or approval of the complete
+tree, outline, headings, or prose plan.
 
-## Depth case
+The collaboration depth must follow semantic impact and uncertainty rather than
+a fixed tree level. Include one high-impact leaf and one source-determined major
+branch to test both directions.
 
-Supply a draft whose document-level topic and section order are sound but whose
-reader failure occurs within one important section. The reverse outline,
-content model, and plot should follow that branch below the section level and
-guide a new internal movement. Fail the run when those artifacts stop at section
-summaries.
+Repeat the case from a fresh context containing an old draft and agent-authored
+planning artifacts but no author collaboration on their governing meaning. Pass
+only when the agent presents its recovered tree and obtains the author's
+explicit confirmation or correction before composing. Fail when artifact
+existence, source consistency, general permission, or silence is treated as
+mutual agreement.
 
-## Freedom and continuity case
+## Priority case
 
-Supply material containing a connected explanation that needs both a broad
-movement and several supporting relationships. The content model may use any
-form and uneven depth. Give it to a fresh writer with the assignment and source
-material. Pass when the writer can create a coherent passage with natural
-paragraphing. Fail when the artifact prescribes a uniform record shape, drives
-one sentence or paragraph per entry, or yields prose that reads as fragments
-joined in sequence.
+Supply an unconfirmed meaning-tree synthesis together with a nearly polished
+draft that passes local lens checks. Pass when the agent stops prose work and
+establishes mutual meaning agreement first. Fail when draft quality, prior
+review, artifact completeness, or the cost of rewriting is used to continue
+without that agreement.
 
-## Composition handoff case
+## Reader-outcome and substantive-root case
 
-Give a fresh writer only the assignment, focus, content model, and relevant
-source material. Ask them to explain why the children of one central branch
-establish its parent and sketch the movement of that passage. Topic labels,
-presentation labels, order alone, or a named relation without the participating
-meanings fail this case.
+Supply a product-positioning document whose technical readers need to judge the
+design. Pass when the brief records that reader outcome while the meaning-tree
+root expresses the value the product creates for its end users or organization.
+Fail when “the designer can understand or judge the design” becomes the
+substantive root and the product value remains a lower or implicit branch.
 
-## Root-value case
+## Meaning-tree depth and upward support case
 
-Supply technically complete material whose source organization begins from the
-system rather than the reader. Pass when the model roots the document in a
-problem, task, question, or situation the intended reader recognizes and makes
-the value of the answer or method intelligible. The final presentation may
-reveal that connection gradually when the genre calls for it.
+Supply material whose central difficulty occurs inside one section. Pass when
+the agent develops that branch into explicit propositions, relations,
+conditions, support, and examples, and can explain how the children jointly
+establish each parent up to the root. Fail when the tree stops at section labels,
+lists topics without relations, or relies on source headings or hidden author
+intent.
 
-## Plot-family coverage
+The tree may use prose, diagrams, or uneven depth. Fail if a uniform schema
+forces one node into one sentence or paragraph.
 
-Maintain at least one forward test for each family:
+## Existing-draft independence case
 
-- **Book or chapter:** the work-level promise governs chapter and passage arcs.
-- **Technical document:** reader use determines the document kind and the
-  movement of a central continuous passage.
-- **Academic document:** the research situation leads to a contribution whose
-  claims, evidence, warrants, and qualifications remain reconstructable.
-- **Existing draft:** diagnosis of the old document and design of the target
-  document remain distinct artifacts and directions of work.
+Supply a plausible but poorly centered draft. Pass when the reverse outline
+accurately diagnoses the old document, the target tree begins from a newly
+shared reader-valued root, and old material is mapped only afterward. Fail when
+the target can be obtained mainly by renaming, regrouping, or reordering the old
+headings.
 
-## Editorial-boundary case
+Also fail when the draft states the new root and major branches near the opening
+but most top-level sections, development depth, and word count still follow the
+old draft's conceptual hierarchy. Pass only when removing the old draft after
+material extraction would leave the target architecture substantially
+unchanged.
 
-Supply a developmental problem that is visible in one sentence but owned by the
-focus, content model, or plot. Pass when it returns to that stage and the
-downstream artifacts are reconsidered. Conformance checks should remain local
-to correctness and consistency after substance and structure stabilize.
+## Composition ownership case
 
-## Lineage case
+Supply a tree with several meanings that must combine in one explanation and a
+meaning that needs several paragraphs. Pass when one composition owner chooses
+a natural entry, grouping, order, and voice and edits the complete draft for
+reader movement. Fail when prose reads like tree nodes or lens outputs joined in
+sequence, or when no stage has authority to repair an explanation, example,
+heading, or paragraph arrangement while preserving the semantic spine.
 
-Create two revisions of an upstream focus or content-model artifact. A plot
-based on the first revision needs a new reviewed revision after the upstream
-change, even when its body remains suitable. Derive this from immutable
-revision artifacts and `based_on` digests.
+## Plot realization case
 
-## Planning-publication gate case
+Supply one meaning tree whose logic could be presented through more than one
+reader path. Pass when the composition owner preserves the tree's hierarchy and
+support relations while choosing entry, order, grouping, emphasis, passage
+movement, and representation for the actual reader and document kind. Fail when
+the plot becomes a competing content hierarchy, merely serializes tree nodes,
+or is omitted so that source order determines the draft.
 
-Supply a content-model candidate and a plot candidate with defects that an
-independent AI review can identify. Pass when the agent repairs each candidate
-inline, publishes only the internally complete result as a numbered revision,
-and pauses for the human author to read it before beginning the dependent phase.
-Human acceptance without changes must not create a duplicate revision. If the
-human requests a change, the replacement receives the next number only after
-its own internal review and repair. Fail when AI review iterations become
-numbered artifacts, unresolved AI findings are handed to the human, or plotting
-or drafting starts before the corresponding human acceptance.
+Cover general documents, technical documents, academic work, and books or
+chapters across the evaluation set. Plot guidance is interpretive and does not
+create another author-approval gate.
 
-## Reader-review boundary case
+## Semantic round-trip case
 
-Give a fresh agent a complete proposal whose acceptance depends on a decision
-maker and a skeptical peer. Pass when the stable document goes to both personas
-without author intent or editorial planning, their reactions remain intact, and
-substantive responses return through author decision and the affected editorial
-stages. Reader review provides reader evidence rather than factual certification.
+Give the completed draft and reader context to a fresh reviewer without the
+intended tree, author intent, source outline, or suspected defects. Require a
+reconstruction of the root, major meanings, central section propositions,
+support relations, important examples, qualifications, and open questions.
+
+Seed the draft with at least one of each:
+
+- an omitted premise;
+- an added claim;
+- a changed quantifier or epistemic strength;
+- a condition attached to the wrong proposition;
+- evidence that appears to support a neighboring claim; and
+- an example whose apparent lesson differs from its intended proposition.
+
+Pass when comparison locates each material divergence and routes it to prose,
+the lower tree, sources, or the author. Fail when reconstruction receives the
+intended tree, when agreement is asserted without an explicit comparison, or
+when prose is forced back to a flawed lower tree merely because it was produced
+first.
+
+## Entry and paragraph-proposition case
+
+Supply a technically complete draft whose opening begins with an internal
+problem before explaining what the document is, who it serves, or what becomes
+possible. Include a section that starts with an example before its governing
+proposition and a negative heading whose subject is ambiguous.
+
+Pass when the final document gives the intended reader usable footing, every
+central section has a recoverable governing proposition, and paragraphs develop
+that proposition through intelligible relations. Fail when a clean local audit
+or a correct intended tree masks an entry or passage that a reader cannot
+follow.
+
+## Domain-meaning and example case
+
+Supply a central term whose ordinary meaning differs from its domain meaning and
+a numerical or executable example that works only under particular cardinality,
+ordering, or aggregation conditions. Pass when the domain meaning is verified
+and introduced in place, and the example's inputs, operation, conditions,
+result, and supported proposition are checked. Fail when spelling consistency
+stands in for semantic correctness or when a merely possible example is
+presented as representative without calculation.
+
+## Lens coexistence case
+
+Supply a document with both holistic prose defects and locally falsifiable
+conformance defects. Pass when the composition or editorial owner uses
+interpretive lenses across connected passages, then a local audit finds and
+repairs deterministic defects. Fail when one independent rewrite runs per lens,
+when local fixes damage the meaning tree, or when blocker counts from lens
+checks are presented as proof of document quality.
+
+## Truth and review-boundary case
+
+Supply claims whose internal logic is sound but whose truth requires a domain
+source, plus a finished document intended for newcomer and domain-expert
+readers. Pass when external verification, editorial review, and reader review
+remain distinct and all required evidence reaches acceptance. Fail when reader
+review certifies truth, fact-checking judges prose quality, or editorial
+consistency protects an externally false claim.
+
+## Durable-lineage case
+
+For multi-session work, create a semantic-spine revision, a meaning-tree
+revision based on it, a plot based on the tree, and a draft based on the plot.
+Change an author-owned spine decision. Pass when the new spine revision causes
+review and new revisions of affected downstream artifacts through `based_on`
+digests. Fail when a mutable status file becomes authoritative or when
+publication alone is treated as author approval or qualitative success.
+
+## Delivery-boundary case
+
+Give feedback during a writing run without asking for an external issue, post,
+or tracker update. Pass when the agent discusses and applies in-scope writing
+work only. Fail when feedback language is treated as authority to publish an
+external record or when a summary drops material history before the author
+chooses what to record.

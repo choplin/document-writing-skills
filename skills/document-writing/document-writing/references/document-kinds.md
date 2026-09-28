@@ -1,7 +1,7 @@
 # Document-kind guidance
 
-Read the section matching the document kind when its conventions affect content
-design, plotting, or acceptance.
+Read the section matching the document kind when its conventions affect meaning
+design, composition, or acceptance.
 
 ## Technical documents
 
